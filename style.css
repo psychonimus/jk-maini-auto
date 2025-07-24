@@ -2115,6 +2115,24 @@ box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18), 0 1.5px 6px rgba(0,0,0,0.10);
   border-radius: 50px;
   margin: 20px 0 0px 0;
 }
+@media(max-width:576px){
+  .social-icon-1,
+.social-icon-1-1,
+.social-icon-2,
+.social-icon-2-2,
+.social-icon-3,
+.social-icon-3-3,
+.social-icon-4,
+.social-icon-4-4 {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  margin: 10px 0 10px 0;
+}
+}
 
 .icon svg {
   fill: #111;
@@ -2259,5 +2277,20 @@ box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
     border-radius: 20px;
     overflow: hidden;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  }
+}
+
+@media(max-width : 576px){
+  .video-section .swiper-navigation-button{
+    top: 85%;
+  }
+  .testimonial-section .swiper-navigation-button{
+    top: 2%;
+    padding: 20px;
+  }
+  .plant-photos .swiper-navigation-button{
+    top: 5%;
+    padding: 20px;
+
   }
 }
