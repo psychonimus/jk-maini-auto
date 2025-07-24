@@ -78,9 +78,14 @@ body {
   background-color: #fff !important;
 }
 
-.navbar.transparent .nav-link,
-.navbar.transparent .navbar-brand {
-  color: #000 !important;
+.navbar.transparent .nav-link{
+  color: #000;
+}
+.navbar.transparent .nav-link:hover{
+  color: var(--primary);
+}
+.navbar.transparent .nav-link.active{
+  color: var(--primary);
 }
 
 
@@ -90,9 +95,14 @@ body {
   /* ← override entire background, not just color */
 }
 
-.navbar.solid .nav-link,
-.navbar.solid .navbar-brand {
-  color: #000 !important;
+.navbar.solid .nav-link{
+  color: #000;
+}
+.navbar.solid .nav-link:hover{
+  color: var(--primary);
+}
+.navbar.solid .nav-link.active{
+  color: var(--primary);
 }
 
 /* Hidden on scroll down */
@@ -106,9 +116,7 @@ body {
 }
 
 /* Hover and active styles */
-.nav-link:hover {
-  font-weight: 500;
-}
+
 
 .nav-link.active {
   font-weight: 600;
@@ -2198,6 +2206,11 @@ box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
 
 
 } 
+@media(max-width : 576px){
+  .sector-swiper .tab-btn{
+    padding: 10px 10px !important;
+  }
+}
 
 
 .sector-swiper .tab-btn.active{
