@@ -1764,6 +1764,18 @@
                     <textarea name="" placeholder="I want to know more about" id="Inquiry"></textarea>
 
                 </div>
+                <div class="d-flex gap-3">
+                    <input required type="checkbox" name="" id="T&C" class="w-auto">
+                    <label class="w-auto" for="T&C">
+                        I agree to the
+                        <a href="privacy-policy.html" target="_blank" class="text-decoration-underline">Privacy
+                            Policy</a>
+                        and
+                        <a href="terms-and-conditions.html" target="_blank" class="text-decoration-underline">Terms
+                            &amp; Conditions</a>
+                        <span class="text-danger">*</span>
+                    </label>
+                </div>
                 <!-- <div class="d-flex gap-3">
                     <input type="checkbox" name="" id="t&c" class="w-auto">
                     <label class="w-auto" for="t&c">I agree to the terms and conditions*</label>
@@ -1775,7 +1787,9 @@
         </div>
     </div>
 
-
+    <button class="btn back-to-top" id="backToTopBtn" title="Back to top" type="button">
+        <i class="fa fa-arrow-up"></i>
+    </button>
 
 
     <section class="contact-footer">
@@ -1861,9 +1875,10 @@
                 <div class="col-md-2 mb-4">
                     <h5 class="mb-3 section-title">Company</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2">Privacy Policy</li>
-                        <li class="mb-2">Terms of Use</a></li>
-                        <li class="mb-2">Site Map</a></li>
+                        <li class="mb-2"><a class="text-decoration-none text-black" href="privacy-policy.html"></a>Privacy Policy</a></li>
+                        <li class="mb-2"><a class="text-decoration-none text-black" href="terms-of-use.html">Terms of Use</a></li>
+                        <!-- <li class="mb-2">Site Map</a></li> -->
+                        
                         <!-- <li class="mb-2"><i class="fa-solid fa-clock me-2"></i> Mon - Sat: 9:00 AM - 6:00 PM</li> -->
                     </ul>
                 </div>
@@ -1971,7 +1986,11 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer>f
+
+
+
+
 
 
     <script>
@@ -1999,8 +2018,9 @@
         });
     </script>
 
-
+   
     <!-- Initialize Swiper -->
+
 
 
     <!-- Bootstrap Bundle with Popper -->
@@ -2015,6 +2035,8 @@
     <script>AOS.init({ duration: 1000 });</script>
     <script src="https://unpkg.com/lenis@1.3.7/dist/lenis.min.js"></script>
     <script src="script.js"></script>
+
+
     <script>
         var swiper = new Swiper(".test-swiper", {
             loop: true,
@@ -2058,12 +2080,8 @@
     <script>AOS.init({ duration: 1000 });</script>
 
 
-
-
-
-
-
-
 </body>
 
 </html>
+
+
