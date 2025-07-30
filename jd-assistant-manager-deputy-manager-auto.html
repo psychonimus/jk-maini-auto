@@ -757,6 +757,134 @@
         }
     </script>
 
+
+
+<script>
+    document.getElementById('ApplyNow').addEventListener('submit', function (e) {
+        debugger
+            e.preventDefault();
+            console.log('Form submitted');
+
+            const form = document.getElementById('ApplyNow');
+            const messageDiv = document.getElementById('message');
+            const errorDiv = document.getElementById('error');
+
+
+            if (!form || !messageDiv || !errorDiv) {
+                console.error('Form or message/error div not found');
+                errorDiv.textContent = 'Form or message/error div not found.';
+                return;
+            }
+
+            const fullNameInput = document.getElementById('fullName');
+            const emailInput = document.getElementById('email');
+            const phoneInput = document.getElementById('phone');
+            const educationInput = document.getElementById('education');
+            const coverLetterInput = document.getElementById('coverLetter');
+            const resumeInput = document.getElementById('resume');
+            const forPositionInput = document.querySelector('.job-header h2');
+            const jobTitle = forPositionInput ? forPositionInput.textContent : 'Unknown Job Title';
+
+            if (!fullNameInput || !emailInput || !phoneInput || !educationInput ||
+                !coverLetterInput || !resumeInput) {
+                errorDiv.textContent = 'One or more form fields are missing.';
+                console.error('Missing form fields');
+                return;
+            }
+
+            const fullName = fullNameInput.value || '';
+            const email = emailInput.value || '';
+            const phone = phoneInput.value || '';
+            const education = educationInput.value || '';
+            const coverLetter = coverLetterInput.value || '';
+            const resume = resumeInput.files[0];
+            const forPosition = jobTitle || '';
+            messageDiv.textContent = '';
+            errorDiv.textContent = '';
+
+            if (!fullName || !email || !resume) {
+                errorDiv.textContent = 'Please fill all required fields (Full Name, Email, Resume).';
+                console.error('Required fields missing:', { fullName, email, resume });
+                return;
+            }
+
+            if (!resume) {
+                errorDiv.textContent = 'Please upload a resume file.';
+                console.error('No resume file selected');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('fullName', fullName);
+            formData.append('email', email);
+            formData.append('phoneno', phone);
+            formData.append('education', education);
+            formData.append('forPosition', forPosition);
+            formData.append('resume', resume);
+            formData.append('coverLetter', coverLetter);
+            //formData.append('subject', 'Resume Submission');
+            //formData.append('htmlContent', `<p>Hello ${fullName},</p><p>Thank you for submitting your resume.</p><p>Your education: ${education}</p><p>Your cover letter: ${coverLetter}</p><p>Contact: ${phone}, ${email}</p>`);
+
+        //  const url = 'http://115.124.123.180:8097/api/mail';
+          const url = 'https://api.jkmaini.com/api/mail';
+
+            fetch(url, {
+                method: 'POST',
+                body: formData
+            })
+
+                .then(response => {
+                    debugger
+                    console.log('Response status:', response.status);
+                    console.log('Response ok:', response.ok);
+                    console.log('Response headers:', [...response.headers.entries()]);
+                    return Promise.all([response.ok]);
+                })
+                .then((text, ok, status) => {
+                    let data = {};
+                    try {
+                        data = JSON.parse(text);
+                    } catch (e) {
+                        data = { error: text || 'Invalid response from server', rawText: text };
+                    }
+                    console.log('Response data:', data);
+                    //Check for success indicators even if status is not 200-299
+                    const isSuccess = ok ||
+                        (data && (
+                            (typeof data.message === 'string' && data.message.toLowerCase().includes('success')) ||
+                            (typeof data.status === 'string' && data.status.toLowerCase().includes('success')) ||
+                            (typeof data.rawText === 'string' && (
+                                data.rawText.toLowerCase().includes('success') ||
+                                data.rawText.toLowerCase().includes('sent')
+                            ))
+                        ));
+                    if (isSuccess) {
+                        debugger
+                        messageDiv.textContent = data.message || data.rawText || 'Resume sent successfully. Form cleared.';
+                    } else {
+                        errorDiv.textContent = data.error || data.message || data.rawText || `Failed to send resume (Status: ${status || 'unknown'}).`;                        
+                    }
+                    return { data, ok, status };
+                })
+
+                .catch(error => {
+                    console.error('Fetch error:', error);
+                    errorDiv.textContent = `Error: ${error.message}`;
+                })
+                .finally(() => {
+                    form.reset();
+                    console.log('Form cleared');
+                });
+        });
+    </script>
+
+
+
+
+
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
         integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -766,7 +894,7 @@
     <script>AOS.init({ duration: 1000 });</script><script src="https://unpkg.com/lenis@1.3.7/dist/lenis.min.js">
 
     </script><script src="script.js"></script>
-    </script><script src="career.js"></script>
+    <!-- </script><script src="career.js"></script> -->
 </body>
 
 </html>
