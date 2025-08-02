@@ -306,8 +306,12 @@
                     </div> -->
 
                     <li class="nav-item">
-                        <a class="nav-link" onclick="openPopup()" href="#"><i class="fa-solid fa-headset me-2"></i>
-                            Enquiry</a>
+                        <a class="nav-link" onclick="openPopup()" href="javascript:void(0)">
+                            <button class="enq-btn d-flex gap-2 align-items-center"><lord-icon
+                                    src="https://cdn.lordicon.com/fpvaxfly.json" trigger="loop" colors="primary:#ffffff"
+                                    style="width:20px;height:20px">
+                                </lord-icon> Enquiry </button>
+                        </a>
                     </li>
 
                 </ul>
@@ -622,26 +626,51 @@
             </div>
             <form action="" class="mt-4" id="contact-form">
                 <div class="form-group d-sm-flex gap-3 ">
-                    <input class="my-3" type="text" placeholder="First Name" id="FirstName">
-                    <input class="my-3" type="text" placeholder="Last Name" id="LastName">
+                    <input class="my-3" type="text" required placeholder="First Name" id="FirstName">
+                    <input class="my-3" type="text" required placeholder="Last Name" id="LastName">
                 </div>
                 <div class="form-group d-sm-flex gap-3 ">
-                    <input class="my-3" type="text" placeholder="Company" id="Company">
-                    <input class="my-3" type="text" placeholder="Email Address" id="EmailAddress">
+                    <input class="my-3" type="text" required placeholder="Company" id="Company">
+                    <input class="my-3" type="text" required placeholder="Email Address" id="EmailAddress">
                 </div>
                 <div class="form-group d-sm-flex gap-3 ">
-                    <input class="my-3" type="text" placeholder="Phone No." id="PhoneNo">
-                    <input class="my-3" type="text" placeholder="Industry" id="Industry">
+                    <input class="my-3" type="text" required placeholder="Phone No." id="PhoneNo">
+                    <input class="my-3" type="text" required placeholder="Industry" id="Industry">
                 </div>
                 <div class="form-group">
                     <textarea name=""  placeholder="I want to know more about" id="Inquiry"></textarea>
 
                 </div>
-                <!-- <div class="d-flex gap-3">
-                    <input type="checkbox" name="" id="t&c" class="w-auto">
-                    <label class="w-auto" for="t&c">I agree to the terms and conditions*</label>
-                </div> -->
-                <button class="hero-button mt-4" id="submit"  >Submit</button>
+                <div class="d-flex gap-3">
+                    <input required type="checkbox" name="" id="T&C" class="w-auto">
+                    <label class="w-auto" for="T&C">
+                        I agree to the
+                        <a href="privacy-policy.html" target="_blank" class="text-decoration-underline">Privacy
+                            Policy</a>
+                        and
+                        <a href="terms-of-use.html" target="_blank" class="text-decoration-underline">Terms
+                            &amp; Conditions</a>
+                        <span class="text-danger">*</span>
+                    </label>
+                </div>
+                <button href="#" class="button mt-4" id="submit">
+                    <span class="button__icon-wrapper">
+                        <svg viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="button__icon-svg"
+                            width="10">
+                            <path
+                                d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                                fill="currentColor"></path>
+                        </svg>
+
+                        <svg viewBox="0 0 14 15" fill="none" width="10" xmlns="http://www.w3.org/2000/svg"
+                            class="button__icon-svg button__icon-svg--copy">
+                            <path
+                                d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </span>
+                    Submit
+                </button>
                 <div id="message" class="message"></div>
                 <div id="error" class="error"></div>
             </form>
@@ -721,9 +750,9 @@
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="about.html" class="text-decoration-none">About Us</a></li>
                         <li class="mb-2"><a target="_blank" href="https://jkmaini.com"
-                                class="text-decoration-none">Jk Maini Group</a></li>
+                                class="text-decoration-none">JK Maini Group</a></li>
                         <li class="mb-2"><a target="_blank" href="https://auto.jkmaini.com"
-                                class="text-decoration-none">Jk Maini Precision Technology Ltd.</a></li>
+                                class="text-decoration-none">JK Maini Precision Technology Ltd.</a></li>
                         <li class="mb-2"><a target="_blank" href="https://jksuperdrive.com/"
                                 class="text-decoration-none">JK Files and Engineering Ltd.</a></li>
                         <li class="mb-2"><a target="_blank" href="https://aero.jkmaini.com"
@@ -809,7 +838,7 @@
                                     <div class="icon social-icon-2-2">
                                         <svg fill="white" class="svgIcon" viewBox="0 0 448 512" height="1.5em"
                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
+                                            <path style="fill : #000;"
                                                 d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
                                             </path>
                                         </svg>
