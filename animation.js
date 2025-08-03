@@ -480,3 +480,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+
+// GSAP hover effect for images with class .gm
+
+// Animate foundation images with a nice appearance and stagger
+document.addEventListener("DOMContentLoaded", function () {
+  const foundationImages = document.querySelectorAll(
+    '.foundation-logo img'
+  );
+  if (foundationImages.length > 0 && typeof gsap !== "undefined") {
+    gsap.from(foundationImages, {
+      opacity: 0,
+      y: 50,
+      scale: 0.8,
+      duration: 0.8,
+      stagger: 0.18,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: foundationImages[0].closest('.row'),
+        start: "top 85%",
+        toggleActions: "play none none reset"
+      }
+    });
+  }
+});

@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon_io (1)/android-chrome-512x512.png"><link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon_io (1)/android-chrome-512x512.png">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
 
 </head>
 
@@ -821,15 +823,20 @@
                 
                 <div class="d-flex gap-3 justify-content-center">
                     <a href="./assets/images/brochure/b,_163,_3rd_Cross_Rd_SAQ_5_MainReport_certificate.pdf"
-                        target="_blank" style="text-decoration: none;">
-                        <button class="hero-button d-flex align-items-center">
+                        target="_blank" style="text-decoration: none;" >
+                        <!-- <button class="hero-button d-flex align-items-center">
                             View Report 1<i class="fa-solid fa-arrow-right ms-2"></i>
+                        </button> -->
+                        <button class="download-button d-flex gap-2 align-items-center">
+                            Report 1
+                            <i style="font-size: 20px;" class="fi fi-sr-cloud-download-alt"></i>
                         </button>
                     </a>
                     <a href="./assets/images/brochure/MPP SAQ_5_Certificate No.5A.pdf" target="_blank"
                         style="text-decoration: none;">
-                        <button class="hero-button d-flex align-items-center">
-                            View Report 2<i class="fa-solid fa-arrow-right ms-2"></i>
+                        <button class="download-button d-flex gap-2 align-items-center">
+                            Report 2
+                            <i style="font-size: 20px;" class="fi fi-sr-cloud-download-alt"></i>
                         </button>
                     </a>
 
@@ -1086,13 +1093,17 @@
         </div>
     </div>
 
-    <section class="get-in-touch-section py-5 text-center" data-aos="fade-up">
+    <section class="get-in-touch-section py-3 text-center" data-aos="fade-up">
         <div class="container">
             <h6 class="section-title">Get in Touch</h6>
             <h2>Empowering Change, Sustaining Tomorrow !</h2>
             <p class="mb-4">Our commitment to the environment, communities, and innovation drives every initiative we undertake, because sustainable progress is a shared journey.</p>
             <div class="d-flex justify-content-center" data-aos="flip-right">
-                <button class="hero-button" onclick="openPopup()">Partner With Us for a Sustainable Future</button>
+                <!-- <button class="hero-button" onclick="openPopup()">Partner With Us for a Sustainable Future</button> -->
+                <button onclick="openPopup()" class="download-button d-flex gap-2 align-items-center">
+                    Partner With Us for a Sustainable Future
+                    
+                </button>
             </div>
         </div>
     </section>
@@ -1189,7 +1200,7 @@
                     <h5 class="mb-3 section-title">Company</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2">
-                            <Privacy class="text-decoration-none text-black" href="privacy-policy.html">Privacy
+                            <a class="text-decoration-none text-black" href="privacy-policy.html">Privacy
                                 Policy</a>
                         </li>
                         <li class="mb-2"><a class="text-decoration-none text-black" href="terms-of-use.html">Terms of
