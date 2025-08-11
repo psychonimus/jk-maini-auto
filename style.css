@@ -2800,4 +2800,11 @@ box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
   background: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="%23ff0000"/><path d="M6 6L14 14M14 6L6 14" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>') no-repeat center center;
   background-size: 20px 20px;
 }
+@media(max-width : 576px){
+  .navbar-nav-left{
+    padding-left: 0px;
+  }
+}
+
+ 
 
