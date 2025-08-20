@@ -1,13 +1,32 @@
-// gsap animations starts here ......... 
 
-// GSAP slide-to-right animation for .foreword-left on scroll
+// =====================
+// GSAP Animations
+// =====================
 gsap.registerPlugin(ScrollTrigger, TextPlugin, SplitText);
 
+// 🔄 Ensure ScrollTrigger recalculates after everything is ready
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
 
+// ✅ Utility: Prevent re-splitting the same element
+function safeSplit(selector, options) {
+  document.querySelectorAll(selector).forEach(el => {
+    if (!el.dataset.split) {
+      new SplitType(el, options);
+      el.dataset.split = "true";
+    }
+  });
+}
+
+// =====================
+// Heading animations
+// =====================
+
+// Typewriter-style heading (.heading-animation-1)
 document.querySelectorAll('.heading-animation-1').forEach((el) => {
   const originalText = el.textContent;
   el.textContent = "";
-
   gsap.to(el, {
     duration: 2,
     text: originalText,
@@ -16,15 +35,13 @@ document.querySelectorAll('.heading-animation-1').forEach((el) => {
       trigger: el,
       start: "top 90%",
       toggleActions: "play none none none",
-      once : true
+      once: true
     }
   });
 });
 
-// GSAP text-appearing animation for .quote-text elements
+// Line-by-line reveal (.heading-animate)
 document.querySelectorAll(".heading-animate").forEach(el => {
-  // Ensure text is justified via JS in case CSS is not applied
-  el.style.textAlign = "justify";
   let split = new SplitText(el, { type: "lines" });
   gsap.from(split.lines, {
     opacity: 0,
@@ -40,6 +57,7 @@ document.querySelectorAll(".heading-animate").forEach(el => {
   });
 });
 
+// Fade paragraphs (.fade-para)
 document.querySelectorAll('.fade-para').forEach(el => {
   gsap.from(el, {
     opacity: 0,
@@ -55,6 +73,7 @@ document.querySelectorAll('.fade-para').forEach(el => {
   });
 });
 
+// Scale + blur reveal (.scale-blur-heading)
 document.querySelectorAll(".scale-blur-heading").forEach(el => {
   gsap.fromTo(el, {
     scale: 1.3,
@@ -69,11 +88,12 @@ document.querySelectorAll(".scale-blur-heading").forEach(el => {
     scrollTrigger: {
       trigger: el,
       start: "top 95%",
-      scrub : true,
+      scrub: true
     }
   });
 });
 
+// Clip reveal (.heading-clip-reveal span)
 document.querySelectorAll('.heading-clip-reveal span').forEach(el => {
   gsap.to(el, {
     y: 0,
@@ -82,11 +102,12 @@ document.querySelectorAll('.heading-clip-reveal span').forEach(el => {
     scrollTrigger: {
       trigger: el,
       start: "top 98%",
-      scrub : true,
+      scrub: true
     }
   });
 });
 
+// Expand heading (.heading-expand)
 document.querySelectorAll('.heading-expand').forEach(el => {
   gsap.fromTo(el, {
     opacity: 0,
@@ -104,6 +125,7 @@ document.querySelectorAll('.heading-expand').forEach(el => {
   });
 });
 
+// Skew + rise heading (.heading-skew)
 document.querySelectorAll('.heading-skew').forEach(el => {
   gsap.from(el, {
     opacity: 0,
@@ -114,187 +136,97 @@ document.querySelectorAll('.heading-skew').forEach(el => {
     scrollTrigger: {
       trigger: el,
       start: "top 80%",
-      scrub : true
+      scrub: true
     }
   });
 });
 
-
-
-
-let typeSplit = new SplitType('[animate]', {
-  types: 'lines, words, chars',
-  tagName: 'span'
-});
-
-// Animate each word on scroll
-gsap.from('[animate] .word', {
-  y: '100%',
+// =====================
+// SplitType word animations
+// =====================
+safeSplit("[animate]", { types: "lines, words, chars", tagName: "span" });
+gsap.from("[animate] .word", {
+  y: "100%",
   opacity: 0,
   duration: 0.5,
-  ease: 'back.out',
+  ease: "back.out",
   stagger: 0.1,
-  scrollTrigger: {
-    trigger: '[animate]',
-    start: 'top 85%',
-    toggleActions: 'play none none reset', 
-    
-  }
+  scrollTrigger: { trigger: "[animate]", start: "top 85%", toggleActions: "play none none reset" }
 });
 
-
-let typeSplit3 = new SplitType('[animate-3]', {
-  types: 'lines, words, chars',
-  tagName: 'span'
-});
-
-// Animate each word on scroll
-gsap.from('[animate-3] .word', {
-  y: '100%',
+safeSplit("[animate-2]", { types: "lines, words, chars", tagName: "span" });
+gsap.from("[animate-2] .word", {
+  y: "100%",
   opacity: 0,
   duration: 0.5,
-  ease: 'back.out',
+  ease: "back.out",
   stagger: 0.1,
-  scrollTrigger: {
-    trigger: '[animate-3]',
-    start: 'top 85%',
-    toggleActions: 'play none none reset', 
-    
-  }
+  scrollTrigger: { trigger: "[animate-2]", start: "top 85%", toggleActions: "play none none reset" }
 });
 
-let typeSplit4 = new SplitType('[vmv]', {
-  types: 'lines, words, chars',
-  tagName: 'span'
-});
-
-// Animate each word on scroll
-gsap.from('[vmv] .word', {
-  y: '100%',
+safeSplit("[animate-3]", { types: "lines, words, chars", tagName: "span" });
+gsap.from("[animate-3] .word", {
+  y: "100%",
   opacity: 0,
   duration: 0.5,
-  ease: 'back.out',
+  ease: "back.out",
   stagger: 0.1,
-  scrollTrigger: {
-    trigger: '[vmv]',
-    start: 'top 85%',
-    toggleActions: 'play none none reset', 
-    
-  }
+  scrollTrigger: { trigger: "[animate-3]", start: "top 85%", toggleActions: "play none none reset" }
 });
 
-
-
-
-
-let typeSplit2 = new SplitType('[animate-2]', {
-  types: 'lines, words, chars',
-  tagName: 'span'
-});
-
-// Animate each word on scroll
-gsap.from('[animate-2] .word', {
-  y: '100%',
+safeSplit("[vmv]", { types: "lines, words, chars", tagName: "span" });
+gsap.from("[vmv] .word", {
+  y: "100%",
   opacity: 0,
   duration: 0.5,
-  ease: 'back.out',
+  ease: "back.out",
   stagger: 0.1,
-  scrollTrigger: {
-    trigger: '[animate-2]',
-    start: 'top 85%',
-    toggleActions: 'play none none reset', 
-    
+  scrollTrigger: { trigger: "[vmv]", start: "top 85%", toggleActions: "play none none reset" }
+});
+
+safeSplit("[animate-name]", { types: "lines, words, chars", tagName: "span" });
+gsap.from("[animate-name] .word", {
+  y: "100%",
+  opacity: 0,
+  duration: 0.5,
+  ease: "power1.out",
+  stagger: 0.03,
+  scrollTrigger: { trigger: "[animate-name]", start: "top 90%", toggleActions: "play reset play reset" }
+});
+
+safeSplit("[animate-name-2]", { types: "lines, words, chars", tagName: "span" });
+gsap.from("[animate-name-2] .word", {
+  y: "100%",
+  opacity: 0,
+  duration: 0.5,
+  ease: "power1.out",
+  stagger: 0.03,
+  scrollTrigger: { trigger: "[animate-name-2]", start: "top 95%", toggleActions: "play reset play reset" }
+});
+
+safeSplit("[letter-fade]", { types: "lines, words, chars", tagName: "span" });
+gsap.fromTo("[letter-fade] .char", 
+  { y: "50%", opacity: 0 },
+  { y: "0%", opacity: 1, duration: 0.5, ease: "power1.out", stagger: 0.08,
+    scrollTrigger: { trigger: "[letter-fade]", start: "top 90%", toggleActions: "play reset play reset" }
   }
-});
+);
 
+// =====================
+// Other element animations
+// =====================
 
-window.addEventListener('load', () => {
-  // Split text into characters
-  const typeSplit = new SplitType('[animate-name]', {
-    types: 'lines, words, chars',
-    tagName: 'span'
-  });
-
-  // Animate characters on scroll
-  gsap.from('[animate-name] .word', {
-    y: '100%',
-    opacity: 0,
-    duration: 0.5,
-    ease: 'power1.out',
-    stagger: 0.03,
-    scrollTrigger: {
-      trigger: '[animate-name]',
-      start: 'top 90%',
-      toggleActions: 'play reset play reset',
-    }
-  });
-});
-
-window.addEventListener('load', () => {
-  // Split text into characters
-  const typeSplit = new SplitType('[animate-name-2]', {
-    types: 'lines, words, chars',
-    tagName: 'span'
-  });
-
-  // Animate characters on scroll
-  gsap.from('[animate-name-2] .word', {
-    y: '100%',
-    opacity: 0,
-    duration: 0.5,
-    ease: 'power1.out',
-    stagger: 0.03,
-    scrollTrigger: {
-      trigger: '[animate-name-2]',
-      start: 'top 95%',
-      toggleActions: 'play reset play reset',
-    }
-  });
-});
-
-window.addEventListener('load', () => {
-  // Split into characters
-  const typeSplit = new SplitType('[letter-fade]', {
-    types: 'lines, words, chars',
-    tagName: 'span'
-  });
-
-  // Scroll-synced character animation
-  gsap.fromTo('[letter-fade] .char',
-    { y: '50%', opacity: 0 },
-    {
-      y: '0%',
-      opacity: 1,
-      duration: 0.5,
-      ease: 'power1.out',
-      stagger: 0.08,
-      scrollTrigger: {
-        trigger: '[letter-fade]',
-        start: 'top 90%',
-        toggleActions: 'play reset play reset',
-      }
-    });
-});
-
-// GSAP blur-in effect for .logos at bottom, clear on scroll up
+// Logos blur in (.logos)
 gsap.set('.logos', { filter: 'blur(8px)', opacity: 0.5 });
-
 gsap.to('.logos', {
   filter: 'blur(0px)',
   opacity: 1,
   duration: 1,
   ease: 'power2.out',
-  scrollTrigger: {
-    trigger: '.logos',
-    start: 'top 95%',
-    end: 'top 90%',
-    scrub: true,
-  }
+  scrollTrigger: { trigger: '.logos', start: 'top 95%', end: 'top 90%', scrub: true }
 });
 
-
-
-// Cool appearance animation for .cta-btn using GSAP
+// CTA buttons (.cta-btn)
 gsap.from('.cta-btn', {
   y: 50,
   opacity: 0,
@@ -302,33 +234,21 @@ gsap.from('.cta-btn', {
   duration: 0.8,
   ease: 'back.out(1.7)',
   stagger: 0.15,
-  scrollTrigger: {
-    trigger: '.cta-btn',
-    start: 'top 90%',
-    toggleActions: 'play none none none',
-  }
+  scrollTrigger: { trigger: '.cta-btn', start: 'top 90%', toggleActions: 'play none none none' }
 });
 
-// Popup animation for each cert image with stagger using GSAP
-// Fix: Animate only visible .cert elements, and ensure images are loaded before animating
-
-// Wait for all images inside .cert-grid to load before running the animation
+// Certificates grid (.cert-grid .cert)
 function animateCerts() {
-  gsap.from(".cert-grid .cert:visible, .cert-grid .cert:not([style*='display: none'])", {
+  gsap.from(".cert-grid .cert", {
     scale: 0.7,
     opacity: 0,
     y: 40,
     duration: 0.7,
     ease: "back.out(1.7)",
     stagger: 0.15,
-    scrollTrigger: {
-      trigger: ".cert-grid",
-      start: "top 90%",
-      toggleActions: "play none none none"
-    }
+    scrollTrigger: { trigger: ".cert-grid", start: "top 90%", toggleActions: "play none none none" }
   });
 }
-
 const certGrid = document.querySelector('.cert-grid');
 if (certGrid) {
   const images = certGrid.querySelectorAll('img');
@@ -341,11 +261,11 @@ if (certGrid) {
         loaded++;
         if (loaded === images.length) animateCerts();
       } else {
-        img.addEventListener('load', () => {
+        img.addEventListener("load", () => {
           loaded++;
           if (loaded === images.length) animateCerts();
         });
-        img.addEventListener('error', () => {
+        img.addEventListener("error", () => {
           loaded++;
           if (loaded === images.length) animateCerts();
         });
@@ -354,15 +274,12 @@ if (certGrid) {
   }
 }
 
-// Word-by-word animation for .page-title headings using GSAP and SplitType
-
+// Page title (.page-title)
 document.addEventListener("DOMContentLoaded", function () {
   const pageTitle = document.querySelector('.page-title');
   if (pageTitle) {
-    // Use SplitType to split the heading into words
     if (typeof SplitType !== "undefined") {
       const split = new SplitType(pageTitle, { types: 'words' });
-      // Animate each word in sequence
       gsap.from(split.words, {
         opacity: 0,
         y: 30,
@@ -371,7 +288,6 @@ document.addEventListener("DOMContentLoaded", function () {
         ease: "power2.out"
       });
     } else {
-      // Fallback: Animate the heading as a whole if SplitType is not loaded
       gsap.from(pageTitle, {
         opacity: 0,
         y: 30,
@@ -382,55 +298,34 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Highlight shimmer animation for headings with .highlight-shimmer-animate
-
-
-
-
-// Word-by-word animation for headings with .page-title-animate class, on scroll
+// Page title on scroll (.page-title-animate)
 document.querySelectorAll('.page-title-animate').forEach((el) => {
   if (typeof SplitType !== "undefined") {
-    // Split the heading into words
     const split = new SplitType(el, { types: 'words' });
-    // Animate each word on scroll
     gsap.from(split.words, {
       opacity: 0,
       y: 30,
       duration: 0.7,
       stagger: 0.15,
       ease: "power2.out",
-      scrollTrigger: {
-        trigger: el,
-        start: "top 90%",
-        toggleActions: "play reset play reset", // reset when revisited
-        // once: true // removed to allow reset
-      }
+      scrollTrigger: { trigger: el, start: "top 90%", toggleActions: "play reset play reset" }
     });
   } else {
-    // Fallback: Animate the heading as a whole on scroll
     gsap.from(el, {
       opacity: 0,
       y: 30,
       duration: 0.7,
       ease: "power2.out",
-      scrollTrigger: {
-        trigger: el,
-        start: "top 90%",
-        toggleActions: "play reset play reset", // reset when revisited
-        // once: true // removed to allow reset
-      }
+      scrollTrigger: { trigger: el, start: "top 90%", toggleActions: "play reset play reset" }
     });
   }
 });
 
-
-// Animate number cards with GSAP: nice appearance, stagger, and reset on revisit
+// Number cards (.number-card)
 document.addEventListener("DOMContentLoaded", function () {
-  if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
-    // Select all number cards
-    const numberCards = document.querySelectorAll('.number-card');
-
-    // Animate each number card with stagger
+  const numberCards = document.querySelectorAll('.number-card');
+  if (numberCards.length > 0) {
+    const row = numberCards[0].closest('.row');
     gsap.from(numberCards, {
       opacity: 0,
       y: 50,
@@ -438,33 +333,18 @@ document.addEventListener("DOMContentLoaded", function () {
       duration: 0.7,
       stagger: 0.18,
       ease: "power3.out",
-      scrollTrigger: {
-        trigger: numberCards[0] ? numberCards[0].closest('.row') : null,
-        start: "top 85%",
-        toggleActions: "play reset play reset", // reset on revisit
-        // markers: true, // Uncomment for debugging
-      }
+      scrollTrigger: { trigger: row, start: "top 85%", toggleActions: "play reset play reset" }
     });
-
-    // Optionally, animate the images inside the cards for extra effect
-    const cardImages = document.querySelectorAll('.number-card img');
-    gsap.from(cardImages, {
+    gsap.from(document.querySelectorAll('.number-card img'), {
       opacity: 0,
       y: 30,
       scale: 0.8,
       duration: 0.5,
       stagger: 0.15,
       ease: "back.out(1.7)",
-      scrollTrigger: {
-        trigger: numberCards[0] ? numberCards[0].closest('.row') : null,
-        start: "top 85%",
-        toggleActions: "play reset play reset",
-      }
+      scrollTrigger: { trigger: row, start: "top 85%", toggleActions: "play reset play reset" }
     });
-
-    // Optionally, animate the numbers (h2) with a little delay for emphasis
-    const cardNumbers = document.querySelectorAll('.number-card h2');
-    gsap.from(cardNumbers, {
+    gsap.from(document.querySelectorAll('.number-card h2'), {
       opacity: 0,
       y: 20,
       scale: 1.2,
@@ -472,36 +352,9 @@ document.addEventListener("DOMContentLoaded", function () {
       stagger: 0.18,
       delay: 0.2,
       ease: "power2.out",
-      scrollTrigger: {
-        trigger: numberCards[0] ? numberCards[0].closest('.row') : null,
-        start: "top 85%",
-        toggleActions: "play reset play reset",
-      }
+      scrollTrigger: { trigger: row, start: "top 85%", toggleActions: "play reset play reset" }
     });
   }
 });
 
 
-// GSAP hover effect for images with class .gm
-
-// Animate foundation images with a nice appearance and stagger
-document.addEventListener("DOMContentLoaded", function () {
-  const foundationImages = document.querySelectorAll(
-    '.foundation-logo img'
-  );
-  if (foundationImages.length > 0 && typeof gsap !== "undefined") {
-    gsap.from(foundationImages, {
-      opacity: 0,
-      y: 50,
-      scale: 0.8,
-      duration: 0.8,
-      stagger: 0.18,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: foundationImages[0].closest('.row'),
-        start: "top 85%",
-        toggleActions: "play none none reset"
-      }
-    });
-  }
-});
