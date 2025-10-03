@@ -15,6 +15,32 @@
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon_io (1)/android-chrome-512x512.png">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
+    <style>
+        .language-switcher {
+            position: relative;
+            display: inline-block;
+        }
+
+        .language-switcher select {
+            background: transparent;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 5px 10px;
+            color: #333;
+            font-size: 10px;
+            cursor: pointer;
+        }
+
+        .language-switcher select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .language-switcher select option {
+            background: white;
+            color: #333;
+        }
+    </style>
 </head>
 
 <body>
@@ -51,10 +77,18 @@
             <div class="meta-header-right">
                 <ul class="navbar-nav-right d-none d-md-flex" style="list-style: none;">
                     <li class="nav-item ms-2    ">
-                        <a class="nav-link" aria-current="page" href="careers.html">Careers</a>
+                        <a class="nav-link" aria-current="page" href="careers.html" data-translate="careers">Careers</a>
                     </li>
                     <li class="nav-item ms-2 ">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.html" data-translate="contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <div class="language-switcher">
+                            <select id="languageSelect" onchange="changeLanguage(this.value)">
+                                <option value="en">English</option>
+                                <option value="id">Bahasa</option>
+                            </select>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -98,22 +132,22 @@
                     <li class="nav-item has-mega-menu">
 
                         <a class="nav-link d-flex justify-content-between" href="#"
-                            onclick="toggleMegaMenu(event)">Businesses
+                            onclick="toggleMegaMenu(event)" data-translate="businesses">Businesses
                             <span class="d-lg-none">+</span>
                         </a>
                         <div class="mega-menu">
                             <div class="mega-menu-content">
                                 <div class="mega-menu-column d-none d-lg-block">
-                                    <h4 onclick="toggleAccordion(this)">Businesses</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="businesses">Businesses</h4>
 
                                 </div>
                                 <div class="mega-menu-column">
-                                    <h4 onclick="toggleAccordion(this)">Business Verticals</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="business_verticals">Business Verticals</h4>
                                     <ul>
-                                        <li><a href="automotive-industrial-&-beyond.html">Automotive, Industrial &
+                                        <li><a href="automotive-industrial-&-beyond.html" data-translate="automotive_industrial_beyond">Automotive, Industrial &
                                                 Beyond</a></li>
-                                        <li><a href="toolsAndHardware.html">Tools & Hardware</a></li>
-                                        <li><a href="aerospace.html">Aerospace & Defence</a></li>
+                                        <li><a href="toolsAndHardware.html" data-translate="tools_hardware">Tools & Hardware</a></li>
+                                        <li><a href="aerospace.html" data-translate="aerospace_defence">Aerospace & Defence</a></li>
                                         <!-- <li><a href="#">Global Footprints</a></li>  -->
                                     </ul>
                                 </div>
@@ -209,22 +243,22 @@
 
                     <li class="nav-item has-mega-menu">
                         <a class="nav-link d-flex justify-content-between" href="people.html"
-                            onclick="toggleMegaMenu(event)">
+                            onclick="toggleMegaMenu(event)" data-translate="people">
                             People
                             <span class="d-lg-none">+</span>
                         </a>
                         <div class="mega-menu">
                             <div class="mega-menu-content">
                                 <div class="mega-menu-column d-none d-lg-block">
-                                    <h4 onclick="toggleAccordion(this)">People</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="people">People</h4>
 
                                 </div>
                                 <div class="mega-menu-column">
-                                    <h4 onclick="toggleAccordion(this)">People</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="people">People</h4>
                                     <ul>
-                                        <li><a href="people.html">Life at JK Maini</a></li>
+                                        <li><a href="people.html" data-translate="life_at_jk_maini">Life at JK Maini</a></li>
                                         <!-- <li><a href="#">Employee Testimonials</a></li> -->
-                                        <li><a href="people.html#employee-test">Employee Testimonials</a></li>
+                                        <li><a href="people.html#employee-test" data-translate="employee_testimonials">Employee Testimonials</a></li>
                                         <!-- <li><a href="#">Global Footprints</a></li>  -->
                                     </ul>
                                 </div>
@@ -250,24 +284,24 @@
                         </div>
                     </li>
                     <li class="nav-item has-mega-menu">
-                        <a class="nav-link d-flex justify-content-between" href="#" onclick="toggleMegaMenu(event)">
+                        <a class="nav-link d-flex justify-content-between" href="#" onclick="toggleMegaMenu(event)" data-translate="beyond_business">
                             Beyond Business
                             <span class="d-lg-none">+</span>
                         </a>
                         <div class="mega-menu">
                             <div class="mega-menu-content">
                                 <div class="mega-menu-column d-none d-lg-block">
-                                    <h4 onclick="toggleAccordion(this)">Beyond Business</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="beyond_business">Beyond Business</h4>
 
                                 </div>
                                 <div class="mega-menu-column">
-                                    <h4 onclick="toggleAccordion(this)">Purpose & Progress</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="purpose_progress">Purpose & Progress</h4>
                                     <ul>
-                                        <li><a href="sustainability.html">Sustainability, Certifications &
+                                        <li><a href="sustainability.html" data-translate="sustainability_certifications_governance">Sustainability, Certifications &
                                                 Governance</a></li>
-                                        <li><a href="awards.html">Awards</a></li>
-                                        <li><a href="csr.html">CSR</a></li>
-                                        <li><a href="events.html">News & Events</a></li>
+                                        <li><a href="awards.html" data-translate="awards">Awards</a></li>
+                                        <li><a href="csr.html" data-translate="csr">CSR</a></li>
+                                        <li><a href="events.html" data-translate="news_events">News & Events</a></li>
                                     </ul>
                                 </div>
                                 <!-- <div class="mega-menu-column">
@@ -292,12 +326,12 @@
                     </li>
 
                     <li class="nav-item has-mega-menu d-md-none">
-                        <a class="nav-link" href="careers.html">Career</a>
+                        <a class="nav-link" href="careers.html" data-translate="career">Career</a>
                     </li>
 
 
                     <li class="nav-item has-mega-menu d-md-none">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.html" data-translate="contact">Contact</a>
                     </li>
 
 
@@ -360,11 +394,11 @@
                                 class="videoMobile d-block d-md-none" src="./assets/images/17-mobile.webm"></video>
                             <div class="container swiper-content">
                                 <div class="col-md-10" data-aos="fade-up">
-                                    <h1 class="page-title">Powering Innovations That Move the World</h1>
-                                    <p class="page-title-animate">Delivering the strength behind innovation and
+                                    <h1 class="page-title" data-translate="hero-title">Powering Innovations That Move the World</h1>
+                                    <p class="page-title-animate" data-translate="hero-subtitle">Delivering the strength behind innovation and
                                         mobility.</p>
                                     <a style="text-decoration: none;" href="automotive-industrial-&-beyond.html">
-                                        <button class="download-button d-flex gap-2 align-items-center">
+                                        <button class="download-button d-flex gap-2 align-items-center" data-translate="explore-more">
                                             Explore More
 
                                         </button>
@@ -381,8 +415,8 @@
                                 class="videoMobile d-block d-md-none" src="./assets/images/19-mobile.webm"></video>
                             <div class="container swiper-content">
                                 <div class="col-md-10">
-                                    <h1>Precision in Motion</h1>
-                                    <p>Because every intricate detail drives performance forward.</p>
+                                    <h1 data-translate="precision-motion">Precision in Motion</h1>
+                                    <p data-translate="precision-motion-sub">Because every intricate detail drives performance forward.</p>
 
                                 </div>
                             </div>
@@ -395,8 +429,8 @@
                                 class="videoMobile d-block d-md-none" src="./assets/images/18-mobile.webm"></video>
                             <div class="container swiper-content">
                                 <div class="col-md-10">
-                                    <h1>Engineering Tomorrow, One Component at a Time</h1>
-                                    <p>Purposefully crafting the future with precision and intent.</p>
+                                    <h1 data-translate="engineering-tomorrow">Engineering Tomorrow, One Component at a Time</h1>
+                                    <p data-translate="engineering-tomorrow-sub">Purposefully crafting the future with precision and intent.</p>
 
                                 </div>
                             </div>
@@ -409,10 +443,10 @@
                                 class="videoMobile d-block d-md-none" src="./assets/images/20-mobile.webm"></video>
                             <div class="container swiper-content">
                                 <div class="col-md-10">
-                                    <h1>Imagined by minds, perfected by machines</h1>
-                                    <p>Where human expertise and advanced technology unite to achieve excellence.</p>
+                                    <h1 data-translate="imagined-perfected">Imagined by minds, perfected by machines</h1>
+                                    <p data-translate="imagined-perfected-sub">Where human expertise and advanced technology unite to achieve excellence.</p>
                                     <a style="text-decoration: none;" href="automotive-industrial-&-beyond.html">
-                                        <button class="download-button d-flex gap-2 align-items-center">
+                                        <button class="download-button d-flex gap-2 align-items-center" data-translate="navigate">
                                             Navigate
                                         </button>
                                     </a>
@@ -434,8 +468,8 @@
     <section class="business-verticals" data-aos="fade-up">
         <div class="container p-4 vertical-bg">
             <div class="text-center">
-                <h6 class="section-title" data-aos="fade-up">Our Business Verticals</h6>
-                <h4 class="heading-animate text-center">A strategic convergence of two business pillars, <br> delivering
+                <h6 class="section-title" data-aos="fade-up" data-translate="business-verticals">Our Business Verticals</h6>
+                <h4 class="heading-animate text-center" data-translate="business-verticals-sub">A strategic convergence of two business pillars, <br> delivering
                     precision, sparking innovation,
                     and powering future-ready growth</h4>
 
@@ -448,9 +482,9 @@
                                 <img src="./assets/images/JKMPTL.png" alt="JK Maini Precision Technology Logo"
                                     class="img-fluid" style="width: 50%;" data-aos="zoom-in">
                             </div>
-                            <h4 class="card-title mb-2">Automotive and Industrial Components</h4>
-                            <h6>Engineering Precision for Performance</h6>
-                            <p class="card-text text-center heading-animate">A trusted OEM supplier of precision
+                            <h4 class="card-title mb-2" data-translate="automotive-industrial">Automotive and Industrial Components</h4>
+                            <h6 data-translate="automotive-industrial-sub">Engineering Precision for Performance</h6>
+                            <p class="card-text text-center heading-animate" data-translate="automotive-industrial-desc">A trusted OEM supplier of precision
                                 automotive components, delivering
                                 high-performance parts built to precise engineering standards</p>
 
@@ -469,7 +503,7 @@
                                             </svg>
                                         </div>
                                     </div>
-                                    <span>Visit Site</span>
+                                    <span data-translate="visit-site">Visit Site</span>
                                 </button>
                             </a>
                         </div>
@@ -483,9 +517,9 @@
                                     alt="JK Maini Tools and Hardware Logo" class="img-fluid" style="width: 50%;"
                                     data-aos="zoom-in">
                             </div>
-                            <h4 class="card-title mb-2">Tools & Hardware</h4>
-                            <h6>Craftsmanship That Empowers Professionals</h6>
-                            <p class="card-text text-center heading-animate">We bring over seven decades of expertise in
+                                    <h4 class="card-title mb-2" data-translate="tools-hardware">Tools & Hardware</h4>
+                            <h6 data-translate="tools-hardware-sub">Craftsmanship That Empowers Professionals</h6>
+                            <p class="card-text text-center heading-animate" data-translate="tools-hardware-desc">We bring over seven decades of expertise in
                                 delivering high-quality
                                 tools and hardware solutions trusted by professionals across industries.</p>
 
@@ -505,7 +539,7 @@
                                             </svg>
                                         </div>
                                     </div>
-                                    <span>Visit Site</span>
+                                    <span data-translate="visit-site">Visit Site</span>
                                 </button>
                             </a>
                         </div>
@@ -584,8 +618,8 @@
         <div class="container">
             <div class="text-center" data-aos="fade-up">
                 <!-- <h6 class="section-title">Centre of Excellence</h6> -->
-                <h2 class="page-title-animate">Centres of Excellence</h2>
-                <p>Our Centre of Excellence is built on four key pillars that empower us to deliver precision,
+                <h2 class="page-title-animate" data-translate="centres-excellence">Centres of Excellence</h2>
+                <p data-translate="centres-excellence-desc">Our Centre of Excellence is built on four key pillars that empower us to deliver precision,
                     performance, and partnership at every stage of the manufacturing journey.</p>
             </div>
             <div class="row">
@@ -593,9 +627,9 @@
                     <div class="service-box text-center">
                         <img class="img-fluid mb-4" src="./assets/images/just-in-time.png" data-aos="zoom-in"
                             alt="Just-in-Time Fulfillment Warehouse">
-                        <h3 class="page-title-animate">Just-in-Time (JIT) Fulfillment
+                        <h3 class="page-title-animate" data-translate="jit-fulfillment">Just-in-Time (JIT) Fulfillment
                         </h3>
-                        <p class="heading-animate text-center">We have established strategically located warehouses in
+                        <p class="heading-animate text-center" data-translate="jit-fulfillment-desc">We have established strategically located warehouses in
                             the US and EU to meet our customers'
                             Just-in-Time (JIT) delivery requirements. This ensures reduced lead times, optimized
                             inventory, and seamless supply chain integration.</p>
@@ -607,8 +641,8 @@
                     <div class="service-box text-center">
                         <img class="img-fluid mb-4" src="./assets/images/traning&upskilling.png" data-aos="zoom-in"
                             alt="Training and Upskilling DOJO Center">
-                        <h3 class="page-title-animate">Training & Upskilling</h3>
-                        <p class="heading-animate text-center">Our DOJO Center provides both real-time and
+                        <h3 class="page-title-animate" data-translate="training-upskilling">Training & Upskilling</h3>
+                        <p class="heading-animate text-center" data-translate="training-upskilling-desc">Our DOJO Center provides both real-time and
                             simulation-based training for new workers. This
                             hands-on approach accelerates skill development, promotes safety, and ensures operational
                             excellence from day one on the shop floor.</p>
@@ -619,8 +653,8 @@
                     <div class="service-box text-center">
                         <img class="img-fluid mb-4" src="./assets/images/design-test-validation.png" data-aos="zoom-in"
                             alt="Design Test and Validation Center">
-                        <h3 class="page-title-animate">Design Test & Validation</h3>
-                        <p class="heading-animate text-center">Innovation starts at the drawing board. Our in-house
+                        <h3 class="page-title-animate" data-translate="design-test-validation">Design Test & Validation</h3>
+                        <p class="heading-animate text-center" data-translate="design-test-validation-desc">Innovation starts at the drawing board. Our in-house
                             design & development team partners
                             closely with clients to transform concepts into manufacturable products. We prioritize
                             performance, manufacturability, and cost-efficiency leveraging advanced tools &
@@ -632,8 +666,8 @@
                     <div class="service-box text-center">
                         <img class="img-fluid mb-4" src="./assets/images/robus-system.png" data-aos="zoom-in"
                             alt="Robust Digital Systems Infrastructure">
-                        <h3 class="page-title-animate">Robust Digital Systems</h3>
-                        <p class="heading-animate text-center">Our operations are powered by a strong backbone of
+                        <h3 class="page-title-animate" data-translate="robust-digital">Robust Digital Systems</h3>
+                        <p class="heading-animate text-center" data-translate="robust-digital-desc">Our operations are powered by a strong backbone of
                             digital infrastructure including advanced
                             ERP systems, AI-enabled tools, supply chain automation, and a well-integrated dealer and
                             distributor management platform. This ensures agility, visibility, and reliability across
@@ -649,8 +683,8 @@
     <section class="clients my-5">
         <div class="container" data-aos="fade-up">
             <div class="text-center">
-                <h6 class="section-title" data-aos="fade-up">Our Clients</h6>
-                <h2 class="page-title-animate">Meet Our Global Clients</h2>
+                <h6 class="section-title" data-aos="fade-up" data-translate="our-clients">Our Clients</h6>
+                <h2 class="page-title-animate" data-translate="meet-clients">Meet Our Global Clients</h2>
 
             </div>
         </div>
@@ -779,8 +813,8 @@
 
     <section class="testimonial-section">
         <div class="container text-center" data-aos="fade-up">
-            <h6 class="section-title" data-aos="fade-up">Our Clients Testimonials</h6>
-            <h2 class="page-title-animate">What Customers say about our services</h2>
+            <h6 class="section-title" data-aos="fade-up" data-translate="client-testimonials">Our Clients Testimonials</h6>
+            <h2 class="page-title-animate" data-tra nslate="what-customers-say">What Customers say about our services</h2>
         </div>
 
 
@@ -1604,7 +1638,7 @@
     <section class="plant-photos mb-5">
         <div class="container-fluid">
             <div class="text-center" data-aos="fade-up">
-                <h6 class="section-title ms-2" data-aos="fade-up">Our Plants</h6>
+                <h6 class="section-title ms-2" data-aos="fade-up" data-translate="our-plants">Our Plants</h6>
 
             </div>
             <div class="swiper plant-swiper" data-aos="fade-up">
@@ -1612,7 +1646,7 @@
                     <div class="swiper-slide">
                         <div class="container text-center">
                             <!-- <h6 class="section-title">Our Plants</h6> -->
-                            <h2 class="page-title-animate">Flex Plates, Ring Gears and Bearings Manufacturing Unit</h2>
+                            <h2 class="page-title-animate" data-translate="flex-plates-manufacturing">Flex Plates, Ring Gears and Bearings Manufacturing Unit</h2>
 
                         </div>
 
@@ -1667,7 +1701,7 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="container text-center">
-                            <h2>Precision Auto Components Manufacturing Unit</h2>
+                            <h2 data-translate="precision-auto-components">Precision Auto Components Manufacturing Unit</h2>
 
                         </div>
 
@@ -1723,7 +1757,7 @@
 
                     <div class="swiper-slide">
                         <div class="container text-center">
-                            <h2>Tools and Hardware Manufacturing Unit</h2>
+                            <h2 data-translate="tools-hardware-manufacturing">Tools and Hardware Manufacturing Unit</h2>
 
                         </div>
 
@@ -1794,8 +1828,8 @@
 
     <section class="global-presence mt-5" id="global-presence">
         <div class="text-center" data-aos="fade-up">
-            <h6 class="section-title" data-aos="fade-up">Global Presence</h6>
-            <h2 class="page-title-animate">Our Presence across the Globe</h2>
+            <h6 class="section-title" data-aos="fade-up" data-translate="global-presence">Global Presence</h6>
+            <h2 class="page-title-animate" data-translate="global-presence-sub">Our Presence across the Globe</h2>
         </div>
         <div class="img-container d-flex justify-content-center container-fluid" data-aos="zoom-in">
             <img src="./assets/images/Global-presence-map-auto.png"
@@ -1808,19 +1842,19 @@
                         <div class="legend-item text-center">
                             <img src="./assets/images/warehouse.png" alt="Warehouse icon">
 
-                            <h5 class="mt-3">Warehouse</h5>
+                            <h5 class="mt-3" data-translate="warehouse">Warehouse</h5>
                         </div>
                         <div class="legend-item text-center">
                             <img src="./assets/images/car.png" alt="Automotive icon">
-                            <h5 class="mt-3">Automotive</h5>
+                            <h5 class="mt-3" data-translate="automotive">Automotive</h5>
                         </div>
                         <div class="legend-item text-center">
                             <img src="./assets/images/wrench.png" alt="Tools & Hardware icon">
-                            <h5 class="mt-3">Tools & Hardware</h5>
+                            <h5 class="mt-3" data-translate="tools-hardware-legend">Tools & Hardware</h5>
                         </div>
                         <div class="legend-item text-center">
                             <img src="./assets/images/manufacturing-unit.png" alt="Manufacturing Unit icon">
-                            <h5 class="mt-3">Manufacturing Unit</h5>
+                            <h5 class="mt-3" data-translate="manufacturing-unit">Manufacturing Unit</h5>
                         </div>
                     </div>
                     <!-- <div class="col-md-6 d-flex gap-3 justify-content-around">
@@ -1835,8 +1869,8 @@
     <section class="explore-more mt-5 py-5">
         <div class="container">
             <div class="text-center" data-aos="fade-up">
-                <h6 class="section-title">Explore More</h6>
-                <h2>Discover how we engineer a better tomorrow through sustainable practices, meaningful careers, and
+                <h6 class="section-title" data-translate="explore-more-section">Explore More</h6>
+                <h2 data-translate="discover-how">Discover how we engineer a better tomorrow through sustainable practices, meaningful careers, and
                     stories that inspire innovation.</h2>
             </div>
             <div class="row mt-5">
@@ -1845,8 +1879,8 @@
                         <div>
                             <img src="./assets/images/sustainability.png" alt="Sustainability at JK Maini">
                             <div class="p-3">
-                                <h2>Sustainability</h2>
-                                <p class="heading-animate">At JK Maini, sustainability is built into every component we
+                                <h2 data-translate="sustainability">Sustainability</h2>
+                                <p class="heading-animate" data-translate="sustainability-desc">At JK Maini, sustainability is built into every component we
                                     craft. From resource
                                     efficiency to reduced environmental impact, we engineer with purpose—driving
                                     responsible
@@ -1855,9 +1889,9 @@
                             </div>
                         </div>
                         <div class="p-3">
-                            <a href="sustainability.html"><i class="fa-solid fa-arrow-right me-2"></i>Explore our
+                            <a href="sustainability.html"><i class="fa-solid fa-arrow-right me-2"></i><span data-translate="explore-sustainability">Explore our
                                 sustainability
-                                efforts</a>
+                                efforts</span></a>
                         </div>
                     </div>
                 </div>
@@ -1866,8 +1900,8 @@
                         <div>
                             <img src="./assets/images/careers.png" alt="Careers at JK Maini">
                             <div class="p-3">
-                                <h2>Career</h2>
-                                <p class="heading-animate">Join a workplace where precision fuels progress. We empower
+                                <h2 data-translate="career">Career</h2>
+                                <p class="heading-animate" data-translate="career-desc">Join a workplace where precision fuels progress. We empower
                                     talent across
                                     disciplines engineering, design, operations, and more—to drive excellence in
                                     manufacturing. We offer a
@@ -1878,8 +1912,8 @@
                             </div>
                         </div>
                         <div class="p-3">
-                            <a href="careers.html"><i class="fa-solid fa-arrow-right me-2"></i>Explore job
-                                opportunities</a>
+                            <a href="careers.html"><i class="fa-solid fa-arrow-right me-2"></i><span data-translate="explore-careers">Explore job
+                                opportunities</span></a>
                         </div>
                     </div>
                 </div>
@@ -1902,13 +1936,13 @@
 
     <section class="get-in-touch-section py-5 text-center" data-aos="fade-up">
         <div class="container">
-            <h6 class="section-title" data-aos="fade-up">Get in Touch</h6>
-            <h2 class="page-title-animate">Ready to Turn Your Manufacturing Vision into Reality?</h2>
-            <p class="mb-4 text-center heading-animate">Whether you're looking for custom-engineered solutions or want
+            <h6 class="section-title" data-aos="fade-up" data-translate="get-in-touch">Get in Touch</h6>
+            <h2 class="page-title-animate" data-translate="ready-to-turn">Ready to Turn Your Manufacturing Vision into Reality?</h2>
+            <p class="mb-4 text-center heading-animate" data-translate="whether-looking">Whether you're looking for custom-engineered solutions or want
                 to explore how our
                 capabilities align with your needs, we're here to help.</p>
             <div class="d-flex justify-content-center" data-aos="flip-right">
-                <button onclick="openPopup()" class="download-button d-flex gap-2 align-items-center">
+                <button onclick="openPopup()" class="download-button d-flex gap-2 align-items-center" data-translate="get-started">
                     Get Started
 
                 </button>
@@ -1920,23 +1954,23 @@
         <div class="right-form p-4">
             <span class="close-btn" onclick="closePopup()">&times;</span>
             <div>
-                <h2>Get in Touch</h2>
-                <p>Tell us what you're building — we'll show you how to get there, faster and smarter.
+                <h2 data-translate="get-in-touch">Get in Touch</h2>
+                <p data-translate="whether-looking">Tell us what you're building — we'll show you how to get there, faster and smarter.
                     Response guaranteed within 24 hours.</p>
             </div>
             <form action="" class="mt-4" id="contact-form">
                 <div class="form-group d-sm-flex gap-3 ">
-                    <input class="my-3" type="text" required placeholder="First Name" id="FirstName">
-                    <input class="my-3" type="text" required placeholder="Last Name" id="LastName">
+                    <input class="my-3" type="text" required placeholder="First Name" id="FirstName" data-translate-placeholder="first-name">
+                    <input class="my-3" type="text" required placeholder="Last Name" id="LastName" data-translate-placeholder="last-name">
                 </div>
                 <div class="form-group d-sm-flex gap-3 ">
-                    <input class="my-3" type="text" required placeholder="Company" id="Company">
-                    <input class="my-3" type="text" required placeholder="Email Address" id="EmailAddress">
+                    <input class="my-3" type="text" required placeholder="Company" id="Company" data-translate-placeholder="company">
+                    <input class="my-3" type="text" required placeholder="Email Address" id="EmailAddress" data-translate-placeholder="email-address">
                 </div>
                 <div class="form-group d-sm-flex gap-3 ">
-                    <input class="my-3" type="text" required placeholder="Phone No." id="PhoneNo">
+                    <input class="my-3" type="text" required placeholder="Phone No." id="PhoneNo" data-translate-placeholder="phone-no">
                     <select class="my-3 form-select" required id="Industry">
-                        <option value="" disabled selected>Select Industry</option>
+                        <option value="" disabled selected data-translate="select-industry">Select Industry</option>
                         <option value="Electric & hybrid">Electric & hybrid</option>
                         <option value="Passenger vehicles">Passenger vehicles</option>
                         <option value="Commercial vehicles">Commercial vehicles</option>
@@ -1959,16 +1993,16 @@
 
                 </div>
                 <div class="form-group">
-                    <textarea name="" placeholder="I want to know more about" id="Inquiry"></textarea>
+                    <textarea name="" placeholder="I want to know more about" id="Inquiry" data-translate-placeholder="inquiry"></textarea>
 
                 </div>
                 <div class="d-flex gap-3 align-items-start">
                     <input required type="checkbox" name="" id="T&C" class="w-auto mt-2">
                     <label class="w-auto" for="T&C">
-                        By checking this box, I consent to the processing of my personal data in accordance with Section
+                        <span data-translate="privacy-consent">By checking this box, I consent to the processing of my personal data in accordance with Section
                         4 (1)(a) of the Digital Personal Data Protection Act 2023, for the purposes outlined in the
-                        Privacy Policy. I have also read and agreed to the <a target="_blank"
-                            href="privacy-policy.html">Privacy Policy.</a>
+                        Privacy Policy. I have also read and agreed to the </span><a target="_blank"
+                            href="privacy-policy.html"><span data-translate="privacy-policy">Privacy Policy.</span></a>
                         <span class="text-danger">*</span>
                     </label>
                 </div>
@@ -1988,7 +2022,7 @@
                                 fill="currentColor"></path>
                         </svg>
                     </span>
-                    Submit
+                    <span data-translate="submit">Submit</span>
                 </button>
                 <div id="message" class="message"></div>
                 <div id="error" class="error"></div>
@@ -2009,9 +2043,9 @@
                         <lord-icon src="https://cdn.lordicon.com/bpmglzll.json" trigger="loop" colors="primary:#ffffff"
                             style="width:50px;height:50px">
                         </lord-icon>
-                        <h3>Our Offices</h3>
-                        <p>View our locations and find contact details to our nearest office.</p>
-                        <a href="contact.html#office-locations">Explore Our Locations</a>
+                        <h3 data-translate="our-offices">Our Offices</h3>
+                        <p data-translate="view-locations">View our locations and find contact details to our nearest office.</p>
+                        <a href="contact.html#office-locations" data-translate="explore-locations">Explore Our Locations</a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -2020,9 +2054,9 @@
                             colors="primary:#ffffff,secondary:#ebe6ef,tertiary:#e83a30,quaternary:#ffffff"
                             style="width:50px;height:50px">
                         </lord-icon>
-                        <h3>Drop us a Line</h3>
-                        <p>You can contact us by filling in this form any time you need professional support.</p>
-                        <a onclick="openPopup()" href="javascript:void(0)">Fill Our Form</a>
+                        <h3 data-translate="drop-us-line">Drop us a Line</h3>
+                        <p data-translate="contact-form">You can contact us by filling in this form any time you need professional support.</p>
+                        <a onclick="openPopup()" href="javascript:void(0)" data-translate="fill-form">Fill Our Form</a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -2031,10 +2065,10 @@
                             colors="primary:#ffffff,secondary:#ffffff,tertiary:#ffffff,quaternary:#ebe6ef"
                             style="width:50px;height:50px">
                         </lord-icon>
-                        <h3>Support</h3>
+                        <h3 data-translate="support">Support</h3>
                         <!-- <p>Learn more about us and find resources that will help you with all of our products</p> -->
-                        <p>Connect with us and know more about our products. Call our support executive.</p>
-                        <a href="tel:+912261527998">Call Now</a>
+                        <p data-translate="connect-support">Connect with us and know more about our products. Call our support executive.</p>
+                        <a href="tel:+912261527998" data-translate="call-now">Call Now</a>
                     </div>
                 </div>
             </div>
@@ -2071,7 +2105,7 @@
 
                 <!-- Quick Links Column -->
                 <div class="col-md-4 mb-4 quick-links">
-                    <h5 class="mb-3 section-title">Quick Links</h5>
+                    <h5 class="mb-3 section-title" data-translate="quick-links">Quick Links</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="about.html" class="text-decoration-none">About Us</a></li>
                         <li class="mb-2"><a target="_blank" href="https://jkmaini.com" class="text-decoration-none">JK
@@ -2088,7 +2122,7 @@
 
                 <!-- Contact Info Column -->
                 <div class="col-md-2 mb-4">
-                    <h5 class="mb-3 section-title">Company</h5>
+                    <h5 class="mb-3 section-title" data-translate="company-footer">Company</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2">
                             <a class="text-decoration-none text-black" href="privacy-policy.html">Privacy
@@ -2105,7 +2139,7 @@
                 <!-- Newsletter Column -->
                 <div class="col-md-2 mb-5">
                     <div class="social-links text-center text-md-start">
-                        <h5 class="mb-3 section-title">Follow us</h5>
+                        <h5 class="mb-3 section-title" data-translate="follow-us">Follow us</h5>
 
                         <!-- From Uiverse.io by javierBarroso -->
                         <div class="social-login-icons d-flex justify-content-center justify-content-md-start">
@@ -2199,7 +2233,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <p class="m-0">© 2025 JK Maini Precision Technology Limited (JKMPTL). All rights
+                        <p class="m-0" data-translate="copyright">© 2025 JK Maini Precision Technology Limited (JKMPTL). All rights
                             reserved.</p>
                     </div>
 
@@ -2215,6 +2249,7 @@
             </path>
         </svg>
     </button>
+    <!-- <h6>Created by Praful Shah | Probus Software</h6> -->
 
     <div id="cursor"></div>
     <!-- <div id="cursor-border"></div> -->
@@ -2308,6 +2343,298 @@
     <script src="animation.js"></script>
     <script src="script.js"></script>
 
+
+    <!-- Translation System -->
+    <script>
+        // Translation object with English and Indonesian text
+        const translations = {
+            en: {
+                // Navigation
+                "businesses": "Businesses",
+                "business_verticals": "Business Verticals",
+                "automotive_industrial_beyond": "Automotive, Industrial & Beyond",
+                "tools_hardware": "Tools & Hardware",
+                "aerospace_defence": "Aerospace & Defence",
+                "people": "People",
+                "life_at_jk_maini": "Life at JK Maini",
+                "employee_testimonials": "Employee Testimonials",
+                "beyond_business": "Beyond Business",
+                "purpose_progress": "Purpose & Progress",
+                "sustainability_certifications_governance": "Sustainability, Certifications & Governance",
+                "awards": "Awards",
+                "csr": "CSR",
+                "news_events": "News & Events",
+                "contact": "Contact",
+                "careers": "Careers",
+                
+                // Hero Section
+                "hero-title": "Powering Innovations That Move the World",
+                "hero-subtitle": "Delivering the strength behind innovation and mobility.",
+                "explore-more": "Explore More",
+                "precision-motion": "Precision in Motion",
+                "precision-motion-sub": "Because every intricate detail drives performance forward.",
+                "engineering-tomorrow": "Engineering Tomorrow, One Component at a Time",
+                "engineering-tomorrow-sub": "Purposefully crafting the future with precision and intent.",
+                "imagined-perfected": "Imagined by minds, perfected by machines",
+                "imagined-perfected-sub": "Where human expertise and advanced technology unite to achieve excellence.",
+                "navigate": "Navigate",
+                
+                // Business Verticals
+                "business-verticals": "Our Business Verticals",
+                "business-verticals-sub": "A strategic convergence of two business pillars, delivering precision, sparking innovation, and powering future-ready growth",
+                "automotive-industrial": "Automotive and Industrial Components",
+                "automotive-industrial-sub": "Engineering Precision for Performance",
+                "automotive-industrial-desc": "A trusted OEM supplier of precision automotive components, delivering high-performance parts built to precise engineering standards",
+                "visit-site": "Visit Site",
+                "tools-hardware": "Tools & Hardware",
+                "tools-hardware-sub": "Craftsmanship That Empowers Professionals",
+                "tools-hardware-desc": "We bring over seven decades of expertise in delivering high-quality tools and hardware solutions trusted by professionals across industries.",
+                
+                // Centres of Excellence
+                "centres-excellence": "Centres of Excellence",
+                "centres-excellence-desc": "Our Centre of Excellence is built on four key pillars that empower us to deliver precision, performance, and partnership at every stage of the manufacturing journey.",
+                "jit-fulfillment": "Just-in-Time (JIT) Fulfillment",
+                "jit-fulfillment-desc": "We have established strategically located warehouses in the US and EU to meet our customers' Just-in-Time (JIT) delivery requirements. This ensures reduced lead times, optimized inventory, and seamless supply chain integration.",
+                "training-upskilling": "Training & Upskilling",
+                "training-upskilling-desc": "Our DOJO Center provides both real-time and simulation-based training for new workers. This hands-on approach accelerates skill development, promotes safety, and ensures operational excellence from day one on the shop floor.",
+                "design-test-validation": "Design Test & Validation",
+                "design-test-validation-desc": "Innovation starts at the drawing board. Our in-house design & development team partners closely with clients to transform concepts into manufacturable products. We prioritize performance, manufacturability, and cost-efficiency leveraging advanced tools & engineering know-how to deliver production-ready components.",
+                "robust-digital": "Robust Digital Systems",
+                "robust-digital-desc": "Our operations are powered by a strong backbone of digital infrastructure including advanced ERP systems, AI-enabled tools, supply chain automation, and a well-integrated dealer and distributor management platform. This ensures agility, visibility, and reliability across all business functions.",
+                
+                // Clients Section
+                "our-clients": "Our Clients",
+                "meet-clients": "Meet Our Global Clients",
+                
+                // Testimonials
+                "client-testimonials": "Our Clients Testimonials",
+                "what-customers-say": "What Customers say about our services",
+                
+                // Plants
+                "our-plants": "Our Plants",
+                "flex-plates-manufacturing": "Flex Plates, Ring Gears and Bearings Manufacturing Unit",
+                "precision-auto-components": "Precision Auto Components Manufacturing Unit",
+                "tools-hardware-manufacturing": "Tools and Hardware Manufacturing Unit",
+                
+                // Global Presence
+                "global-presence": "Global Presence",
+                "global-presence-sub": "Our Presence across the Globe",
+                "warehouse": "Warehouse",
+                "automotive": "Automotive",
+                "tools-hardware-legend": "Tools & Hardware",
+                "manufacturing-unit": "Manufacturing Unit",
+                
+                // Explore More
+                "explore-more-section": "Explore More",
+                "discover-how": "Discover how we engineer a better tomorrow through sustainable practices, meaningful careers, and stories that inspire innovation.",
+                "sustainability": "Sustainability",
+                "sustainability-desc": "At JK Maini, sustainability is built into every component we craft. From resource efficiency to reduced environmental impact, we engineer with purpose—driving responsible innovation and a greener supply chain.",
+                "explore-sustainability": "Explore our sustainability efforts",
+                "career": "Career",
+                "career-desc": "Join a workplace where precision fuels progress. We empower talent across disciplines engineering, design, operations, and more—to drive excellence in manufacturing. We offer a career that's built to last.",
+                "explore-careers": "Explore job opportunities",
+                
+                // Get in Touch
+                "get-in-touch": "Get in Touch",
+                "ready-to-turn": "Ready to Turn Your Manufacturing Vision into Reality?",
+                "whether-looking": "Whether you're looking for custom-engineered solutions or want to explore how our capabilities align with your needs, we're here to help.",
+                "get-started": "Get Started",
+                
+                // Contact Footer
+                "our-offices": "Our Offices",
+                "view-locations": "View our locations and find contact details to our nearest office.",
+                "explore-locations": "Explore Our Locations",
+                "drop-us-line": "Drop us a Line",
+                "contact-form": "You can contact us by filling in this form any time you need professional support.",
+                "fill-form": "Fill Our Form",
+                "support": "Support",
+                "connect-support": "Connect with us and know more about our products. Call our support executive.",
+                "call-now": "Call Now",
+                
+                // Form Fields
+                "first-name": "First Name",
+                "last-name": "Last Name",
+                "company": "Company",
+                "email-address": "Email Address",
+                "phone-no": "Phone No.",
+                "select-industry": "Select Industry",
+                "inquiry": "I want to know more about",
+                "submit": "Submit",
+                "privacy-consent": "By checking this box, I consent to the processing of my personal data in accordance with Section 4 (1)(a) of the Digital Personal Data Protection Act 2023, for the purposes outlined in the Privacy Policy. I have also read and agreed to the",
+                "privacy-policy": "Privacy Policy.",
+                
+                // Footer
+                "quick-links": "Quick Links",
+                "company-footer": "Company",
+                "follow-us": "Follow us",
+                "copyright": "© 2025 JK Maini Precision Technology Limited (JKMPTL). All rights reserved."
+            },
+            id: {
+                // Navigation
+                "businesses": "Bisnis",
+                "business_verticals": "Vertikal Bisnis",
+                "automotive_industrial_beyond": "Otomotif, Industri & di Atas",
+                "tools_hardware": "Alat & Perangkat Keras",
+                "aerospace_defence": "Aerospace & Pertahanan",
+                "people": "Orang",
+                "life_at_jk_maini": "Di JK Maini",
+                "employee_testimonials": "Testimoni Karyawan",
+                "beyond_business": "di Atas Bisnis",
+                "purpose_progress": "Tujuan & Kemajuan",
+                "sustainability_certifications_governance": "Keberlanjutan, Sertifikasi & Pengawasan",
+                "awards": "Penghargaan",
+                "csr": "CSR",
+                "news_events": "Berita & Acara",
+                "contact": "Kontak",
+                "careers": "Karir",
+                
+                // Hero Section
+                "hero-title": "Menggerakkan Inovasi yang Menggerakkan Dunia",
+                "hero-subtitle": "Memberikan kekuatan di balik inovasi dan mobilitas.",
+                "explore-more": "Jelajahi Lebih Lanjut",
+                "precision-motion": "Presisi dalam Gerakan",
+                "precision-motion-sub": "Karena setiap detail rumit mendorong kinerja maju.",
+                "engineering-tomorrow": "Merekayasa Masa Depan, Satu Komponen pada Suatu Waktu",
+                "engineering-tomorrow-sub": "Dengan sengaja merancang masa depan dengan presisi dan niat.",
+                "imagined-perfected": "Dibayangkan oleh pikiran, disempurnakan oleh mesin",
+                "imagined-perfected-sub": "Di mana keahlian manusia dan teknologi canggih bersatu untuk mencapai keunggulan.",
+                "navigate": "Navigasi",
+                
+                // Business Verticals
+                "business-verticals": "Vertikal Bisnis Kami",
+                "business-verticals-sub": "Konvergensi strategis dari dua pilar bisnis, memberikan presisi, memicu inovasi, dan menggerakkan pertumbuhan yang siap menghadapi masa depan",
+                "automotive-industrial": "Komponen Otomotif dan Industri",
+                "automotive-industrial-sub": "Rekayasa Presisi untuk Kinerja",
+                "automotive-industrial-desc": "Pemasok OEM terpercaya untuk komponen otomotif presisi, memberikan suku cadang berkinerja tinggi yang dibangun sesuai standar rekayasa yang tepat",
+                "visit-site": "Kunjungi Situs",
+                "tools-hardware": "Alat & Perangkat Keras",
+                "tools-hardware-sub": "Kerajinan yang Memberdayakan Profesional",
+                "tools-hardware-desc": "Kami membawa lebih dari tujuh dekade keahlian dalam memberikan solusi alat dan perangkat keras berkualitas tinggi yang dipercaya oleh para profesional di berbagai industri.",
+                
+                // Centres of Excellence
+                "centres-excellence": "Pusat Keunggulan",
+                "centres-excellence-desc": "Pusat Keunggulan kami dibangun di atas empat pilar utama yang memberdayakan kami untuk memberikan presisi, kinerja, dan kemitraan di setiap tahap perjalanan manufaktur.",
+                "jit-fulfillment": "Pemenuhan Tepat Waktu (JIT)",
+                "jit-fulfillment-desc": "Kami telah membangun gudang yang berlokasi strategis di AS dan UE untuk memenuhi persyaratan pengiriman Tepat Waktu (JIT) pelanggan kami. Ini memastikan waktu tunggu berkurang, inventaris dioptimalkan, dan integrasi rantai pasok yang mulus.",
+                "training-upskilling": "Pelatihan & Peningkatan Keterampilan",
+                "training-upskilling-desc": "Pusat DOJO kami memberikan pelatihan berbasis real-time dan simulasi untuk pekerja baru. Pendekatan hands-on ini mempercepat pengembangan keterampilan, mempromosikan keselamatan, dan memastikan keunggulan operasional dari hari pertama di lantai produksi.",
+                "design-test-validation": "Desain, Tes & Validasi",
+                "design-test-validation-desc": "Inovasi dimulai dari papan gambar. Tim desain & pengembangan internal kami bermitra erat dengan klien untuk mengubah konsep menjadi produk yang dapat diproduksi. Kami memprioritaskan kinerja, kemampuan produksi, dan efisiensi biaya dengan memanfaatkan alat canggih & keahlian rekayasa untuk memberikan komponen siap produksi.",
+                "robust-digital": "Sistem Digital yang Kuat",
+                "robust-digital-desc": "Operasi kami didukung oleh infrastruktur digital yang kuat termasuk sistem ERP canggih, alat berbasis AI, otomatisasi rantai pasok, dan platform manajemen dealer dan distributor yang terintegrasi dengan baik. Ini memastikan kelincahan, visibilitas, dan keandalan di semua fungsi bisnis.",
+                
+                // Clients Section
+                "our-clients": "Klien Kami",
+                "meet-clients": "Temui Klien Global Kami",
+                
+                // Testimonials
+                "client-testimonials": "Testimoni Klien Kami",
+                "what-customers-say": "Apa yang pelanggan katakan tentang layanan kami",
+                
+                // Plants
+                "our-plants": "Pabrik Kami",
+                "flex-plates-manufacturing": "Unit Manufaktur Flex Plates, Ring Gears dan Bearings",
+                "precision-auto-components": "Unit Manufaktur Komponen Otomotif Presisi",
+                "tools-hardware-manufacturing": "Unit Manufaktur Alat dan Perangkat Keras",
+                
+                // Global Presence
+                "global-presence": "Kehadiran Global",
+                "global-presence-sub": "Kehadiran Kami di Seluruh Dunia",
+                "warehouse": "Gudang",
+                "automotive": "Otomotif",
+                "tools-hardware-legend": "Alat & Perangkat Keras",
+                "manufacturing-unit": "Unit Manufaktur",
+                
+                // Explore More
+                "explore-more-section": "Jelajahi Lebih Lanjut",
+                "discover-how": "Temukan bagaimana kami merekayasa masa depan yang lebih baik melalui praktik berkelanjutan, karir yang berarti, dan cerita yang menginspirasi inovasi.",
+                "sustainability": "Keberlanjutan",
+                "sustainability-desc": "Di JK Maini, keberlanjutan dibangun ke dalam setiap komponen yang kami buat. Dari efisiensi sumber daya hingga pengurangan dampak lingkungan, kami merekayasa dengan tujuan—mendorong inovasi yang bertanggung jawab dan rantai pasok yang lebih hijau.",
+                "explore-sustainability": "Jelajahi upaya keberlanjutan kami",
+                "career": "Karir",
+                "career-desc": "Bergabunglah dengan tempat kerja di mana presisi memicu kemajuan. Kami memberdayakan bakat di berbagai disiplin rekayasa, desain, operasi, dan lainnya—untuk mendorong keunggulan dalam manufaktur. Kami menawarkan karir yang dibangun untuk bertahan lama.",
+                "explore-careers": "Jelajahi peluang kerja",
+                
+                // Get in Touch
+                "get-in-touch": "Hubungi Kami",
+                "ready-to-turn": "Siap Mengubah Visi Manufaktur Anda Menjadi Kenyataan?",
+                "whether-looking": "Baik Anda mencari solusi rekayasa khusus atau ingin menjelajahi bagaimana kemampuan kami selaras dengan kebutuhan Anda, kami siap membantu.",
+                "get-started": "Mulai",
+                
+                // Contact Footer
+                "our-offices": "Kantor Kami",
+                "view-locations": "Lihat lokasi kami dan temukan detail kontak ke kantor terdekat kami.",
+                "explore-locations": "Jelajahi Lokasi Kami",
+                "drop-us-line": "Kirimkan Pesan",
+                "contact-form": "Anda dapat menghubungi kami dengan mengisi formulir ini kapan saja Anda membutuhkan dukungan profesional.",
+                "fill-form": "Isi Formulir Kami",
+                "support": "Dukungan",
+                "connect-support": "Hubungi kami dan ketahui lebih banyak tentang produk kami. Hubungi eksekutif dukungan kami.",
+                "call-now": "Hubungi Sekarang",
+                
+                // Form Fields
+                "first-name": "Nama Depan",
+                "last-name": "Nama Belakang",
+                "company": "Perusahaan",
+                "email-address": "Alamat Email",
+                "phone-no": "Nomor Telepon",
+                "select-industry": "Pilih Industri",
+                "inquiry": "Saya ingin tahu lebih banyak tentang",
+                "submit": "Kirim",
+                "privacy-consent": "Dengan mencentang kotak ini, saya menyetujui pemrosesan data pribadi saya sesuai dengan Bagian 4 (1)(a) dari Undang-Undang Perlindungan Data Pribadi Digital 2023, untuk tujuan yang diuraikan dalam Kebijakan Privasi. Saya juga telah membaca dan menyetujui",
+                "privacy-policy": "Kebijakan Privasi.",
+                
+                // Footer
+                "quick-links": "Tautan Cepat",
+                "company-footer": "Perusahaan",
+                "follow-us": "Ikuti kami",
+                "copyright": "© 2025 JK Maini Precision Technology Limited (JKMPTL). Semua hak dilindungi."
+            }
+        };
+
+        // Function to change language
+        function changeLanguage(language) {
+            // Store selected language in localStorage
+            localStorage.setItem('selectedLanguage', language);
+            
+            // Update all elements with data-translate attribute
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[language] && translations[language][key]) {
+                    element.textContent = translations[language][key];
+                }
+            });
+            
+            // Update elements with data-translate-placeholder attribute
+            const placeholderElements = document.querySelectorAll('[data-translate-placeholder]');
+            placeholderElements.forEach(element => {
+                const key = element.getAttribute('data-translate-placeholder');
+                if (translations[language] && translations[language][key]) {
+                    element.placeholder = translations[language][key];
+                }
+            });
+            
+            // Update page title based on language
+            if (language === 'id') {
+                document.title = "JK Maini Precision Technology Ltd.";
+            } else {
+                document.title = "JK Maini Precision Technology Ltd.";
+            }
+        }
+
+        // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+            const languageSelect = document.getElementById('languageSelect');
+            
+            if (languageSelect) {
+                languageSelect.value = savedLanguage;
+            }
+            
+            changeLanguage(savedLanguage);
+        });
+    </script>
 
     <script>
         var swiper = new Swiper(".test-swiper", {

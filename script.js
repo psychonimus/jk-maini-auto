@@ -147,93 +147,213 @@ function customEncodeURI(str) {
             .replace(/[ ]/g, '%20');
 }
 
-document.getElementById('contact-form').addEventListener('submit', function (e) {
+document.getElementById('contact-form').addEventListener("submit", function (e) {
+  debugger
+  e.preventDefault();
+  console.log('Form submitted');
+  const toEmail = document.getElementById('EmailAddress').value;
+  const firstname = document.getElementById('FirstName').value;
+  const lastname = document.getElementById('LastName').value;
+  const company = document.getElementById('Company').value;
+  const phoneno = document.getElementById('PhoneNo').value;
+  const industry = document.getElementById('Industry').value;
+  const email = document.getElementById('EmailAddress').value; // Same as toEmail
+  const inquiry = document.getElementById('Inquiry').value;
+  const resumeInput = document.getElementById('Attachment');
 
-    e.preventDefault();
-    console.log('Form submitted');
-    const toEmail = document.getElementById('EmailAddress').value;
-    const firstname = document.getElementById('FirstName').value;
-    const lastname = document.getElementById('LastName').value;
-    const company = document.getElementById('Company').value;
-    const phoneno = document.getElementById('PhoneNo').value;
-    const industry = document.getElementById('Industry').value;
-    const email = document.getElementById('EmailAddress').value; // Same as toEmail
-    const inquiry = document.getElementById('Inquiry').value;
-    const subject = "";
-    const htmlContent = "";
-    const messageDiv = document.getElementById('message');
-    const errorDiv = document.getElementById('error');
-  
-    messageDiv.style.display = 'none';
+  const subject = "";
+  const htmlContent = "";
+  const messageDiv = document.getElementById('message');
+  const errorDiv = document.getElementById('error');
+  let resume = null;
+  messageDiv.style.display = 'none';
   errorDiv.style.display = 'none';
   messageDiv.innerHTML = '';
   errorDiv.innerHTML = '';
-  
-    // messageDiv.textContent = '';
-    // errorDiv.textContent = '';
-  
-    //const url = 'http://172.21.4.191:80/api/email/sendemail?toEmail=' + customEncodeURI(toEmail) + //testing 
-  
-    const url = 'https://api.jkmaini.com/api/email/sendemail?firstname=' + customEncodeURI(firstname) +
-      '&lastname=' + customEncodeURI(lastname) +
-      '&company=' + customEncodeURI(company) +
-      '&phoneno=' + customEncodeURI(phoneno) +
-      '&industry=' + customEncodeURI(industry) +
-      '&email=' + customEncodeURI(email) +
-      '&inquiry=' + customEncodeURI(inquiry);
-  
-    console.log('URL:', url);
-    console.log('Payload:', JSON.stringify({ subject, htmlContent }));
-    // For proxy: fetch('/api/email/sendemail?toEmail=' + customEncodeURI(toEmail) + '&firstname=' + customEncodeURI(firstname) + '&lastname=' + customEncodeURI(lastname) + '&company=' + customEncodeURI(company) + '&phoneno=' + customEncodeURI(phoneno) + '&industry=' + customEncodeURI(industry) + '&email=' + customEncodeURI(email) + '&inquiry=' + customEncodeURI(inquiry), {
-    fetch(url, {
+  if (resumeInput != null) {
+      resume = resumeInput.files[0];
+
+  }
+
+  if (resume) {
+      console.log('Resume file:', resume.name, resume.size, resume.type);
+      const allowedTypes = [
+          'application/pdf',
+          'application/msword',
+          'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+      ];
+      const allowedExtensions = ['.pdf', '.doc', '.docx'];
+      const fileExtension = resume.name.substring(resume.name.lastIndexOf('.')).toLowerCase();
+      if (!allowedTypes.includes(resume.type) || !allowedExtensions.includes(fileExtension)) {
+          errorDiv.textContent = 'Invalid file type. Please upload a PDF, DOC, or DOCX file.';
+          console.error('Invalid file type:', resume.type, fileExtension);
+          return;
+      }
+  }
+  const formData = new FormData();
+  formData.append('firstname', firstname);
+  formData.append('lastname', lastname);
+  formData.append('company', company);
+  formData.append('phoneno', phoneno);
+  formData.append('industry', industry);
+  formData.append('email', email);
+  formData.append('inquiry', inquiry);
+  formData.append('resume', resume);
+
+  //const url = 'http://172.21.4.191:80/api/email/sendemail?toEmail=' + customEncodeURI(toEmail) + //testing 
+
+  const url = 'https://api.jkmaini.com/api/email/sendemail';
+
+  fetch(url, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ subject, htmlContent })
-      // If API supports plain-text:
-      // body: JSON.stringify({ subject, htmlContent, textContent: `Hello ${firstname}! Thank you for your inquiry about ${company} services. Visit us at https://probus.co.in. To unsubscribe, visit https://probus.co.in/unsubscribe. Probus, 123 Business Street, City, Country` })
-    })
+      body: formData
+  })
+
       .then(function (response) {
-        debugger
-        console.log('Response status:', response.status);
-        console.log('Response headers:', [...response.headers.entries()]);
-        console.log('Response ok:', response.ok);
-        return Promise.all([response.json(), response.ok, response.status]);
+          debugger
+          console.log('Response status:', response.status);
+          console.log('Response headers:', [...response.headers.entries()]);
+          console.log('Response ok:', response.ok);
+          return Promise.all([response.json(), response.ok, response.status]);
       })
       .then(function ([jsonData, ok, status]) {
-        debugger
-        console.log('Response data:', jsonData);
-        // if (ok) {
-        //     debugger
-        //     messageDiv.textContent = jsonData.message || 'Application submitted successfully.';
-        // } else {
-        //     errorDiv.textContent = jsonData.error || `Application not submitted successfully. Status: ${status}`;
-        // }
-        if (ok) {
-          messageDiv.style.display = 'block';
-          messageDiv.innerHTML = `<p>${jsonData.message || 'Response submitted successfully.'}</p>`;
-          errorDiv.style.display = 'none';
-          errorDiv.innerHTML = '';
-        } else {
-          errorDiv.style.display = 'block';
-          errorDiv.innerHTML = `<p>${jsonData.error || 'Responce not Submitted.'}</p>`;
-          messageDiv.style.display = 'none';
-          messageDiv.innerHTML = '';
-        }
+          debugger
+          console.log('Response data:', jsonData);
+
+          if (ok) {
+              debugger
+              messageDiv.style.display = 'block';
+              messageDiv.innerHTML = `<p>${jsonData.message || 'Response submitted successfully.'}</p>`;
+              errorDiv.style.display = 'none';
+              errorDiv.innerHTML = '';
+          } else {
+              debugger
+              errorDiv.style.display = 'block';
+              errorDiv.innerHTML = `<p>${jsonData.error || 'Responce not Submitted.'}</p>`;
+              messageDiv.style.display = 'none';
+              messageDiv.innerHTML = '';
+          }
       })
       .catch(function (error) {
-        console.error('Fetch error:', error);
-        // errorDiv.textContent = `Error: ${error.message}`;
-        errorDiv.style.display = 'block';
-        errorDiv.innerHTML = `<p>Error: ${error.message}</p>`;
-        messageDiv.style.display = 'none';
-        messageDiv.innerHTML = '';
+          debugger
+          console.error('Fetch error:', error);
+          // errorDiv.textContent = `Error: ${error.message}`;
+          errorDiv.style.display = 'block';
+          errorDiv.innerHTML = `<p>Error: ${error.message}</p>`;
+          messageDiv.style.display = 'none';
+          messageDiv.innerHTML = '';
       })
       .finally(function () {
-        document.getElementById('contact-form').reset();
-        console.log('Form cleared');
+          debugger
+          document.getElementById('contact-form').reset();
+          console.log('Form cleared');
       });
-  
 });
+
+
+document.getElementById('contact-formAttachment').addEventListener("submit", function (e) {
+  debugger
+  e.preventDefault();
+  console.log('Form submitted');
+  const toEmail = document.getElementById('txtEmailAddress').value;
+  const firstname = document.getElementById('txtFirstName').value;
+  const lastname = document.getElementById('txtLastName').value;
+  const company = document.getElementById('txtCompany').value;
+  const phoneno = document.getElementById('txtPhoneNo').value;
+  const industry = document.getElementById('ddlIndustry').value;
+  const email = document.getElementById('txtEmailAddress').value; // Same as toEmail
+  const inquiry = document.getElementById('txtInquiry').value;
+  const resumeInput = document.getElementById('fileAttachment');
+
+  const subject = "";
+  const htmlContent = "";
+  const messageDiv = document.getElementById('txtmessage');
+  const errorDiv = document.getElementById('txterror');
+  let resume = null;
+  messageDiv.style.display = 'none';
+  errorDiv.style.display = 'none';
+  messageDiv.innerHTML = '';
+  errorDiv.innerHTML = '';
+  if (resumeInput != null) {
+      resume = resumeInput.files[0];
+
+  }
+
+  if (resume) {
+      console.log('Resume file:', resume.name, resume.size, resume.type);
+      const allowedTypes = [
+          'application/pdf',
+          'application/msword',
+          'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+      ];
+      const allowedExtensions = ['.pdf', '.doc', '.docx'];
+      const fileExtension = resume.name.substring(resume.name.lastIndexOf('.')).toLowerCase();
+      if (!allowedTypes.includes(resume.type) || !allowedExtensions.includes(fileExtension)) {
+          errorDiv.textContent = 'Invalid file type. Please upload a PDF, DOC, or DOCX file.';
+          console.error('Invalid file type:', resume.type, fileExtension);
+          return;
+      }
+  }
+  const formData = new FormData();
+  formData.append('firstname', firstname);
+  formData.append('lastname', lastname);
+  formData.append('company', company);
+  formData.append('phoneno', phoneno);
+  formData.append('industry', industry);
+  formData.append('email', email);
+  formData.append('inquiry', inquiry);
+  formData.append('resume', resume);
+
+  //const url = 'http://172.21.4.191:80/api/email/sendemail?toEmail=' + customEncodeURI(toEmail) + //testing 
+
+  const url = 'https://api.jkmaini.com/api/email/sendemail';
+
+  fetch(url, {
+      method: 'POST',
+      body: formData
+  })
+
+      .then(function (response) {
+          debugger
+          console.log('Response status:', response.status);
+          console.log('Response headers:', [...response.headers.entries()]);
+          console.log('Response ok:', response.ok);
+          return Promise.all([response.json(), response.ok, response.status]);
+      })
+      .then(function ([jsonData, ok, status]) {
+          debugger
+          console.log('Response data:', jsonData);
+
+          if (ok) {
+              debugger
+              messageDiv.style.display = 'block';
+              messageDiv.innerHTML = `<p>${jsonData.message || 'Response submitted successfully.'}</p>`;
+              errorDiv.style.display = 'none';
+              errorDiv.innerHTML = '';
+          } else {
+              debugger
+              errorDiv.style.display = 'block';
+              errorDiv.innerHTML = `<p>${jsonData.error || 'Responce not Submitted.'}</p>`;
+              messageDiv.style.display = 'none';
+              messageDiv.innerHTML = '';
+          }
+      })
+      .catch(function (error) {
+          debugger
+          console.error('Fetch error:', error);
+          // errorDiv.textContent = `Error: ${error.message}`;
+          errorDiv.style.display = 'block';
+          errorDiv.innerHTML = `<p>Error: ${error.message}</p>`;
+          messageDiv.style.display = 'none';
+          messageDiv.innerHTML = '';
+      })
+      .finally(function () {
+          debugger
+          document.getElementById('contact-formAttachment').reset();
+          console.log('Form cleared');
+      });
+});
+
 
 
 document.getElementById('ApplyNow').addEventListener('submit', function (e) {
