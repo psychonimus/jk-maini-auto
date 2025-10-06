@@ -50,10 +50,18 @@
             <div class="meta-header-right">
                 <ul class="navbar-nav-right d-none d-md-flex" style="list-style: none;">
                     <li class="nav-item ms-2    ">
-                        <a class="nav-link" aria-current="page" href="careers.html">Careers</a>
+                        <a class="nav-link" aria-current="page" href="careers.html" data-translate="careers">Careers</a>
                     </li>
                     <li class="nav-item ms-2 ">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.html" data-translate="contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <div class="language-switcher">
+                            <select id="languageSelect" onchange="changeLanguage(this.value)">
+                                <option value="en">English</option>
+                                <option value="id">Bahasa</option>
+                            </select>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -99,43 +107,30 @@
                     <li class="nav-item has-mega-menu">
 
                         <a class="nav-link d-flex justify-content-between active" href="#"
-                            onclick="toggleMegaMenu(event)">Businesses
+                            onclick="toggleMegaMenu(event)" data-translate="businesses">Businesses
                             <span class="d-lg-none">+</span>
                         </a>
                         <div class="mega-menu">
                             <div class="mega-menu-content">
                                 <div class="mega-menu-column d-none d-lg-block">
-                                    <h4 onclick="toggleAccordion(this)">Businesses</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="businesses">Businesses</h4>
 
                                 </div>
                                 <div class="mega-menu-column">
-                                    <h4 onclick="toggleAccordion(this)">Business Verticals</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="business_verticals">Business
+                                        Verticals</h4>
                                     <ul>
-                                        <li><a href="automotive-industrial-&-beyond.html">Automotive, Industrial &
+                                        <li><a href="automotive-industrial-&-beyond.html"
+                                                data-translate="automotive_industrial_beyond">Automotive, Industrial &
                                                 Beyond</a></li>
-                                        <li><a href="toolsAndHardware.html">Tools & Hardware</a></li>
-                                        <li><a href="aerospace.html">Aerospace & Defence</a></li>
+                                        <li><a href="toolsAndHardware.html" data-translate="tools_hardware">Tools &
+                                                Hardware</a></li>
+                                        <li><a href="aerospace.html" data-translate="aerospace_defence">Aerospace &
+                                                Defence</a></li>
                                         <!-- <li><a href="#">Global Footprints</a></li>  -->
                                     </ul>
                                 </div>
-                                <!-- <div class="mega-menu-column">
-                                    <h4 onclick="toggleAccordion(this)">Sustainability</h4>
-                                    <ul>
-                                        <li><a href="#">Environmental Impact</a></li>
-                                        <li><a href="#">Social Responsibility</a></li>
-                                        <li><a href="#">Green Initiatives</a></li>
-                                        <li><a href="#">Reports</a></li>
-                                    </ul>
-                                </div>
-                                <div class="mega-menu-column">
-                                    <h4 onclick="toggleAccordion(this)">Recognition</h4>
-                                    <ul>
-                                        <li><a href="#">Awards</a></li>
-                                        <li><a href="#">Certifications</a></li>
-                                        <li><a href="#">Press Coverage</a></li>
-                                        <li><a href="#">Testimonials</a></li>
-                                    </ul>
-                                </div> -->
+
                             </div>
                         </div>
                     </li>
@@ -210,22 +205,24 @@
 
                     <li class="nav-item has-mega-menu">
                         <a class="nav-link d-flex justify-content-between" href="people.html"
-                            onclick="toggleMegaMenu(event)">
+                            onclick="toggleMegaMenu(event)" data-translate="people">
                             People
                             <span class="d-lg-none">+</span>
                         </a>
                         <div class="mega-menu">
                             <div class="mega-menu-content">
                                 <div class="mega-menu-column d-none d-lg-block">
-                                    <h4 onclick="toggleAccordion(this)">People</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="people">People</h4>
 
                                 </div>
                                 <div class="mega-menu-column">
-                                    <h4 onclick="toggleAccordion(this)">People</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="people">People</h4>
                                     <ul>
-                                        <li><a href="people.html">Life at JK Maini</a></li>
+                                        <li><a href="people.html" data-translate="life_at_jk_maini">Life at JK Maini</a>
+                                        </li>
                                         <!-- <li><a href="#">Employee Testimonials</a></li> -->
-                                        <li><a href="people.html#employee-test">Employee Testimonials</a></li>
+                                        <li><a href="people.html#employee-test"
+                                                data-translate="employee_testimonials">Employee Testimonials</a></li>
                                         <!-- <li><a href="#">Global Footprints</a></li>  -->
                                     </ul>
                                 </div>
@@ -251,24 +248,29 @@
                         </div>
                     </li>
                     <li class="nav-item has-mega-menu">
-                        <a class="nav-link d-flex justify-content-between" href="#" onclick="toggleMegaMenu(event)">
+                        <a class="nav-link d-flex justify-content-between" href="#" onclick="toggleMegaMenu(event)"
+                            data-translate="beyond_business">
                             Beyond Business
                             <span class="d-lg-none">+</span>
                         </a>
                         <div class="mega-menu">
                             <div class="mega-menu-content">
                                 <div class="mega-menu-column d-none d-lg-block">
-                                    <h4 onclick="toggleAccordion(this)">Beyond Business</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="beyond_business">Beyond Business
+                                    </h4>
 
                                 </div>
                                 <div class="mega-menu-column">
-                                    <h4 onclick="toggleAccordion(this)">Purpose & Progress</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="purpose_progress">Purpose &
+                                        Progress</h4>
                                     <ul>
-                                        <li><a href="sustainability.html">Sustainability, Certifications &
+                                        <li><a href="sustainability.html"
+                                                data-translate="sustainability_certifications_governance">Sustainability,
+                                                Certifications &
                                                 Governance</a></li>
-                                        <li><a href="awards.html">Awards</a></li>
-                                        <li><a href="csr.html">CSR</a></li>
-                                        <li><a href="events.html">News & Events</a></li>
+                                        <li><a href="awards.html" data-translate="awards">Awards</a></li>
+                                        <li><a href="csr.html" data-translate="csr">CSR</a></li>
+                                        <li><a href="events.html" data-translate="news_events">News & Events</a></li>
                                     </ul>
                                 </div>
                                 <!-- <div class="mega-menu-column">
@@ -293,12 +295,21 @@
                     </li>
 
                     <li class="nav-item has-mega-menu d-md-none">
-                        <a class="nav-link" href="careers.html">Career</a>
+                        <a class="nav-link" href="careers.html" data-translate="careers">Career</a>
                     </li>
 
 
                     <li class="nav-item has-mega-menu d-md-none">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.html" data-translate="contact">Contact</a>
+                    </li>
+
+                    <li class="nav-item  d-md-none">
+                        <div class="language-switcher">
+                            <select id="languageSelect" onchange="changeLanguage(this.value)">
+                                <option value="en">English</option>
+                                <option value="id">Bahasa</option>
+                            </select>
+                        </div>
                     </li>
 
                 </ul>
@@ -352,35 +363,29 @@
                         </div>
                         <div class="container swiper-content">
                             <div class="text-center mt-5" data-aos="fade-up">
-                                <h1 class="page-title">Aerospace Precision Engineering<br>
+                                <h1 class="page-title" data-translate="aerospace_title">
+                                    Aerospace Precision Engineering<br>
                                     Redefining Possibility in the Sky
                                 </h1>
-                                <!-- <p class="mt-3 mb-4">
-                                    At JK Maini, we specialize in precision manufacturing of high-quality automobile
-                                    parts that power the vehicles of today and tomorrow. Our advanced engineering
-                                    processes and rigorous quality control ensure every component meets the demanding
-                                    standards of the automotive industry.
-                                </p> -->
+                        
                                 <div class="d-flex justify-content-center">
                                     <a href="https://aero.jkmaini.com" target="_blank" style="text-decoration: none;">
                                         <button class="visit-site-btn mt-3" style="border: 2px solid #fff;">
                                             <div class="svg-wrapper-1">
                                                 <div class="svg-wrapper">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                        width="24" height="24">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                                                         <path fill="none" d="M0 0h24v24H0z"></path>
-                                                        <path fill="currentColor"
-                                                            d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
-                                                        </path>
+                                                        <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
                                                     </svg>
                                                 </div>
                                             </div>
-                                            <span>Visit Site</span>
+                                            <span data-translate="visit_site">Visit Site</span>
                                         </button>
                                     </a>
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
 
                 </div>
@@ -393,23 +398,20 @@
             <div class="row">
                 <div class="col-md-6" data-aos="fade-up">
                     <div class="header">
-                        <h6 class="section-title" data-aos="fade-up">JK Maini Global Aerospace</h6>
-                        <h2 class="page-title-animate">Our Aerospace Capabilities
-                        </h2>
-                        <p style="text-align: justify;" data-aos="fade-up">With over two decades of aerospace expertise,
-                            J K Maini is a trusted name in
+                        <h6 class="section-title" data-translate="aero_section_title">JK Maini Global Aerospace</h6>
+                        <h2 class="page-title-animate" data-translate="aero_page_title">Our Aerospace Capabilities</h2>
+                        <p style="text-align: justify;" data-translate="aero_paragraph_1">
+                            With over two decades of aerospace expertise, J K Maini is a trusted name in
                             precision-engineered components for global aerospace leaders. Backed by the legacy of
                             Raymond Group and the innovation-led heritage of Maini, we deliver high-complexity,
                             flight-critical parts with world-class quality, speed, and scale.
                         </p>
-                        <p style="text-align: justify;" data-aos="fade-up">From stator vanes and engine housings to flap
-                            tracks and fuel system assemblies, we engineer
-                            over1200+ SKUs across complex engine, structural, and system components. Our 10,500 sq. m.
+                        <p style="text-align: justify;" data-translate="aero_paragraph_2">
+                            From stator vanes and engine housings to flap tracks and fuel system assemblies, we engineer
+                            over 1200+ SKUs across complex engine, structural, and system components. Our 10,500 sq. m.
                             aerospace facility in Bengaluru is built to meet the rigorous standards of global OEMs and
                             Tier-1 suppliers.
                         </p>
-
-
                     </div>
                 </div>
                 <div class="col-md-6" data-aos="fade-up">
@@ -421,55 +423,58 @@
             </div>
         </div>
     </section>
+    
 
     <section class="facility-cards my-4" data-aos="fade-up">
         <div class="container">
             <div class="header">
-                <h4 class="section-title page-title-animate">Segments We Serve
+                <h4 class="section-title page-title-animate" data-translate="segments_section_title">
+                    Segments We Serve
                 </h4>
-
             </div>
             <div class="facilities-grid-2 mt-4">
                 <div class="facility-card" data-aos="flip-left">
                     <img src="./assets/images/commercial-aircraft.png"
                         alt="Commercial Aircraft Segment - Aerospace Manufacturing">
                     <div class="overlay">
-                        <div class="facility-title">Commercial Aircraft
+                        <div class="facility-title" data-translate="segment_commercial_aircraft">
+                            Commercial Aircraft
                         </div>
-                        <!-- <a href="#" class="explore-btn">Explore Now</a> -->
                     </div>
                 </div>
-
+    
                 <div class="facility-card" data-aos="flip-left">
                     <img src="./assets/images/business-jets.png" alt="Business Jets Segment - Aerospace Manufacturing">
                     <div class="overlay">
-                        <div class="facility-title">Business Jets </div>
-                        <!-- <a href="#" class="explore-btn">Explore Now</a> -->
+                        <div class="facility-title" data-translate="segment_business_jets">
+                            Business Jets
+                        </div>
                     </div>
                 </div>
-
+    
                 <div class="facility-card" data-aos="flip-left">
                     <img src="./assets/images/defence-aviation.png"
                         alt="Defence Aviation Segment - Aerospace Manufacturing">
                     <div class="overlay">
-                        <div class="facility-title">Defence Aviation </div>
-                        <!-- <a href="#" class="explore-btn">Explore Now</a> -->
+                        <div class="facility-title" data-translate="segment_defence_aviation">
+                            Defence Aviation
+                        </div>
                     </div>
                 </div>
-
+    
                 <div class="facility-card" data-aos="flip-left">
                     <img src="./assets/images/helicopter.png"
                         alt="Helicopter Programs Segment - Aerospace Manufacturing">
                     <div class="overlay">
-                        <div class="facility-title">Helicopter Programs </div>
-                        <!-- <a href="#" class="explore-btn">Explore Now</a> -->
+                        <div class="facility-title" data-translate="segment_helicopter_programs">
+                            Helicopter Programs
+                        </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </section>
+    
 
     <section class="numbers my-5 py-5">
         <div class="container">
@@ -478,243 +483,212 @@
                     <div class="number-card text-center">
                         <img class="mb-2" src="./assets/images/product-sku.png" alt="Product SKUs">
                         <h2>90%</h2>
-                        <p>Export-driven business</p>
+                        <p data-translate="export_driven_business">Export-driven business</p>
                     </div>
                     <div class="number-card text-center">
                         <img class="mb-2" src="./assets/images/ring-gears.png" alt="Ring Gears">
                         <h2>25+</h2>
-                        <p>Customers</p>
+                        <p data-translate="customers">Customers</p>
                     </div>
-
                 </div>
                 <div class="col-lg-6 d-flex justify-content-around mt-3 mt-lg-0 mx-lg-0 px-lg-0">
                     <div class="number-card text-center">
                         <img class="mb-2" src="./assets/images/total-plants.png" alt="plants">
                         <h2>2</h2>
-                        <p>Decades of experience</p>
+                        <p data-translate="decades_experience">Decades of experience</p>
                     </div>
                     <div class="number-card text-center">
                         <img class="mb-2" src="./assets/images/warehouse-colored.png" alt="warehouses">
                         <h2>1200+</h2>
-                        <p>SKUs</p>
+                        <p data-translate="skus">SKUs</p>
                     </div>
-
                 </div>
             </div>
-
         </div>
     </section>
+    
 
 
 
     <section class="automobile-segments" data-aos="fade-up">
         <div class="container">
             <div class="header text-center">
-                <h6 class="section-title" data-aos="fade-in">One Stop Solution for</h6>
-                <h2 class="page-title-animate">Aircraft Components</h2>
-                <p class="heading-animate">We manufacture a wide range of high-precision aircraft components that meet
-                    the rigorous standards of
-                    the aerospace industry. Our expertise includes the production of critical parts such as landing gear
-                    components, structural assemblies, engine mounts, and precision-machined fittings for both
-                    fixed-wing and rotary aircraft.</p>
-                <p class="heading-animate">With advanced manufacturing capabilities and strict quality controls, we
-                    supply OEMs and Tier-1
-                    aerospace suppliers with components engineered for safety, reliability, and performance. Our
-                    solutions support commercial, defence, and helicopter programs worldwide, helping our partners
-                    achieve new heights in aviation excellence.</p>
+                <h6 class="section-title" data-aos="fade-in" data-translate="one_stop_solution_for">One Stop Solution for</h6>
+                <h2 class="page-title-animate" data-translate="aircraft_components">Aircraft Components</h2>
+                <p class="heading-animate" data-translate="aircraft_intro_1">
+                    We manufacture a wide range of high-precision aircraft components that meet the rigorous standards of the aerospace industry. Our expertise includes the production of critical parts such as landing gear components, structural assemblies, engine mounts, and precision-machined fittings for both fixed-wing and rotary aircraft.
+                </p>
+                <p class="heading-animate" data-translate="aircraft_intro_2">
+                    With advanced manufacturing capabilities and strict quality controls, we supply OEMs and Tier-1 aerospace suppliers with components engineered for safety, reliability, and performance. Our solutions support commercial, defence, and helicopter programs worldwide, helping our partners achieve new heights in aviation excellence.
+                </p>
             </div>
+            
 
             <div class="tab-buttons mt-4">
-                <button class="tab-btn active" data-tab="complex-engine-parts">Complex Engine Parts</button>
-                <button class="tab-btn" data-tab="structure-parts">Structure Parts</button>
-                <button class="tab-btn" data-tab="system-parts">System Parts</button>
+                <button class="tab-btn active" data-tab="complex-engine-parts" data-translate="complex_engine_parts">Complex Engine Parts</button>
+                <button class="tab-btn" data-tab="structure-parts" data-translate="structure_parts">Structure Parts</button>
+                <button class="tab-btn" data-tab="system-parts" data-translate="system_parts">System Parts</button>
             </div>
+            
 
             <div class="tab-content my-5 active" id="complex-engine-parts">
                 <div class="d-flex flex-wrap justify-content-center">
+            
                     <div class="flex-basis-30 part-img-container overlay-container">
                         <img src="./assets/images/complex-engine-parts/Turbine _Vanes.png" class="img-fluid popup-image"
                             alt="Turbine Vanes - Complex Engine Part">
-                        <div class="custom-overlay-text">
-                            Turbine Vanes
-                        </div>
+                        <div class="custom-overlay-text" data-translate="turbine_vanes">Turbine Vanes</div>
                     </div>
-
+            
                     <div class="flex-basis-30 part-img-container overlay-container">
-                        <img src="./assets/images/complex-engine-parts/Housing Assembly.png"
-                            class="img-fluid popup-image" alt="Housing Assembly - Complex Engine Part">
-                        <div class="custom-overlay-text">
-                            Housing Assembly
-                        </div>
+                        <img src="./assets/images/complex-engine-parts/Housing Assembly.png" class="img-fluid popup-image"
+                            alt="Housing Assembly - Complex Engine Part">
+                        <div class="custom-overlay-text" data-translate="housing_assembly">Housing Assembly</div>
                     </div>
+            
                     <div class="flex-basis-30 part-img-container overlay-container">
-                        <img src="./assets/images/complex-engine-parts/Fuel System Cylinder.png"
-                            class="img-fluid popup-image" alt="Fuel System Cylinder - Complex Engine Part">
-                        <div class="custom-overlay-text">
-                            Fuel System Cylinder
-                        </div>
+                        <img src="./assets/images/complex-engine-parts/Fuel System Cylinder.png" class="img-fluid popup-image"
+                            alt="Fuel System Cylinder - Complex Engine Part">
+                        <div class="custom-overlay-text" data-translate="fuel_system_cylinder">Fuel System Cylinder</div>
                     </div>
+            
                     <div class="flex-basis-30 part-img-container overlay-container">
                         <img src="./assets/images/complex-engine-parts/Stator Blade.png" class="img-fluid popup-image"
                             alt="Stator Blade - Complex Engine Part">
-                        <div class="custom-overlay-text">
-                            Stator Blade
-                        </div>
+                        <div class="custom-overlay-text" data-translate="stator_blade">Stator Blade</div>
                     </div>
+            
                     <div class="flex-basis-30 part-img-container overlay-container">
-                        <img src="./assets/images/complex-engine-parts/Fuel Control Assembly.png"
-                            class="img-fluid popup-image" alt="Fuel Control Assembly - Complex Engine Part">
-                        <div class="custom-overlay-text">
-                            Fuel Control Assembly
-                        </div>
+                        <img src="./assets/images/complex-engine-parts/Fuel Control Assembly.png" class="img-fluid popup-image"
+                            alt="Fuel Control Assembly - Complex Engine Part">
+                        <div class="custom-overlay-text" data-translate="fuel_control_assembly">Fuel Control Assembly</div>
                     </div>
+            
                     <div class="flex-basis-30 part-img-container overlay-container">
-                        <img src="./assets/images/complex-engine-parts/Body insert Assembly.png"
-                            class="img-fluid popup-image" alt="Body Insert Assembly - Complex Engine Part">
-                        <div class="custom-overlay-text">
-                            Body insert Assembly
-                        </div>
+                        <img src="./assets/images/complex-engine-parts/Body insert Assembly.png" class="img-fluid popup-image"
+                            alt="Body Insert Assembly - Complex Engine Part">
+                        <div class="custom-overlay-text" data-translate="body_insert_assembly">Body Insert Assembly</div>
                     </div>
+            
                     <div class="flex-basis-30 part-img-container overlay-container">
                         <img src="./assets/images/complex-engine-parts/Lever Throttle.png" class="img-fluid popup-image"
                             alt="Lever Throttle - Complex Engine Part">
-                        <div class="custom-overlay-text">
-                            Lever Throttle
-                        </div>
+                        <div class="custom-overlay-text" data-translate="lever_throttle">Lever Throttle</div>
                     </div>
+            
                     <div class="flex-basis-30 part-img-container overlay-container">
                         <img src="./assets/images/complex-engine-parts/TGB Mount.png" class="img-fluid popup-image"
                             alt="TGB Mount - Complex Engine Part">
-                        <div class="custom-overlay-text">
-                            TGB Mount
-
-                        </div>
+                        <div class="custom-overlay-text" data-translate="tgb_mount">TGB Mount</div>
                     </div>
+            
                     <div class="flex-basis-30 part-img-container overlay-container">
                         <img src="./assets/images/complex-engine-parts/Inlet.png" class="img-fluid popup-image"
                             alt="Inlet - Complex Engine Part">
-                        <div class="custom-overlay-text">
-                            Inlet
-                        </div>
+                        <div class="custom-overlay-text" data-translate="inlet">Inlet</div>
                     </div>
+            
                     <div class="flex-basis-30 part-img-container overlay-container">
-                        <img src="./assets/images/complex-engine-parts/Gear Train  support plate.png"
-                            class="img-fluid popup-image" alt="Gear Train Support Plate - Complex Engine Part">
-                        <div class="custom-overlay-text">
-                            Gear Train support plate
-                        </div>
+                        <img src="./assets/images/complex-engine-parts/Gear Train  support plate.png" class="img-fluid popup-image"
+                            alt="Gear Train Support Plate - Complex Engine Part">
+                        <div class="custom-overlay-text" data-translate="gear_train_support_plate">Gear Train Support Plate</div>
                     </div>
+            
                     <div class="flex-basis-30 part-img-container overlay-container">
-                        <img src="./assets/images/complex-engine-parts/Tie Rod Assembly.png"
-                            class="img-fluid popup-image" alt="Tie Rod Assembly - Complex Engine Part">
-                        <div class="custom-overlay-text">
-                            Tie Rod Assembly
-
-                        </div>
+                        <img src="./assets/images/complex-engine-parts/Tie Rod Assembly.png" class="img-fluid popup-image"
+                            alt="Tie Rod Assembly - Complex Engine Part">
+                        <div class="custom-overlay-text" data-translate="tie_rod_assembly">Tie Rod Assembly</div>
                     </div>
+            
                     <div class="flex-basis-30 part-img-container overlay-container">
                         <img src="./assets/images/complex-engine-parts/Mount Bracket.png" class="img-fluid popup-image"
                             alt="Mount Bracket - Complex Engine Part">
-                        <div class="custom-overlay-text">
-                            Mount Bracket
-                        </div>
+                        <div class="custom-overlay-text" data-translate="mount_bracket">Mount Bracket</div>
                     </div>
-
+            
                 </div>
             </div>
+            
 
             <div class="tab-content my-5" id="structure-parts">
                 <div class="d-flex flex-wrap justify-content-center">
+            
                     <div class="flex-basis-30 part-img-container overlay-container">
                         <img src="./assets/images/structure-parts/Swinging Links.png" class="img-fluid popup-image"
                             alt="Swinging Links - Structure Part">
-                        <div class="custom-overlay-text">
-                            Swinging Links
-                        </div>
+                        <div class="custom-overlay-text" data-translate="swinging_links">Swinging Links</div>
                     </div>
-
+            
                     <div class="flex-basis-30 part-img-container overlay-container">
-                        <img src="./assets/images/structure-parts/Tank Drag Strut Assembly.png"
-                            class="img-fluid popup-image" alt="Tank Drag Strut Assembly - Structure Part">
-                        <div class="custom-overlay-text">
-                            Tank Drag Strut Assembly
-                        </div>
+                        <img src="./assets/images/structure-parts/Tank Drag Strut Assembly.png" class="img-fluid popup-image"
+                            alt="Tank Drag Strut Assembly - Structure Part">
+                        <div class="custom-overlay-text" data-translate="tank_drag_strut_assembly">Tank Drag Strut Assembly</div>
                     </div>
+            
                     <div class="flex-basis-30 part-img-container overlay-container">
                         <img src="./assets/images/structure-parts/Hook Assembly.png" class="img-fluid popup-image"
                             alt="Hook Assembly - Structure Part">
-                        <div class="custom-overlay-text">
-                            Hook Assembly
-                        </div>
+                        <div class="custom-overlay-text" data-translate="hook_assembly">Hook Assembly</div>
                     </div>
+            
                     <div class="flex-basis-30 part-img-container overlay-container">
                         <img src="./assets/images/structure-parts/Rings.png" class="img-fluid popup-image"
                             alt="Rings - Structure Part">
-                        <div class="custom-overlay-text">
-                            Rings
-                        </div>
+                        <div class="custom-overlay-text" data-translate="rings">Rings</div>
                     </div>
+            
                     <div class="flex-basis-30 part-img-container overlay-container">
                         <img src="./assets/images/structure-parts/Pylon.png" class="img-fluid popup-image"
                             alt="Pylon - Structure Part">
-                        <div class="custom-overlay-text">
-                            Paylon
-                        </div>
+                        <div class="custom-overlay-text" data-translate="pylon">Pylon</div>
                     </div>
-
-
+            
                 </div>
             </div>
+            
 
             <div class="tab-content my-5" id="system-parts">
                 <div class="d-flex flex-wrap justify-content-center">
+            
                     <div class="flex-basis-30 part-img-container overlay-container">
                         <img src="./assets/images/system-parts/Manifolds.png" class="img-fluid popup-image"
                             alt="Manifolds - System Part">
-                        <div class="custom-overlay-text">
-                            Manifolds
-                        </div>
+                        <div class="custom-overlay-text" data-translate="manifolds">Manifolds</div>
                     </div>
-
+            
                     <div class="flex-basis-30 part-img-container overlay-container">
                         <img src="./assets/images/system-parts/Clevis.png" class="img-fluid popup-image"
                             alt="Clevis - System Part">
-                        <div class="custom-overlay-text">
-                            Clevis
-                        </div>
+                        <div class="custom-overlay-text" data-translate="clevis">Clevis</div>
                     </div>
+            
                     <div class="flex-basis-30 part-img-container overlay-container">
                         <img src="./assets/images/system-parts/Flange Tube.png" class="img-fluid popup-image"
                             alt="Flange Tube - System Part">
-                        <div class="custom-overlay-text">
-                            Flange Tube
-                        </div>
+                        <div class="custom-overlay-text" data-translate="flange_tube">Flange Tube</div>
                     </div>
+            
                     <div class="flex-basis-30 part-img-container overlay-container">
                         <img src="./assets/images/system-parts/TIR Holder.png" class="img-fluid popup-image"
                             alt="TIR Holder - System Part">
-                        <div class="custom-overlay-text">
-                            TIR Holder
-                        </div>
+                        <div class="custom-overlay-text" data-translate="tir_holder">TIR Holder</div>
                     </div>
+            
                     <div class="flex-basis-30 part-img-container overlay-container">
-                        <img src="./assets/images/system-parts/Lighting System Housings.png"
-                            class="img-fluid popup-image" alt="Lighting System Housings - System Part">
-                        <div class="custom-overlay-text">
-                            Lighting System Housings
-                        </div>
+                        <img src="./assets/images/system-parts/Lighting System Housings.png" class="img-fluid popup-image"
+                            alt="Lighting System Housings - System Part">
+                        <div class="custom-overlay-text" data-translate="lighting_system_housings">Lighting System Housings</div>
                     </div>
+            
                     <div class="flex-basis-30 part-img-container overlay-container">
                         <img src="./assets/images/system-parts/Housing cover.png" class="img-fluid popup-image"
                             alt="Housing Cover - System Part">
-                        <div class="custom-overlay-text">
-                            Housing cover
-                        </div>
+                        <div class="custom-overlay-text" data-translate="housing_cover">Housing Cover</div>
                     </div>
-
-
+            
                 </div>
             </div>
+            
         </div>
     </section>
 
@@ -722,23 +696,29 @@
         <div class="right-form p-4">
             <span class="close-btn" onclick="closePopup()">&times;</span>
             <div>
-                <h2>Get in Touch</h2>
-                <p>Tell us what you’re building — we’ll show you how to get there, faster and smarter.
+                <h2 data-translate="get-in-touch">Get in Touch</h2>
+                <p data-translate="whether-looking">Tell us what you're building — we'll show you how to get there,
+                    faster and smarter.
                     Response guaranteed within 24 hours.</p>
             </div>
             <form action="" class="mt-4" id="contact-form">
                 <div class="form-group d-sm-flex gap-3 ">
-                    <input class="my-3" type="text" required placeholder="First Name" id="FirstName">
-                    <input class="my-3" type="text" required placeholder="Last Name" id="LastName">
+                    <input class="my-3" type="text" required placeholder="First Name" id="FirstName"
+                        data-translate-placeholder="first-name">
+                    <input class="my-3" type="text" required placeholder="Last Name" id="LastName"
+                        data-translate-placeholder="last-name">
                 </div>
                 <div class="form-group d-sm-flex gap-3 ">
-                    <input class="my-3" type="text" required placeholder="Company" id="Company">
-                    <input class="my-3" type="text" required placeholder="Email Address" id="EmailAddress">
+                    <input class="my-3" type="text" required placeholder="Company" id="Company"
+                        data-translate-placeholder="company">
+                    <input class="my-3" type="text" required placeholder="Email Address" id="EmailAddress"
+                        data-translate-placeholder="email-address">
                 </div>
                 <div class="form-group d-sm-flex gap-3 ">
-                    <input class="my-3" type="text" required placeholder="Phone No." id="PhoneNo">
+                    <input class="my-3" type="text" required placeholder="Phone No." id="PhoneNo"
+                        data-translate-placeholder="phone-no">
                     <select class="my-3 form-select" required id="Industry">
-                        <option value="" disabled selected>Select Industry</option>
+                        <option value="" disabled selected data-translate="select-industry">Select Industry</option>
                         <option value="Electric & hybrid">Electric & hybrid</option>
                         <option value="Passenger vehicles">Passenger vehicles</option>
                         <option value="Commercial vehicles">Commercial vehicles</option>
@@ -761,16 +741,18 @@
 
                 </div>
                 <div class="form-group">
-                    <textarea name="" placeholder="I want to know more about" id="Inquiry"></textarea>
+                    <textarea name="" placeholder="I want to know more about" id="Inquiry"
+                        data-translate-placeholder="inquiry"></textarea>
 
                 </div>
                 <div class="d-flex gap-3 align-items-start">
                     <input required type="checkbox" name="" id="T&C" class="w-auto mt-2">
                     <label class="w-auto" for="T&C">
-                        By checking this box, I consent to the processing of my personal data in accordance with Section
-                        4 (1)(a) of the Digital Personal Data Protection Act 2023, for the purposes outlined in the
-                        Privacy Policy. I have also read and agreed to the <a target="_blank"
-                            href="privacy-policy.html">Privacy Policy.</a>
+                        <span data-translate="privacy-consent">By checking this box, I consent to the processing of my
+                            personal data in accordance with Section
+                            4 (1)(a) of the Digital Personal Data Protection Act 2023, for the purposes outlined in the
+                            Privacy Policy. I have also read and agreed to the </span><a target="_blank"
+                            href="privacy-policy.html"><span data-translate="privacy-policy">Privacy Policy.</span></a>
                         <span class="text-danger">*</span>
                     </label>
                 </div>
@@ -790,7 +772,7 @@
                                 fill="currentColor"></path>
                         </svg>
                     </span>
-                    Submit
+                    <span data-translate="submit">Submit</span>
                 </button>
                 <div id="message" class="message"></div>
                 <div id="error" class="error"></div>
@@ -818,9 +800,11 @@
                         <lord-icon src="https://cdn.lordicon.com/bpmglzll.json" trigger="loop" colors="primary:#ffffff"
                             style="width:50px;height:50px">
                         </lord-icon>
-                        <h3>Our Offices</h3>
-                        <p>View our locations and find contact details to our nearest office.</p>
-                        <a href="contact.html#office-locations">Explore Our Locations</a>
+                        <h3 data-translate="our-offices">Our Offices</h3>
+                        <p data-translate="view-locations">View our locations and find contact details to our nearest
+                            office.</p>
+                        <a href="contact.html#office-locations" data-translate="explore-locations">Explore Our
+                            Locations</a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -829,9 +813,10 @@
                             colors="primary:#ffffff,secondary:#ebe6ef,tertiary:#e83a30,quaternary:#ffffff"
                             style="width:50px;height:50px">
                         </lord-icon>
-                        <h3>Drop us a Line</h3>
-                        <p>You can contact us by filling in this form any time you need professional support.</p>
-                        <a onclick="openPopup()" href="javascript:void(0)">Fill Our Form</a>
+                        <h3 data-translate="drop-us-line">Drop us a Line</h3>
+                        <p data-translate="contact-form">You can contact us by filling in this form any time you need
+                            professional support.</p>
+                        <a onclick="openPopup()" href="javascript:void(0)" data-translate="fill-form">Fill Our Form</a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -840,10 +825,11 @@
                             colors="primary:#ffffff,secondary:#ffffff,tertiary:#ffffff,quaternary:#ebe6ef"
                             style="width:50px;height:50px">
                         </lord-icon>
-                        <h3>Support</h3>
+                        <h3 data-translate="support">Support</h3>
                         <!-- <p>Learn more about us and find resources that will help you with all of our products</p> -->
-                        <p>Connect with us and know more about our products. Call our support executive.</p>
-                        <a href="tel:+912261527998">Call Now</a>
+                        <p data-translate="connect-support">Connect with us and know more about our products. Call our
+                            support executive.</p>
+                        <a href="tel:+912261527998" data-translate="call-now">Call Now</a>
                     </div>
                 </div>
             </div>
@@ -1008,7 +994,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <p class="m-0">© 2025 JK Maini Precision Technology Limited (JKMPTL). All rights
+                        <p class="m-0" data-translate="copyright">© 2025 JK Maini Precision Technology Limited (JKMPTL).
+                            All rights
                             reserved.</p>
                     </div>
 
@@ -1148,6 +1135,323 @@
     <script src="https://unpkg.com/lenis@1.3.7/dist/lenis.min.js"></script>
     <script src="animation.js"></script>
     <script src="script.js"></script>
+
+
+    <script>
+        // Translation object with English and Indonesian text
+        const translations = {
+            en: {
+                // Navigation
+                "businesses": "Businesses",
+                "business_verticals": "Business Verticals",
+                "automotive_industrial_beyond": "Automotive, Industrial & Beyond",
+                "tools_hardware": "Tools & Hardware",
+                "aerospace_defence": "Aerospace & Defence",
+                "people": "People",
+                "life_at_jk_maini": "Life at JK Maini",
+                "employee_testimonials": "Employee Testimonials",
+                "beyond_business": "Beyond Business",
+                "purpose_progress": "Purpose & Progress",
+                "sustainability_certifications_governance": "Sustainability, Certifications & Governance",
+                "awards": "Awards",
+                "csr": "CSR",
+                "news_events": "News & Events",
+                "contact": "Contact",
+                "careers": "Careers",
+
+                //hero-section
+                "aerospace_title": "Aerospace Precision Engineering Redefining Possibility in the Sky",
+                "visit_site": "Visit Site",
+                
+                //about-section
+                "aero_section_title": "JK Maini Global Aerospace",
+                "aero_page_title": "Our Aerospace Capabilities",
+                "aero_paragraph_1": "With over two decades of aerospace expertise, J K Maini is a trusted name in precision-engineered components for global aerospace leaders. Backed by the legacy of Raymond Group and the innovation-led heritage of Maini, we deliver high-complexity, flight-critical parts with world-class quality, speed, and scale.",
+                "aero_paragraph_2": "From stator vanes and engine housings to flap tracks and fuel system assemblies, we engineer over 1200+ SKUs across complex engine, structural, and system components. Our 10,500 sq. m. aerospace facility in Bengaluru is built to meet the rigorous standards of global OEMs and Tier-1 suppliers.",
+
+                //cards-section
+                "segments_section_title": "Segments We Serve",
+                "segment_commercial_aircraft": "Commercial Aircraft",
+                "segment_business_jets": "Business Jets",
+                "segment_defence_aviation": "Defence Aviation",
+                "segment_helicopter_programs": "Helicopter Programs",
+
+                //numbers
+                "export_driven_business": "Export-driven business",
+                "customers": "Customers",
+                "decades_experience": "Decades of experience",
+                "skus": "SKUs",
+
+                //parts-content
+                "one_stop_solution_for": "One Stop Solution for",
+                "aircraft_components": "Aircraft Components",
+                "aircraft_intro_1": "We manufacture a wide range of high-precision aircraft components that meet the rigorous standards of the aerospace industry. Our expertise includes the production of critical parts such as landing gear components, structural assemblies, engine mounts, and precision-machined fittings for both fixed-wing and rotary aircraft.",
+                "aircraft_intro_2": "With advanced manufacturing capabilities and strict quality controls, we supply OEMs and Tier-1 aerospace suppliers with components engineered for safety, reliability, and performance. Our solutions support commercial, defence, and helicopter programs worldwide, helping our partners achieve new heights in aviation excellence.",
+
+                //parts-category
+                "complex_engine_parts": "Complex Engine Parts",
+                "structure_parts": "Structure Parts",
+                "system_parts": "System Parts",
+
+                //complex-engine-parts
+                "turbine_vanes": "Turbine Vanes",
+                "housing_assembly": "Housing Assembly",
+                "fuel_system_cylinder": "Fuel System Cylinder",
+                "stator_blade": "Stator Blade",
+                "fuel_control_assembly": "Fuel Control Assembly",
+                "body_insert_assembly": "Body Insert Assembly",
+                "lever_throttle": "Lever Throttle",
+                "tgb_mount": "TGB Mount",
+                "inlet": "Inlet",
+                "gear_train_support_plate": "Gear Train Support Plate",
+                "tie_rod_assembly": "Tie Rod Assembly",
+                "mount_bracket": "Mount Bracket",
+
+                //structure-parts
+                "swinging_links": "Swinging Links",
+                "tank_drag_strut_assembly": "Tank Drag Strut Assembly",
+                "hook_assembly": "Hook Assembly",
+                "rings": "Rings",
+                "pylon": "Pylon",
+
+                //system-parts
+                "manifolds": "Manifolds",
+                "clevis": "Clevis",
+                "flange_tube": "Flange Tube",
+                "tir_holder": "TIR Holder",
+                "lighting_system_housings": "Lighting System Housings",
+                "housing_cover": "Housing Cover",
+
+
+
+
+
+
+
+                // Get in Touch
+                "get-in-touch": "Get in Touch",
+                "ready-to-turn": "Ready to Turn Your Manufacturing Vision into Reality?",
+                "whether-looking": "Whether you're looking for custom-engineered solutions or want to explore how our capabilities align with your needs, we're here to help.",
+                "get-started": "Get Started",
+
+                // Contact Footer
+                "our-offices": "Our Offices",
+                "view-locations": "View our locations and find contact details to our nearest office.",
+                "explore-locations": "Explore Our Locations",
+                "drop-us-line": "Drop us a Line",
+                "contact-form": "You can contact us by filling in this form any time you need professional support.",
+                "fill-form": "Fill Our Form",
+                "support": "Support",
+                "connect-support": "Connect with us and know more about our products. Call our support executive.",
+                "call-now": "Call Now",
+
+                // Form Fields
+                "first-name": "First Name",
+                "last-name": "Last Name",
+                "company": "Company",
+                "email-address": "Email Address",
+                "phone-no": "Phone No.",
+                "select-industry": "Select Industry",
+                "inquiry": "I want to know more about",
+                "submit": "Submit",
+                "privacy-consent": "By checking this box, I consent to the processing of my personal data in accordance with Section 4 (1)(a) of the Digital Personal Data Protection Act 2023, for the purposes outlined in the Privacy Policy. I have also read and agreed to the",
+                "privacy-policy": "Privacy Policy.",
+
+                // Footer
+                "quick-links": "Quick Links",
+                "company-footer": "Company",
+                "follow-us": "Follow us",
+                "copyright": "© 2025 JK Maini Precision Technology Limited (JKMPTL). All rights reserved."
+            },
+            id: {
+                // Navigation
+                "businesses": "Bisnis",
+                "business_verticals": "Vertikal Bisnis",
+                "automotive_industrial_beyond": "Otomotif, Industri & di Atas",
+                "tools_hardware": "Alat & Perangkat Keras",
+                "aerospace_defence": "Aerospace & Pertahanan",
+                "people": "Orang",
+                "life_at_jk_maini": "Di JK Maini",
+                "employee_testimonials": "Testimoni Karyawan",
+                "beyond_business": "di Atas Bisnis",
+                "purpose_progress": "Tujuan & Kemajuan",
+                "sustainability_certifications_governance": "Keberlanjutan, Sertifikasi & Pengawasan",
+                "awards": "Penghargaan",
+                "csr": "CSR",
+                "news_events": "Berita & Acara",
+                "contact": "Kontak",
+                "careers": "Karir",
+
+                //hero-section
+                "aerospace_title": "Rekayasa Presisi Dirgantara Mendefinisikan Ulang Kemungkinan di Langit",
+                "visit_site": "Kunjungi Situs",
+
+                //about-section
+                "aero_section_title": "JK Maini Dirgantara Global",
+                "aero_page_title": "Kemampuan Dirgantara Kami",
+                "aero_paragraph_1": "Dengan pengalaman lebih dari dua dekade di bidang dirgantara, J K Maini adalah nama terpercaya dalam komponen presisi untuk pemimpin dirgantara global. Didukung oleh warisan Raymond Group dan inovasi Maini, kami menghadirkan bagian kompleks yang kritis untuk penerbangan dengan kualitas, kecepatan, dan skala kelas dunia.",
+                "aero_paragraph_2": "Dari stator vanes dan engine housings hingga flap tracks dan rakitan sistem bahan bakar, kami merancang lebih dari 1200 SKU untuk komponen mesin, struktural, dan sistem yang kompleks. Fasilitas dirgantara seluas 10.500 m² kami di Bengaluru dibangun untuk memenuhi standar ketat OEM global dan pemasok Tier-1.",
+
+                //cards-section
+                "segments_section_title": "Segmen yang Kami Layani",
+                "segment_commercial_aircraft": "Pesawat Komersial",
+                "segment_business_jets": "Jet Bisnis",
+                "segment_defence_aviation": "Penerbangan Pertahanan",
+                "segment_helicopter_programs": "Program Helikopter",
+
+                //numbers
+                "export_driven_business": "Bisnis berorientasi ekspor",
+                "customers": "Pelanggan",
+                "decades_experience": "Dua dekade pengalaman",
+                "skus": "Unit Penyimpanan Stok (SKU)",
+
+                //parts-content
+                "one_stop_solution_for": "Solusi Satu Atap untuk",
+                "aircraft_components": "Komponen Pesawat",
+                "aircraft_intro_1": "Kami memproduksi berbagai komponen pesawat presisi tinggi yang memenuhi standar ketat industri dirgantara. Keahlian kami mencakup produksi komponen kritis seperti sistem pendaratan, rakitan struktural, dudukan mesin, dan fitting presisi untuk pesawat sayap tetap maupun helikopter.",
+                "aircraft_intro_2": "Dengan kemampuan manufaktur canggih dan kontrol kualitas yang ketat, kami memasok OEM dan pemasok Tier-1 dirgantara dengan komponen yang dirancang untuk keselamatan, keandalan, dan performa. Solusi kami mendukung program komersial, pertahanan, dan helikopter di seluruh dunia, membantu mitra kami mencapai keunggulan baru dalam penerbangan.",
+
+                //parts-category
+                "complex_engine_parts": "Komponen Mesin Kompleks",
+                "structure_parts": "Komponen Struktur",
+                "system_parts": "Komponen Sistem",
+
+                //complex-engine-parts
+                "turbine_vanes": "Bilah Turbin",
+                "housing_assembly": "Rakitan Rumah",
+                "fuel_system_cylinder": "Silinder Sistem Bahan Bakar",
+                "stator_blade": "Bilah Stator",
+                "fuel_control_assembly": "Rakitan Kontrol Bahan Bakar",
+                "body_insert_assembly": "Rakitan Sisipan Tubuh",
+                "lever_throttle": "Tuas Throttle",
+                "tgb_mount": "TGB Mount",
+                "inlet": "Inlet",
+                "gear_train_support_plate": "Pelat Penyangga Rangka Gigi",
+                "tie_rod_assembly": "Rakitan Tie Rod",
+                "mount_bracket": "Braket Mount",
+
+                //structure-parts
+                "swinging_links": "Tautan Ayun",
+                "tank_drag_strut_assembly": "Rakitan Strut Tarik Tangki",
+                "hook_assembly": "Rakitan Kait",
+                "rings": "Cincin",
+                "pylon": "Pylon",
+
+                //system-parts
+                "manifolds": "Manifold",
+                "clevis": "Clevis",
+                "flange_tube": "Tabung Flensa",
+                "tir_holder": "Penahan TIR",
+                "lighting_system_housings": "Rumah Sistem Pencahayaan",
+                "housing_cover": "Penutup Rumah",
+
+
+
+
+
+
+
+
+
+                // Get in Touch
+                "get-in-touch": "Hubungi Kami",
+                "ready-to-turn": "Siap Mengubah Visi Manufaktur Anda Menjadi Kenyataan?",
+                "whether-looking": "Baik Anda mencari solusi rekayasa khusus atau ingin menjelajahi bagaimana kemampuan kami selaras dengan kebutuhan Anda, kami siap membantu.",
+                "get-started": "Mulai",
+
+                // Contact Footer
+                "our-offices": "Kantor Kami",
+                "view-locations": "Lihat lokasi kami dan temukan detail kontak ke kantor terdekat kami.",
+                "explore-locations": "Jelajahi Lokasi Kami",
+                "drop-us-line": "Kirimkan Pesan",
+                "contact-form": "Anda dapat menghubungi kami dengan mengisi formulir ini kapan saja Anda membutuhkan dukungan profesional.",
+                "fill-form": "Isi Formulir Kami",
+                "support": "Dukungan",
+                "connect-support": "Hubungi kami dan ketahui lebih banyak tentang produk kami. Hubungi eksekutif dukungan kami.",
+                "call-now": "Hubungi Sekarang",
+
+                // Form Fields
+                "first-name": "Nama Depan",
+                "last-name": "Nama Belakang",
+                "company": "Perusahaan",
+                "email-address": "Alamat Email",
+                "phone-no": "Nomor Telepon",
+                "select-industry": "Pilih Industri",
+                "inquiry": "Saya ingin tahu lebih banyak tentang",
+                "submit": "Kirim",
+                "privacy-consent": "Dengan mencentang kotak ini, saya menyetujui pemrosesan data pribadi saya sesuai dengan Bagian 4 (1)(a) dari Undang-Undang Perlindungan Data Pribadi Digital 2023, untuk tujuan yang diuraikan dalam Kebijakan Privasi. Saya juga telah membaca dan menyetujui",
+                "privacy-policy": "Kebijakan Privasi.",
+
+                // Footer
+                "quick-links": "Tautan Cepat",
+                "company-footer": "Perusahaan",
+                "follow-us": "Ikuti kami",
+                "copyright": "© 2025 JK Maini Precision Technology Limited (JKMPTL). Semua hak dilindungi."
+            }
+        };
+
+        // Function to change language
+        function changeLanguage(language) {
+            // Store selected language in localStorage
+            localStorage.setItem('selectedLanguage', language);
+
+            // Update all elements with data-translate attribute
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[language] && translations[language][key]) {
+                    element.textContent = translations[language][key];
+                }
+            });
+
+            // Update elements with data-translate-placeholder attribute
+            const placeholderElements = document.querySelectorAll('[data-translate-placeholder]');
+            placeholderElements.forEach(element => {
+                const key = element.getAttribute('data-translate-placeholder');
+                if (translations[language] && translations[language][key]) {
+                    element.placeholder = translations[language][key];
+                }
+            });
+
+            // Update page title based on language
+            if (language === 'id') {
+                document.title = "JK Maini Precision Technology Ltd.";
+            } else {
+                document.title = "JK Maini Precision Technology Ltd.";
+            }
+        }
+
+        // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+            const languageSelect = document.getElementById('languageSelect');
+
+            if (languageSelect) {
+                languageSelect.value = savedLanguage;
+            }
+
+            changeLanguage(savedLanguage);
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script>
 
 

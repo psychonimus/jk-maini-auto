@@ -15,32 +15,7 @@
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon_io (1)/android-chrome-512x512.png">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-    <style>
-        .language-switcher {
-            position: relative;
-            display: inline-block;
-        }
-
-        .language-switcher select {
-            background: transparent;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            padding: 5px 10px;
-            color: #333;
-            font-size: 10px;
-            cursor: pointer;
-        }
-
-        .language-switcher select:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-
-        .language-switcher select option {
-            background: white;
-            color: #333;
-        }
-    </style>
+    
 </head>
 
 <body>
@@ -332,6 +307,15 @@
 
                     <li class="nav-item has-mega-menu d-md-none">
                         <a class="nav-link" href="contact.html" data-translate="contact">Contact</a>
+                    </li>
+
+                    <li class="nav-item  d-md-none">
+                        <div class="language-switcher">
+                            <select id="languageSelect" onchange="changeLanguage(this.value)">
+                                <option value="en">English</option>
+                                <option value="id">Bahasa</option>
+                            </select>
+                        </div>
                     </li>
 
 
@@ -814,7 +798,7 @@
     <section class="testimonial-section">
         <div class="container text-center" data-aos="fade-up">
             <h6 class="section-title" data-aos="fade-up" data-translate="client-testimonials">Our Clients Testimonials</h6>
-            <h2 class="page-title-animate" data-tra nslate="what-customers-say">What Customers say about our services</h2>
+            <h2 class="page-title-animate" data-translate="what-customers-say">What Customers say about our services</h2>
         </div>
 
 
@@ -838,17 +822,11 @@
                                             <div class="quotes">
                                                 <img src="./assets/images/quotes.png" alt="Quote icon">
                                             </div>
-                                            <!-- <div class="rating">
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                            </div> -->
+                                            
                                         </div>
                                     </div>
                                     <div class="test-text text-start px-4">
-                                        <p class="mt-0" style="text-align: justify;">
+                                        <p class="mt-0" style="text-align: justify;" data-translate="sachin_testimonial">
                                             "JK Maini Precision Technology limited (JKMPTL) rose to the occasion when we
                                             faced a critical global supply
                                             disruption.
@@ -866,19 +844,7 @@
                                             <p class="">Executive Director corporate Procurement and
                                                 member of Board, Skoda
                                                 Auto Wolkswagong India</p>
-                                            <!-- <a target="_blank" href="https://www.linkedin.com/in/sachin-kulkarni-vw/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
-                                                
-                                                <button class="linkedin-Btn">
-                                                    <svg viewBox="0 0 16 16" height="16" width="16"
-                                                        xmlns="http://www.w3.org/2000/svg" class="svgIcon">
-                                                        <path
-                                                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z">
-                                                        </path>
-                                                    </svg>
-                                                    <span class="text">LinkedIn</span>
-                                                </button>
-
-                                            </a> -->
+                                            
 
                                         </div>
                                     </div>
@@ -904,17 +870,11 @@
                                             <div class="quotes">
                                                 <img src="./assets/images/quotes.png" alt="Quote icon">
                                             </div>
-                                            <!-- <div class="rating">
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                            </div> -->
+                                            
                                         </div>
                                     </div>
                                     <div class="test-text text-start px-4">
-                                        <p class="mt-0" style="text-align: justify;">
+                                        <p class="mt-0" style="text-align: justify;" data-translate="hrishikesh_testimonial">
                                             "JK Maini has consistently demonstrated a zero-defect mindset and a
                                             first-time-right approach values that perfectly align with our expectations
                                             at Valeo. Their marketing strength, backed by strong technical expertise and
@@ -932,24 +892,7 @@
                                         <div class="nameandposition text-start">
                                             <h4 class="m-0">Hrishikesh Kulkarni</h4>
                                             <p>Group Purchasing and Exports Director, Valeo</p>
-                                            <!-- <a target="_blank" href="https://www.linkedin.com/in/hrishiwelcomes/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
-                                                <button class="linkedin-Btn">
-                                                    <svg viewBox="0 0 16 16" height="16" width="16"
-                                                        xmlns="http://www.w3.org/2000/svg" class="svgIcon">
-                                                        <path
-                                                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z">
-                                                        </path>
-                                                    </svg>
-                                                    <span class="text">LinkedIn</span>
-                                                </button>
-                                            </a> -->
-                                            <!-- <div class="social-icons mt-3">
-                                                <a href="https://www.linkedin.com/in/gautam-singhania" target="_blank"
-                                                    aria-label="LinkedIn" class="me-2" style="color: #0A66C2; font-size: 1.5rem;">
-                                                    <i class="fab fa-linkedin"></i>
-                                                </a>
-                    
-                                            </div> -->
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -974,17 +917,11 @@
                                             <div class="quotes">
                                                 <img src="./assets/images/quotes.png" alt="Quote icon">
                                             </div>
-                                            <!-- <div class="rating">
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                            </div> -->
+                                            
                                         </div>
                                     </div>
                                     <div class="test-text text-start px-4">
-                                        <p class="mt-0" style="text-align: justify;">
+                                        <p class="mt-0" style="text-align: justify;" data-translate="girish_testimonial">
                                             "Our journey with JK Maini spans over two and a half decades, and it has
                                             been
                                             nothing short of outstanding. From supplying critical components to Volvo's
@@ -1004,24 +941,7 @@
                                         <div class="nameandposition text-start">
                                             <h4 class="m-0">Girish DM</h4>
                                             <p>VP, Volvo Group Truck Purchasing</p>
-                                            <!-- <a target="_blank" href="https://www.linkedin.com/in/girishdm/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
-                                                <button class="linkedin-Btn">
-                                                    <svg viewBox="0 0 16 16" height="16" width="16"
-                                                        xmlns="http://www.w3.org/2000/svg" class="svgIcon">
-                                                        <path
-                                                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z">
-                                                        </path>
-                                                    </svg>
-                                                    <span class="text">LinkedIn</span>
-                                                </button>
-                                            </a> -->
-                                            <!-- <div class="social-icons mt-3">
-                                                <a href="https://www.linkedin.com/in/gautam-singhania" target="_blank"
-                                                    aria-label="LinkedIn" class="me-2" style="color: #0A66C2; font-size: 1.5rem;">
-                                                    <i class="fab fa-linkedin"></i>
-                                                </a>
-                    
-                                            </div> -->
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1046,17 +966,11 @@
                                             <div class="quotes">
                                                 <img src="./assets/images/quotes.png" alt="Quote icon">
                                             </div>
-                                            <!-- <div class="rating">
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                            </div> -->
+                                            
                                         </div>
                                     </div>
                                     <div class="test-text text-start px-4">
-                                        <p class="mt-0" style="text-align: justify;">
+                                        <p class="mt-0" style="text-align: justify;" data-translate="angelo_testimonial">
                                             "Despite being a relatively new partner, we've always felt like a priority
                                             with JK Maini. The level of attention, collaboration, and commitment shown
                                             by their team, from traveling across Europe to understand our needs, to
@@ -1072,24 +986,7 @@
                                         <div class="nameandposition text-start">
                                             <h4 class="m-0">Angelo Bona</h4>
                                             <p>GM and Board Member, Saleri India Pvt Ltd </p>
-                                            <!-- <a target="_blank" href="https://www.linkedin.com/in/angelo-bona-mrics-ba268a72/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
-                                                <button class="linkedin-Btn">
-                                                    <svg viewBox="0 0 16 16" height="16" width="16"
-                                                        xmlns="http://www.w3.org/2000/svg" class="svgIcon">
-                                                        <path
-                                                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z">
-                                                        </path>
-                                                    </svg>
-                                                    <span class="text">LinkedIn</span>
-                                                </button>
-                                            </a> -->
-                                            <!-- <div class="social-icons mt-3">
-                                                <a href="https://www.linkedin.com/in/gautam-singhania" target="_blank"
-                                                    aria-label="LinkedIn" class="me-2" style="color: #0A66C2; font-size: 1.5rem;">
-                                                    <i class="fab fa-linkedin"></i>
-                                                </a>
-                    
-                                            </div> -->
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1114,17 +1011,11 @@
                                             <div class="quotes">
                                                 <img src="./assets/images/quotes.png" alt="Quote icon">
                                             </div>
-                                            <!-- <div class="rating">
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                            </div> -->
+                                            
                                         </div>
                                     </div>
                                     <div class="test-text text-start px-4">
-                                        <p class="mt-0" style="text-align: justify;">
+                                        <p class="mt-0" style="text-align: justify;" data-translate="prasad_testimonial">
                                             "Our relationship with JK Maini spans over 25 years, beginning with small
                                             orders and evolving into a strategic partnership that now supports a
                                             significant portion of our flywheel business. Their consistent quality,
@@ -1141,24 +1032,7 @@
                                         <div class="nameandposition text-start">
                                             <h4 class="m-0">Prasad Mantri</h4>
                                             <p>MD, Mantri Metallics</p>
-                                            <!-- <a target="_blank" href="https://www.linkedin.com/in/prasad-mantri-b460637/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
-                                                <button class="linkedin-Btn">
-                                                    <svg viewBox="0 0 16 16" height="16" width="16"
-                                                        xmlns="http://www.w3.org/2000/svg" class="svgIcon">
-                                                        <path
-                                                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z">
-                                                        </path>
-                                                    </svg>
-                                                    <span class="text">LinkedIn</span>
-                                                </button>
-                                            </a> -->
-                                            <!-- <div class="social-icons mt-3">
-                                                <a href="https://www.linkedin.com/in/gautam-singhania" target="_blank"
-                                                    aria-label="LinkedIn" class="me-2" style="color: #0A66C2; font-size: 1.5rem;">
-                                                    <i class="fab fa-linkedin"></i>
-                                                </a>
-                    
-                                            </div> -->
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1183,17 +1057,11 @@
                                             <div class="quotes">
                                                 <img src="./assets/images/quotes.png" alt="Quote icon">
                                             </div>
-                                            <!-- <div class="rating">
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                            </div> -->
+                                            
                                         </div>
                                     </div>
                                     <div class="test-text text-start px-4">
-                                        <p class="mt-0" style="text-align: justify;">
+                                        <p class="mt-0" style="text-align: justify;" data-translate="shrirang_testimonial">
                                             "JKMPTLa has been a trusted partner for over 25 years. Their
                                             consistent quality, reliability, and timely delivery have played a key role
                                             in scaling our flywheel business and setting industry benchmarks. We value
@@ -1205,24 +1073,7 @@
                                         <div class="nameandposition text-start">
                                             <h4 class="m-0">Shrirang Tambe</h4>
                                             <p>Head strategic purchasing, MTU India </p>
-                                            <!-- <a target="_blank" href="https://www.linkedin.com/in/shrirang-m-tambe-cpscm%E2%84%A2%EF%B8%8F-5259676/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
-                                                <button class="linkedin-Btn">
-                                                    <svg viewBox="0 0 16 16" height="16" width="16"
-                                                        xmlns="http://www.w3.org/2000/svg" class="svgIcon">
-                                                        <path
-                                                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z">
-                                                        </path>
-                                                    </svg>
-                                                    <span class="text">LinkedIn</span>
-                                                </button>
-                                            </a> -->
-                                            <!-- <div class="social-icons mt-3">
-                                                <a href="https://www.linkedin.com/in/gautam-singhania" target="_blank"
-                                                    aria-label="LinkedIn" class="me-2" style="color: #0A66C2; font-size: 1.5rem;">
-                                                    <i class="fab fa-linkedin"></i>
-                                                </a>
-                    
-                                            </div> -->
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1247,17 +1098,11 @@
                                             <div class="quotes">
                                                 <img src="./assets/images/quotes.png" alt="Quote icon">
                                             </div>
-                                            <!-- <div class="rating">
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                            </div> -->
+                                            
                                         </div>
                                     </div>
                                     <div class="test-text text-start px-4">
-                                        <p class="mt-0" style="text-align: justify;">
+                                        <p class="mt-0" style="text-align: justify;" data-translate="robert_testimonial">
                                             "We developed a great partnership with J.K. Files over the past 40 years. JK
                                             Files quality products & services has helped us in growing our business in
                                             Latin Americas.
@@ -1270,13 +1115,7 @@
                                         <div class="nameandposition text-start">
                                             <h4 class="m-0">Robert Maroday</h4>
                                             <p>Business Partner, Central America</p>
-                                            <!-- <div class="social-icons mt-3">
-                                                <a href="https://www.linkedin.com/in/gautam-singhania" target="_blank"
-                                                    aria-label="LinkedIn" class="me-2" style="color: #0A66C2; font-size: 1.5rem;">
-                                                    <i class="fab fa-linkedin"></i>
-                                                </a>
-                    
-                                            </div> -->
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1301,17 +1140,11 @@
                                             <div class="quotes">
                                                 <img src="./assets/images/quotes.png" alt="Quote icon">
                                             </div>
-                                            <!-- <div class="rating">
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                            </div> -->
+                                            
                                         </div>
                                     </div>
                                     <div class="test-text text-start px-4">
-                                        <p class="mt-0" style="text-align: justify;">
+                                        <p class="mt-0" style="text-align: justify;" data-translate="carlos_testimonial">
                                             "After using JK Files for several years now, I've found their professional
                                             and positive approach to any requirements outstanding, with the product
                                             always meeting specifications and dimensions. I would recommend JK Files &
@@ -1324,13 +1157,7 @@
                                         <div class="nameandposition text-start">
                                             <h4 class="m-0">Carlos Debbe</h4>
                                             <p>Business Partner, Central America</p>
-                                            <!-- <div class="social-icons mt-3">
-                                                <a href="https://www.linkedin.com/in/gautam-singhania" target="_blank"
-                                                    aria-label="LinkedIn" class="me-2" style="color: #0A66C2; font-size: 1.5rem;">
-                                                    <i class="fab fa-linkedin"></i>
-                                                </a>
-                    
-                                            </div> -->
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1355,16 +1182,10 @@
                                             <div class="quotes">
                                                 <img src="./assets/images/quotes.png" alt="Quote icon">
                                             </div>
-                                            <!-- <div class="rating">
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                            </div> -->
+                                            
                                         </div>
                                     </div>
-                                    <div class="test-text text-start px-4">
+                                    <div class="test-text text-start px-4" data-translate="nitin_testimonial">
                                         <p class="mt-0" style="text-align: justify;">
                                             "We have been associated with JK Files for many years now. Have worked on
                                             several projects together, the JK Files team has time and again proven
@@ -1379,13 +1200,7 @@
                                         <div class="nameandposition text-start">
                                             <h4 class="m-0">Nitin Shah</h4>
                                             <p>Business Partner, India</p>
-                                            <!-- <div class="social-icons mt-3">
-                                                <a href="https://www.linkedin.com/in/gautam-singhania" target="_blank"
-                                                    aria-label="LinkedIn" class="me-2" style="color: #0A66C2; font-size: 1.5rem;">
-                                                    <i class="fab fa-linkedin"></i>
-                                                </a>
-                    
-                                            </div> -->
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1410,16 +1225,10 @@
                                             <div class="quotes">
                                                 <img src="./assets/images/quotes.png" alt="Quote icon">
                                             </div>
-                                            <!-- <div class="rating">
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                            </div> -->
+                                            
                                         </div>
                                     </div>
-                                    <div class="test-text text-start px-4">
+                                    <div class="test-text text-start px-4" data-translate="kalpesh_testimonial">
                                         <p class="mt-0" style="text-align: justify;">
                                             "I wanted to take this opportunity to thank the team at JK Files for their
                                             fantastic work. JK team has always demonstrated great professionalism while
@@ -1436,13 +1245,7 @@
                                         <div class="nameandposition text-start">
                                             <h4 class="m-0">Kalpesh Shah</h4>
                                             <p>Business Partner, Africa</p>
-                                            <!-- <div class="social-icons mt-3">
-                                                <a href="https://www.linkedin.com/in/gautam-singhania" target="_blank"
-                                                    aria-label="LinkedIn" class="me-2" style="color: #0A66C2; font-size: 1.5rem;">
-                                                    <i class="fab fa-linkedin"></i>
-                                                </a>
-                    
-                                            </div> -->
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1467,16 +1270,10 @@
                                             <div class="quotes">
                                                 <img src="./assets/images/quotes.png" alt="Quote icon">
                                             </div>
-                                            <!-- <div class="rating">
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                            </div> -->
+                                            
                                         </div>
                                     </div>
-                                    <div class="test-text text-start px-4">
+                                    <div class="test-text text-start px-4" data-translate="rakesh_testimonial">
                                         <p class="mt-0" style="text-align: justify;">
                                             "Despite the challenging environment due to COVID-19, the JK team was always
                                             ready to help us by visiting our premises whenever we needed them.
@@ -1490,13 +1287,7 @@
                                         <div class="nameandposition text-start">
                                             <h4 class="m-0">Rakesh Gupta</h4>
                                             <p>Business Partner, India</p>
-                                            <!-- <div class="social-icons mt-3">
-                                                <a href="https://www.linkedin.com/in/gautam-singhania" target="_blank"
-                                                    aria-label="LinkedIn" class="me-2" style="color: #0A66C2; font-size: 1.5rem;">
-                                                    <i class="fab fa-linkedin"></i>
-                                                </a>
-                    
-                                            </div> -->
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1520,17 +1311,11 @@
                                             <div class="quotes">
                                                 <img src="./assets/images/quotes.png" alt="Quote icon">
                                             </div>
-                                            <!-- <div class="rating">
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                            </div> -->
+                                            
                                         </div>
                                     </div>
-                                    <div class="test-text text-start px-4">
-                                        <p class="mt-0" style="text-align: justify;">
+                                    <div class="test-text text-start px-4" >
+                                        <p class="mt-0" style="text-align: justify;" data-translate="milan_testimonial">
                                             "We have been associated with JK Files for almost 35 years now. All JK
                                             products be it Files or Drills, Cutting Wheels or Power Tool Machines, they
                                             are the best in their category and offer real value for money. Also the team
@@ -1546,13 +1331,7 @@
                                         <div class="nameandposition text-start">
                                             <h4 class="m-0">Mr. Milan Patel</h4>
                                             <p>Business Partner</p>
-                                            <!-- <div class="social-icons mt-3">
-                                                <a href="https://www.linkedin.com/in/gautam-singhania" target="_blank"
-                                                    aria-label="LinkedIn" class="me-2" style="color: #0A66C2; font-size: 1.5rem;">
-                                                    <i class="fab fa-linkedin"></i>
-                                                </a>
-                    
-                                            </div> -->
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1577,19 +1356,13 @@
                                             <div class="quotes">
                                                 <img src="./assets/images/quotes.png" alt="Quote icon">
                                             </div>
-                                            <!-- <div class="rating">
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                            </div> -->
+                                            
                                         </div>
                                     </div>
                                     <div class="test-text text-start px-4">
                                         <p><strong>A Legacy of Trust: Partnering with JK Maini in the Middle
                                                 East.</strong></p>
-                                        <p class="mt-0" style="text-align: justify;">
+                                        <p class="mt-0" style="text-align: justify;" data-translate="sudhir_testimonial">
                                             "For over 40 years, we've proudly partnered with JK Maini in the Middle
                                             East. Their reliable service, excellent products, and supportive team have
                                             consistently made them a trusted collaborator. We look forward to continuing
@@ -1602,24 +1375,7 @@
                                         <div class="nameandposition text-start">
                                             <h4 class="m-0">Mr. Sudhir Bhasin</h4>
                                             <p>Director, Rockfort Trading Co. L.L.C, Middle East</p>
-                                            <!-- <a target="_blank" href="https://www.linkedin.com/in/sudhir-bhasin-10370643/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
-                                                <button class="linkedin-Btn">
-                                                    <svg viewBox="0 0 16 16" height="16" width="16"
-                                                        xmlns="http://www.w3.org/2000/svg" class="svgIcon">
-                                                        <path
-                                                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z">
-                                                        </path>
-                                                    </svg>
-                                                    <span class="text">LinkedIn</span>
-                                                </button>
-                                            </a> -->
-                                            <!-- <div class="social-icons mt-3">
-                                                <a href="https://www.linkedin.com/in/gautam-singhania" target="_blank"
-                                                    aria-label="LinkedIn" class="me-2" style="color: #0A66C2; font-size: 1.5rem;">
-                                                    <i class="fab fa-linkedin"></i>
-                                                </a>
-                    
-                                            </div> -->
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -2409,6 +2165,21 @@
                 // Testimonials
                 "client-testimonials": "Our Clients Testimonials",
                 "what-customers-say": "What Customers say about our services",
+                "sachin_testimonial": "JK Maini Precision Technology limited (JKMPTL) rose to the occasion when we faced a critical global supply disruption. In just six weeks, they developed and delivered over 100,000 high-quality parts, helping avert a potential loss of 500,000 cars across Volkswagen Group brands. Their agility, precision, and global readiness truly reflect the strength of India's supplier ecosystem.",
+                "hrishikesh_testimonial": "JK Maini has consistently demonstrated a zero-defect mindset and a first-time-right approach values that perfectly align with our expectations at Valeo. Their marketing strength, backed by strong technical expertise and flexible manufacturing capabilities, enabled a seamless product launch within months. Even during critical moments, like the rapid six-week development of a new gear when a major supplier failed, JK Maini stood up to the occasion and delivered. Their state-of-the-art facility with a single-piece flow and Industry 4.0 orientation further reflects their commitment to innovation and excellence. We see them as a strategic partner poised for global growth.",
+                "girish_testimonial": "Our journey with JK Maini spans over two and a half decades, and it has been nothing short of outstanding. From supplying critical components to Volvo's global operations to supporting their expansion into the automotive sector, we have seen JK Maini grow and adapt to the changing dynamics of the industry. Their commitment to quality, innovation, and customer service has always been at the forefront, making them a trusted partner for us. We look forward to continuing our successful partnership for many more years to come.",
+                "angelo_testimonial": "Despite being a relatively new partner, we've always felt like a priority with JK Maini. The level of attention, collaboration, and commitment shown by their team, from traveling across Europe to understand our needs, to supporting our growth across various regions, has been nothing short of exceptional. Their proactive approach and flexibility have made us feel like a valued partner, and we look forward to continuing our successful partnership for many more years to come.",
+                "prasad_testimonial": "Our relationship with JK Maini spans over 25 years, beginning with small orders and evolving into a strategic partnership that now supports a significant portion of our flywheel business. Their consistent quality, reliability, and timely delivery have been instrumental in our growth from just-in-time to well-in-time operations. Ring Plus Aqua's starter gears have been a key enabler in expanding both our domestic and export offerings. Their service has set a benchmark in our industry, and we look forward to continuing this trusted collaboration as they enter an exciting new chapter of growth.",
+                "shrirang_testimonial": "JKMPTLa has been a trusted partner for over 25 years. Their consistent quality, reliability, and timely delivery have played a key role in scaling our flywheel business and setting industry benchmarks. We value this partnership and look forward to future growth together.",
+                "robert_testimonial": "We developed a great partnership with J.K. Files over the past 40 years. JK Files quality products & services has helped us in growing our business in Latin Americas. I truly admire our long-standing business partnership.",
+                "carlos_testimonial": "After using JK Files for several years now, I've found their professional and positive approach to any requirements outstanding, with the product always meeting specifications and dimensions. I would recommend JK Files & Engineering Ltd. as a first-class Hand Tools supplier to anyone.",
+                "nitin_testimonial": "We have been associated with JK Files for many years now. Have worked on several projects together, the JK Files team has time and again proven themselves to be innovative, professional, and extremely thorough with their knowledge of Files and Tools. And all combined with their agility, the JK team is always a pleasure to deal with.",
+                "kalpesh_testimonial": "I wanted to take this opportunity to thank the team at JK Files for their fantastic work. JK team has always demonstrated great professionalism while performing the job. would especially like to emphasize on the quality, timeliness, accuracy, marketing efforts, and enthusiasm of the team.Our success has been based on our cherished partnership from the very beginning. This association with JK Files is precious for us and we look forward to work together in the coming years ahead",
+                "rakesh_testimonial": "Despite the challenging environment due to COVID-19, the JK team was always ready to help us by visiting our premises whenever we needed them. We sincerely thank you for your kind support. I look forward to many more years of successful cooperation between us.",
+                "milan_testimonial": "We have been associated with JK Files for almost 35 years now. All JK products be it Files or Drills, Cutting Wheels or Power Tool Machines, they are the best in their category and offer real value for money. Also the team attached to us is very helpful and responsive. It is rare that we had to speak to anyone else but the JK team for any kind of resolution or help. I feel proud of being associated with them for such a long time and wish them all the best for a great future ahead.",
+                "sudhir_testimonial": "For over 40 years, we've proudly partnered with JK Maini in the Middle East. Their reliable service, excellent products, and supportive team have consistently made them a trusted collaborator. We look forward to continuing this successful relationship for many years to come.",
+                
+                
                 
                 // Plants
                 "our-plants": "Our Plants",
@@ -2530,6 +2301,21 @@
                 // Testimonials
                 "client-testimonials": "Testimoni Klien Kami",
                 "what-customers-say": "Apa yang pelanggan katakan tentang layanan kami",
+                "sachin_testimonial": "JK Maini Precision Technology limited (JKMPTL) telah memperkuat diri ketika kami menghadapi gangguan global pasokan kritis. Dalam waktu enam minggu, mereka mengembangkan dan mengirimkan lebih dari 100.000 bagian berkualitas tinggi, membantu mengurangi potensi kehilangan 500.000 kendaraan di grup Volkswagen. Kecakapan, presisi, dan siap menghadapi global mereka benar-benar mencerminkan kekuatan ekosistem pemasok India.",
+                "hrishikesh_testimonial": "JK Maini telah menunjukkan kesadaran nol kesalahan dan pendekatan 'pertama kali benar' yang sempurna yang sesuai dengan harapan kami di Valeo. Kekuatan pemasaran mereka, didukung oleh keahlian teknis yang kuat dan fleksibilitas kapasitas produksi, memungkinkan peluncuran produk yang lancar dalam beberapa bulan. Bahkan selama momen kritis, seperti pengembangan cepat dalam tiga minggu untuk roda gigi baru ketika pemasok utama gagal, JK Maini berdiri tegak dan memberikan. Fasilitas terbaru mereka dengan aliran satu komponen dan orientasi Industri 4.0 lebih lanjut mencerminkan komitmen mereka untuk inovasi dan keunggulan. Kami melihat mereka sebagai mitra strategis yang siap tumbuh secara global.",
+                "girish_testimonial": "Perjalanan kami dengan JK Maini telah berlangsung lebih dari dua setengah dekade, dan itu tidak pernah kurang dari luar biasa. Dari menyediakan komponen kritis ke operasi global Volvo hingga mendukung pengembangan mereka ke sektor otomotif, kami telah melihat JK Maini tumbuh dan menyesuaikan diri dengan dinamika industri yang berubah. Komitmen mereka untuk kualitas, inovasi, dan pelayanan pelanggan selalu ada di depan, membuat mereka mitra yang dipercaya bagi kami. Kami berharap untuk melanjutkan kolaborasi kami yang sukses untuk banyak tahun ke depan.",
+                "angelo_testimonial": "Meskipun menjadi mitra baru, kami selalu merasa sebagai prioritas dengan JK Maini. Tingkat perhatian, kolaborasi, dan komitmen yang ditunjukkan oleh tim mereka, dari bepergian ke Eropa untuk memahami kebutuhan kami, hingga mendukung pertumbuhan kami di berbagai wilayah, tidak pernah kurang dari luar biasa. Pendekatan proaktif dan fleksibilitas mereka telah membuat kami merasa sebagai mitra yang berharga, dan kami berharap untuk melanjutkan kolaborasi kami yang sukses untuk banyak tahun ke depan.",
+                "prasad_testimonial": "Hubungan kami dengan JK Maini telah berlangsung lebih dari 25 tahun, dimulai dengan pesanan kecil dan berkembang menjadi kolaborasi strategis yang sekarang mendukung bagian besar bisnis flywheel kami. Kualitasnya yang konsisten, keandalan, dan penyampaian tepat waktu telah menjadi pondasi dalam pertumbuhan kami dari just-in-time ke operasi well-in-time. Roda starter Ring Plus Aqua telah menjadi enabler utama dalam mengembangkan kedua penawaran domestik dan ekspor kami. Pelayanan mereka telah menjadi standar dalam industri kami, dan kami berharap melanjutkan kolaborasi ini yang dipercaya sebagai mereka memasuki babak baru pertumbuhan yang menarik.",
+                "shrirang_testimonial": "JKMPTLa telah menjadi mitra yang dipercaya selama lebih dari 25 tahun. Kualitasnya yang konsisten, keandalan, dan penyampaian tepat waktu telah memainkan peran kunci dalam meningkatkan bisnis flywheel kami dan menetapkan standar industri. Kami menghargai kolaborasi ini dan berharap untuk pertumbuhan bersama di masa depan.",
+                "robert_testimonial": "Kami telah mengembangkan kolaborasi yang luar biasa dengan J.K. Files selama 40 tahun. Kualitas produk dan layanan J.K. Files telah membantu kami dalam pertumbuhan bisnis di Amerika Latin. Saya sangat menghargai kolaborasi bisnis kami yang telah berlangsung lama.",
+                "carlos_testimonial": "Setelah menggunakan J.K. Files selama beberapa tahun, saya telah menemukan pendekatan profesional dan positif mereka terhadap setiap persyaratan luar biasa, dengan produk selalu memenuhi spesifikasi dan dimensi. Saya akan merekomendasikan J.K. Files & Engineering Ltd. sebagai pemasok alat tangan berkelas pertama kepada siapa saja.",
+                "nitin_testimonial": "Kami telah bekerja sama dengan J.K. Files selama beberapa tahun. Tim J.K. Files telah membuktikan diri mereka berkembang secara inovatif, profesional, dan sangat teliti dengan pengetahuan mereka tentang Files dan Alat. Dan semuanya bersama-sama dengan kecepatan mereka, tim J.K. adalah suatu kegembiraan untuk berurusan.",
+                "kalpesh_testimonial": "Saya ingin mengambil kesempatan ini untuk mengucapkan terima kasih kepada tim di J.K. Files atas pekerjaan yang fantastisnya. Tim J.K. telah selalu menunjukkan profesionalisme yang luar biasa saat melakukan pekerjaan. Saya ingin khususnya menekankan pada kualitas, kecepatan, akurasi, usaha pemasaran, dan semangat tim.Kesuksesan kami didasarkan pada kolaborasi yang berharga dari awal. Hubungan ini dengan J.K. Files sangat berharga bagi kami dan kami berharap untuk bekerja sama dalam beberapa tahun ke depan",
+                "rakesh_testimonial": "Meskipun menghadapi tantangan karena COVID-19, tim JK selalu siap membantu kami dengan mengunjungi lokasi kami kapan saja kami membutuhkan bantuan. Kami dengan sebenar-benar mengucapkan terima kasih atas dukungannya. Saya berharap untuk berkolaborasi dengan sukses dalam banyak tahun ke depan.",
+                "milan_testimonial": "Kami telah bekerja sama dengan J.K. Files selama hampir 35 tahun. Semua produk JK, baik Files atau Drills, Cutting Wheels atau Mesin Alat Listrik, mereka adalah yang terbaik dalam kategori mereka dan menawarkan nilai nyata untuk uang. Juga tim yang terikat dengan kami sangat membantu dan responsif. Jarang kami perlu berbicara dengan siapa pun selain tim JK untuk setiap jenis penyelesaian atau bantuan. Saya merasa bangga telah bekerja sama dengan mereka selama ini dan mengucapkan terima kasih kepada mereka semua untuk masa depan yang hebat.",
+                "sudhir_testimonial": "Untuk lebih dari 40 tahun, kami dengan bangga bekerja sama dengan JK Maini di Timur Tengah. Pelayanan mereka yang dapat dipercaya, produk berkualitas tinggi, dan tim yang mendukung mereka telah selalu membuat mereka mitra yang dipercaya. Kami berharap melanjutkan hubungan ini yang sukses untuk banyak tahun ke depan.",
+                
+                
                 
                 // Plants
                 "our-plants": "Pabrik Kami",

@@ -43,16 +43,24 @@
                             data-bs-toggle="tooltip" data-bs-placement="bottom" title="JK Superdrive">
                             Tools & Hardware (JK Superdrive)</a>
                     </li>
-                    
+
                 </ul>
             </div>
             <div class="meta-header-right">
                 <ul class="navbar-nav-right d-none d-md-flex" style="list-style: none;">
                     <li class="nav-item ms-2    ">
-                        <a class="nav-link" aria-current="page" href="careers.html">Careers</a>
+                        <a class="nav-link" aria-current="page" href="careers.html" data-translate="careers">Careers</a>
                     </li>
                     <li class="nav-item ms-2 ">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.html" data-translate="contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <div class="language-switcher">
+                            <select id="languageSelect" onchange="changeLanguage(this.value)">
+                                <option value="en">English</option>
+                                <option value="id">Bahasa</option>
+                            </select>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -67,7 +75,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-md-2">
 
-                   
+
                     <!-- <li class="nav-item has-mega-menu">
                         <a class="nav-link d-flex justify-content-between" href="./about.html"
                             onclick="toggleMegaMenu(event)">
@@ -97,133 +105,56 @@
                     <li class="nav-item has-mega-menu">
 
                         <a class="nav-link d-flex justify-content-between active" href="#"
-                            onclick="toggleMegaMenu(event)">Businesses
+                            onclick="toggleMegaMenu(event)" data-translate="businesses">Businesses
                             <span class="d-lg-none">+</span>
                         </a>
                         <div class="mega-menu">
                             <div class="mega-menu-content">
                                 <div class="mega-menu-column d-none d-lg-block">
-                                    <h4 onclick="toggleAccordion(this)">Businesses</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="businesses">Businesses</h4>
 
                                 </div>
                                 <div class="mega-menu-column">
-                                    <h4 onclick="toggleAccordion(this)">Business Verticals</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="business_verticals">Business
+                                        Verticals</h4>
                                     <ul>
-                                        <li><a href="automotive-industrial-&-beyond.html">Automotive, Industrial &
+                                        <li><a href="automotive-industrial-&-beyond.html"
+                                                data-translate="automotive_industrial_beyond">Automotive, Industrial &
                                                 Beyond</a></li>
-                                        <li><a href="toolsAndHardware.html">Tools & Hardware</a></li>
-                                        <li><a href="aerospace.html">Aerospace & Defence</a></li>
+                                        <li><a href="toolsAndHardware.html" data-translate="tools_hardware">Tools &
+                                                Hardware</a></li>
+                                        <li><a href="aerospace.html" data-translate="aerospace_defence">Aerospace &
+                                                Defence</a></li>
                                         <!-- <li><a href="#">Global Footprints</a></li>  -->
                                     </ul>
                                 </div>
-                                <!-- <div class="mega-menu-column">
-                                    <h4 onclick="toggleAccordion(this)">Sustainability</h4>
-                                    <ul>
-                                        <li><a href="#">Environmental Impact</a></li>
-                                        <li><a href="#">Social Responsibility</a></li>
-                                        <li><a href="#">Green Initiatives</a></li>
-                                        <li><a href="#">Reports</a></li>
-                                    </ul>
-                                </div>
-                                <div class="mega-menu-column">
-                                    <h4 onclick="toggleAccordion(this)">Recognition</h4>
-                                    <ul>
-                                        <li><a href="#">Awards</a></li>
-                                        <li><a href="#">Certifications</a></li>
-                                        <li><a href="#">Press Coverage</a></li>
-                                        <li><a href="#">Testimonials</a></li>
-                                    </ul>
-                                </div> -->
+
                             </div>
                         </div>
                     </li>
 
-                    <!-- <li class="nav-item has-mega-menu d-none d-lg-block sector-laptop">
-                        <a class="nav-link d-flex justify-content-between" href="#" onclick="toggleMegaMenu(event)">
-                            Sectors
-                            <span class="d-lg-none">+</span>
-                        </a>
-                        <div class="mega-menu">
-                            <div class="mega-menu-content">
-                                <div class="mega-menu-column d-none d-lg-block">
-                                    <h4 onclick="toggleAccordion(this)">Sectors</h4>
 
-                                </div>
-                                <div class="mega-menu-column">
-                                    
-                                    <ul>
-                                        <li><a href="automobile-sector.html">Automobile</a></li>
-                                        <li><a href="tools-and-hardware-sector.html">Tools and Hardware</a></li>
-                                        
-                                        <li><a href="off-highway.html">Off Highway & Industrial
-                                                Applications</a></li>
-                                        
-                                    </ul>
-                                </div>
-                                <div class="mega-menu-column">
-                                    
-                                    <ul>
-
-                                        <li><a style="color: #dadada;" href="electric-and-hybrid-sector.html">Electric &
-                                            Hybrid</a></li>
-                                        <li><a style="color: #dadada;" href="locomotive-sector.html">Locomotive</a></li>
-                                        <li><a style="color: #dadada;" href="agriculture-sector.html">Agriculture</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </div>
-                    </li> -->
-
-                    <!-- <li class="nav-item has-mega-menu d-block d-lg-none sector-mobile">
-                        <a class="nav-link d-flex justify-content-between" href="#" onclick="toggleMegaMenu(event)">
-                            Sectors
-                            <span class="d-lg-none">+</span>
-                        </a>
-                        <div class="mega-menu">
-                            <div class="mega-menu-content">
-                                <div class="mega-menu-column d-none d-lg-block">
-                                    <h4 onclick="toggleAccordion(this)">Sectors</h4>
-
-                                </div>
-                                <div class="mega-menu-column">
-                                    <h4 onclick="toggleAccordion(this)">Sectors</h4>
-                                    <ul>
-                                        <li><a href="automobile-sector.html">Automobile</a></li>
-                                        <li><a href="tools-and-hardware-sector.html">Tools and Hardware</a></li>
-                                        
-                                        <li><a href="off-highway.html">Off Highway & Industrial Applications</a></li>
-                                        <li><a style="color: #dadada;" href="electric-and-hybrid-sector.html">Electric &
-                                                Hybrid</a></li>
-                                        <li><a style="color: #dadada;" href="locomotive-sector.html">Locomotive</a></li>
-                                        <li><a style="color: #dadada;" href="agriculture-sector.html">Agriculture</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </div>
-                    </li> -->
 
                     <li class="nav-item has-mega-menu">
                         <a class="nav-link d-flex justify-content-between" href="people.html"
-                            onclick="toggleMegaMenu(event)">
+                            onclick="toggleMegaMenu(event)" data-translate="people">
                             People
                             <span class="d-lg-none">+</span>
                         </a>
                         <div class="mega-menu">
                             <div class="mega-menu-content">
                                 <div class="mega-menu-column d-none d-lg-block">
-                                    <h4 onclick="toggleAccordion(this)">People</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="people">People</h4>
 
                                 </div>
                                 <div class="mega-menu-column">
-                                    <h4 onclick="toggleAccordion(this)">People</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="people">People</h4>
                                     <ul>
-                                        <li><a href="people.html">Life at JK Maini</a></li>
+                                        <li><a href="people.html" data-translate="life_at_jk_maini">Life at JK Maini</a>
+                                        </li>
                                         <!-- <li><a href="#">Employee Testimonials</a></li> -->
-                                        <li><a href="people.html#employee-test">Employee Testimonials</a></li>
+                                        <li><a href="people.html#employee-test"
+                                                data-translate="employee_testimonials">Employee Testimonials</a></li>
                                         <!-- <li><a href="#">Global Footprints</a></li>  -->
                                     </ul>
                                 </div>
@@ -249,23 +180,29 @@
                         </div>
                     </li>
                     <li class="nav-item has-mega-menu">
-                        <a class="nav-link d-flex justify-content-between" href="#" onclick="toggleMegaMenu(event)">
+                        <a class="nav-link d-flex justify-content-between" href="#" onclick="toggleMegaMenu(event)"
+                            data-translate="beyond_business">
                             Beyond Business
                             <span class="d-lg-none">+</span>
                         </a>
                         <div class="mega-menu">
                             <div class="mega-menu-content">
                                 <div class="mega-menu-column d-none d-lg-block">
-                                    <h4 onclick="toggleAccordion(this)">Beyond Business</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="beyond_business">Beyond Business
+                                    </h4>
 
                                 </div>
                                 <div class="mega-menu-column">
-                                    <h4 onclick="toggleAccordion(this)">Purpose & Progress</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="purpose_progress">Purpose &
+                                        Progress</h4>
                                     <ul>
-                                        <li><a href="sustainability.html">Sustainability, Certifications & Governance</a></li>
-                                        <li><a href="awards.html">Awards</a></li>
-                                        <li><a href="csr.html">CSR</a></li>
-                                        <li><a href="events.html">News & Events</a></li>
+                                        <li><a href="sustainability.html"
+                                                data-translate="sustainability_certifications_governance">Sustainability,
+                                                Certifications &
+                                                Governance</a></li>
+                                        <li><a href="awards.html" data-translate="awards">Awards</a></li>
+                                        <li><a href="csr.html" data-translate="csr">CSR</a></li>
+                                        <li><a href="events.html" data-translate="news_events">News & Events</a></li>
                                     </ul>
                                 </div>
                                 <!-- <div class="mega-menu-column">
@@ -290,12 +227,21 @@
                     </li>
 
                     <li class="nav-item has-mega-menu d-md-none">
-                        <a class="nav-link" href="careers.html">Career</a>
+                        <a class="nav-link" href="careers.html" data-translate="careers">Career</a>
                     </li>
-                   
+
 
                     <li class="nav-item has-mega-menu d-md-none">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.html" data-translate="contact">Contact</a>
+                    </li>
+
+                    <li class="nav-item  d-md-none">
+                        <div class="language-switcher">
+                            <select id="languageSelect" onchange="changeLanguage(this.value)">
+                                <option value="en">English</option>
+                                <option value="id">Bahasa</option>
+                            </select>
+                        </div>
                     </li>
 
                 </ul>
@@ -321,7 +267,8 @@
                         </a>
                     </li>
                     <li class="nav-item icon-content my-auto">
-                        <a  data-social="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/company/ring-plus-aqua-ltd./">
+                        <a data-social="linkedin" aria-label="LinkedIn"
+                            href="https://www.linkedin.com/company/ring-plus-aqua-ltd./">
                             <div class="filled"></div>
                             <svg xml:space="preserve" viewBox="0 0 16 16" class="bi bi-linkedin" fill="currentColor"
                                 height="16" width="16" xmlns="http://www.w3.org/2000/svg">
@@ -347,21 +294,20 @@
                         </div>
                         <div class="container swiper-content">
                             <div class="text-center mt-5" data-aos="fade-up">
-                                <h1 class="page-title">Tools & Hardware</h1>
-                                <p class="mt-3 mb-4 text-center heading-animate">
+                                <h1 class="page-title" data-translate="tools_hardware_title">Tools & Hardware</h1>
+                                <p class="mt-3 mb-4 text-center heading-animate" data-translate="tools_hardware_desc">
                                     JK Maini is a trusted name in the tools and hardware sector, delivering
                                     precision-engineered solutions for a wide range of industrial and commercial
                                     applications. Our comprehensive portfolio includes Files, Cutting Tools, Hand Tools,
                                     Power Tools & Power Tool Accessories.
-
                                 </p>
                                 <div class="d-flex justify-content-center">
                                     <a target="_blank" href="https://jksuperdrive.com/" style="text-decoration: none;">
                                         <button class="visit-site-btn mt-3" style="border: 2px solid #fff;">
                                             <div class="svg-wrapper-1">
                                                 <div class="svg-wrapper">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
-                                                        height="24">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        width="24" height="24">
                                                         <path fill="none" d="M0 0h24v24H0z"></path>
                                                         <path fill="currentColor"
                                                             d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
@@ -369,12 +315,13 @@
                                                     </svg>
                                                 </div>
                                             </div>
-                                            <span>Visit Site</span>
+                                            <span data-translate="tools_hardware_visit_site">Visit Site</span>
                                         </button>
                                     </a>
                                 </div>
                             </div>
                         </div>
+
                     </div>
 
                 </div>
@@ -389,21 +336,23 @@
                     <div class="header">
                         <img src="./assets/images/jk-super-and-hammer.png" alt="Tools and Hardware"
                             class="img-fluid mb-2" style="width: 35%;" data-aos="zoom-in">
-                        <h6 class="section-title" data-aos="fade-up">Precision in Every Cut</h6>
-                        <h2 class="page-title-animate">The Tools & Hardware Legacy of JK Files
-                        </h2>
-                        <p style="text-align: justify;" data-aos="fade-up">At JK Files, we bring over seven decades of expertise in delivering high-quality tools and
+                        <h6 class="section-title" data-aos="fade-up" data-translate="tools_legacy_subtitle">Precision in
+                            Every Cut</h6>
+                        <h2 class="page-title-animate" data-translate="tools_legacy_title">The Tools & Hardware Legacy
+                            of JK Files</h2>
+                        <p style="text-align: justify;" data-aos="fade-up" data-translate="tools_legacy_desc">
+                            At JK Files, we bring over seven decades of expertise in delivering high-quality tools and
                             hardware solutions trusted by professionals across industries. As a core part of JK Maini,
                             our tools and hardware business stands as a symbol of precision, performance, and
                             reliability.
                         </p>
-
-
                     </div>
+
                 </div>
                 <div class="col-md-6" data-aos="fade-up">
                     <div class="image-container">
-                        <img data-aos="zoom-in" src="./assets/images/tools-about.png" style="width: 100%;" alt="Tools and Hardware About">
+                        <img data-aos="zoom-in" src="./assets/images/tools-about.png" style="width: 100%;"
+                            alt="Tools and Hardware About">
                     </div>
                 </div>
             </div>
@@ -412,133 +361,128 @@
 
     <section class="numbers my-5 py-5" data-aos="fade-up">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 d-flex justify-content-around mx-lg-0 px-lg-0">
-                    <div class="number-card text-center">
-                        <img class="mb-2" src="./assets/images/product-sku.png" alt="Product SKUs">
-                        <h2>5000+</h2>
-                        <p>PRODUCT SKUs</p>
-                    </div>
-                    <div class="number-card text-center">
-                        <img class="mb-2" src="./assets/images/ring-gears.png" alt="Ring Gears">
-                        <h2>1000+</h2>
-                        <p>Dealers Globally</p>
-                    </div>
-                </div>
-                <div class="col-lg-6 d-flex justify-content-around mt-3 mt-lg-0 mx-lg-0 px-lg-0">
-                    <div class="number-card text-center">
-                        <img class="mb-2" src="./assets/images/total-plants.png" alt="plants">
-                        <h2>3</h2>
-                        <p>PLANTS</p>
-                    </div>
-                    <div class="number-card text-center">
-                        <img class="mb-2" src="./assets/images/warehouse-colored.png" alt="warehouses">
-                        <h2>55+</h2>
-                        <p>Countries</p>
-                    </div>
-                </div>
+          <div class="row">
+            <div class="col-lg-6 d-flex justify-content-around mx-lg-0 px-lg-0">
+              <div class="number-card text-center">
+                <img class="mb-2" src="./assets/images/product-sku.png" alt="Product SKUs">
+                <h2>5000+</h2>
+                <p data-translate="number_product_skus">PRODUCT SKUs</p>
+              </div>
+              <div class="number-card text-center">
+                <img class="mb-2" src="./assets/images/ring-gears.png" alt="Ring Gears">
+                <h2>1000+</h2>
+                <p data-translate="number_dealers_globally">Dealers Globally</p>
+              </div>
             </div>
-
+            <div class="col-lg-6 d-flex justify-content-around mt-3 mt-lg-0 mx-lg-0 px-lg-0">
+              <div class="number-card text-center">
+                <img class="mb-2" src="./assets/images/total-plants.png" alt="plants">
+                <h2>3</h2>
+                <p data-translate="number_plants">PLANTS</p>
+              </div>
+              <div class="number-card text-center">
+                <img class="mb-2" src="./assets/images/warehouse-colored.png" alt="warehouses">
+                <h2>55+</h2>
+                <p data-translate="number_countries">Countries</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
+      
 
-    <section class="facility-cards my-4">
+      <section class="facility-cards my-4">
         <div class="container">
-            <div class="header text-center" data-aos="fade-up">
-                <h4 class="section-title" data-aos="fade-up">Core Products & Solutions
-                </h4>
-                <p class="heading-animate">We manufacture high-performance & precision Tools that powers both industrial and professional-grade
-                    tools incl segments like Industrial, Automobile, Agriculture, Construction, Home improvement / DIY,
-                    Engineering, Real Estate, Metal Fabrications etc.
-
-                </p>
-            </div>
-            <div class="facilities-grid" data-aos="fade-up">
-                <div class="facility-card first-card">
-                    <img src="./assets/images/files.png" alt="High Carbin Files & Steels">
-                    <div class="overlay">
-                        <div class="facility-title">High Carbin Files & Steels
-                        </div>
-                        <a target="_blank" href="https://jksuperdrive.com/files/" class="explore-btn">Explore Now</a>
-                    </div>
-                </div>
-
-                <div class="facility-card">
-                    <img src="./assets/images/cutting-tools.png" alt="Cutting Tools">
-                    <div class="overlay">
-                        <div class="facility-title">Cutting Tools</div>
-                        <a target="_blank" href="https://jksuperdrive.com/cutting-tools/" class="explore-btn">Explore
-                            Now</a>
-                    </div>
-                </div>
-
-                <div class="facility-card">
-                    <img src="./assets/images/hand-tools.png" alt="Hand Tools">
-                    <div class="overlay">
-                        <div class="facility-title">Hand Tools</div>
-                        <a target="_blank" href="https://jksuperdrive.com/hand-tools/" class="explore-btn">Explore
-                            Now</a>
-                    </div>
-                </div>
-
-                <div class="facility-card">
-                    <img src="./assets/images/power-tools.png" alt="Power Tools Machines">
-                    <div class="overlay">
-                        <div class="facility-title">Power Tools Machines</div>
-                        <a target="_blank" href="https://jksuperdrive.com/power-tools/" class="explore-btn">Explore
-                            Now</a>
-                    </div>
-                </div>
-
-                <div class="facility-card">
-                    <img src="./assets/images/power-tools-accessories.png" alt="Power Tool Accessories">
-                    <div class="overlay">
-                        <div class="facility-title">Power Tool Accessories</div>
-                        <a target="_blank" href="https://jksuperdrive.com/power-tool-accessories/"
-                            class="explore-btn">Explore Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="details my-5" data-aos="fade-up">
-        <div class="container">
-            <div class="header">
-                <h4 class="section-title page-title-animate">Our Expertise in Tools & Hardware</h4>
-
-            </div>
-            <div class="row mt-5">
-
-                <div class="col-12">
-                    <h4 class="page-title-animate">
-                        <i class="fa-solid fa-scale-balanced" style="color: #d32f2f; margin-right: 8px;"></i>
-                        Materials, Tolerances & Volume
-                    </h4>
-                    <!-- <p>We support the next wave of clean mobility with high-precision components tailored for electric
-                        and hybrid vehicles. Our product portfolio includes:</p> -->
-                    <ul class="heading-animate">
-                        <li><strong class="section-title">Materials</strong>: High Carbon Steels, high-speed steel
-                            (HSS), Alloy steels, tool steels,, stainless steel
-                        </li>
-                        <li><strong class="section-title">Tolerances</strong>: Precision-ground and machined to ±5
-                            microns, with surface finishes suitable for rotational and impact applications
-                        </li>
-                        <li><strong class="section-title">Volume Capabilities</strong>: From small batch prototyping to
-                            mass production, tailored for OEM and Tier 1 tool manufacturers
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <h4 class="mt-3 page-title-animate"><i class="fa-solid fa-industry" style="color: #d32f2f; margin-right: 8px;"></i>Industry
-                Standards & Compliance</h4>
-            <p class="heading-animate">We adhere to global tooling standards and performance benchmarks, ensuring every part is validated for
-                High performance, longevity, cost benefits and safety. Our in-house testing and quality assurance
-                protocols deliver consistent reliability across thousands of cycles, meeting the demands of professional
-                environments worldwide.
+          <div class="header text-center" data-aos="fade-up">
+            <h4 class="section-title" data-aos="fade-up" data-translate="core_products_title">Core Products & Solutions</h4>
+            <p class="heading-animate" data-translate="core_products_desc">
+              We manufacture high-performance & precision Tools that powers both industrial and professional-grade tools incl segments like Industrial, Automobile, Agriculture, Construction, Home improvement / DIY, Engineering, Real Estate, Metal Fabrications etc.
             </p>
+          </div>
+          <div class="facilities-grid" data-aos="fade-up">
+            <div class="facility-card first-card">
+              <img src="./assets/images/files.png" alt="High Carbon Files & Steels">
+              <div class="overlay">
+                <div class="facility-title" data-translate="product_high_carbon_files">High Carbon Files & Steels</div>
+                <a target="_blank" href="https://jksuperdrive.com/files/" class="explore-btn" data-translate="explore_now">Explore Now</a>
+              </div>
+            </div>
+      
+            <div class="facility-card">
+              <img src="./assets/images/cutting-tools.png" alt="Cutting Tools">
+              <div class="overlay">
+                <div class="facility-title" data-translate="product_cutting_tools">Cutting Tools</div>
+                <a target="_blank" href="https://jksuperdrive.com/cutting-tools/" class="explore-btn" data-translate="explore_now">Explore Now</a>
+              </div>
+            </div>
+      
+            <div class="facility-card">
+              <img src="./assets/images/hand-tools.png" alt="Hand Tools">
+              <div class="overlay">
+                <div class="facility-title" data-translate="product_hand_tools">Hand Tools</div>
+                <a target="_blank" href="https://jksuperdrive.com/hand-tools/" class="explore-btn" data-translate="explore_now">Explore Now</a>
+              </div>
+            </div>
+      
+            <div class="facility-card">
+              <img src="./assets/images/power-tools.png" alt="Power Tools Machines">
+              <div class="overlay">
+                <div class="facility-title" data-translate="product_power_tools_machines">Power Tools Machines</div>
+                <a target="_blank" href="https://jksuperdrive.com/power-tools/" class="explore-btn" data-translate="explore_now">Explore Now</a>
+              </div>
+            </div>
+      
+            <div class="facility-card">
+              <img src="./assets/images/power-tools-accessories.png" alt="Power Tool Accessories">
+              <div class="overlay">
+                <div class="facility-title" data-translate="product_power_tool_accessories">Power Tool Accessories</div>
+                <a target="_blank" href="https://jksuperdrive.com/power-tool-accessories/" class="explore-btn" data-translate="explore_now">Explore Now</a>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
+      
+
+      <section class="details my-5" data-aos="fade-up">
+        <div class="container">
+          <div class="header">
+            <h4 class="section-title page-title-animate" data-translate="tools_expertise_title">Our Expertise in Tools & Hardware</h4>
+          </div>
+      
+          <div class="row mt-5">
+            <div class="col-12">
+              <h4 class="page-title-animate">
+                <i class="fa-solid fa-scale-balanced" style="color: #d32f2f; margin-right: 8px;"></i>
+                <span data-translate="materials_tolerances_volume">Materials, Tolerances & Volume</span>
+              </h4>
+              <ul class="heading-animate">
+                <li>
+                  <strong class="section-title" data-translate="materials_label">Materials</strong>: 
+                  <span data-translate="materials_desc">High Carbon Steels, high-speed steel (HSS), Alloy steels, tool steels, stainless steel</span>
+                </li>
+                <li>
+                  <strong class="section-title" data-translate="tolerances_label">Tolerances</strong>: 
+                  <span data-translate="tolerances_desc">Precision-ground and machined to ±5 microns, with surface finishes suitable for rotational and impact applications</span>
+                </li>
+                <li>
+                  <strong class="section-title" data-translate="volume_label">Volume Capabilities</strong>: 
+                  <span data-translate="volume_desc">From small batch prototyping to mass production, tailored for OEM and Tier 1 tool manufacturers</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+      
+          <h4 class="mt-3 page-title-animate">
+            <i class="fa-solid fa-industry" style="color: #d32f2f; margin-right: 8px;"></i>
+            <span data-translate="industry_standards">Industry Standards & Compliance</span>
+          </h4>
+          <p class="heading-animate" data-translate="industry_standards_desc">
+            We adhere to global tooling standards and performance benchmarks, ensuring every part is validated for High performance, longevity, cost benefits and safety. Our in-house testing and quality assurance protocols deliver consistent reliability across thousands of cycles, meeting the demands of professional environments worldwide.
+          </p>
+        </div>
+      </section>
+      
 
 
 
@@ -546,54 +490,63 @@
         <div class="right-form p-4">
             <span class="close-btn" onclick="closePopup()">&times;</span>
             <div>
-                <h2>Get in Touch</h2>
-                <p>Tell us what you’re building — we’ll show you how to get there, faster and smarter.
+                <h2 data-translate="get-in-touch">Get in Touch</h2>
+                <p data-translate="whether-looking">Tell us what you're building — we'll show you how to get there,
+                    faster and smarter.
                     Response guaranteed within 24 hours.</p>
             </div>
             <form action="" class="mt-4" id="contact-form">
                 <div class="form-group d-sm-flex gap-3 ">
-                    <input class="my-3" type="text" required placeholder="First Name" id="FirstName">
-                    <input class="my-3" type="text" required placeholder="Last Name" id="LastName">
+                    <input class="my-3" type="text" required placeholder="First Name" id="FirstName"
+                        data-translate-placeholder="first-name">
+                    <input class="my-3" type="text" required placeholder="Last Name" id="LastName"
+                        data-translate-placeholder="last-name">
                 </div>
                 <div class="form-group d-sm-flex gap-3 ">
-                    <input class="my-3" type="text" required placeholder="Company" id="Company">
-                    <input class="my-3" type="text" required placeholder="Email Address" id="EmailAddress">
+                    <input class="my-3" type="text" required placeholder="Company" id="Company"
+                        data-translate-placeholder="company">
+                    <input class="my-3" type="text" required placeholder="Email Address" id="EmailAddress"
+                        data-translate-placeholder="email-address">
                 </div>
                 <div class="form-group d-sm-flex gap-3 ">
-                    <input class="my-3" type="text" required placeholder="Phone No." id="PhoneNo">
+                    <input class="my-3" type="text" required placeholder="Phone No." id="PhoneNo"
+                        data-translate-placeholder="phone-no">
                     <select class="my-3 form-select" required id="Industry">
-    <option value="" disabled selected>Select Industry</option>
-    <option value="Electric & hybrid">Electric & hybrid</option>
-    <option value="Passenger vehicles">Passenger vehicles</option>
-    <option value="Commercial vehicles">Commercial vehicles</option>
-    <option value="Industrial & hydraulics">Industrial & hydraulics</option>
-    <option value="Tools and hardware">Tools and hardware</option>
-    <option value="Locomotive">Locomotive</option>
-    <option value="Marine">Marine</option>
-    <option value="Agriculture">Agriculture</option>
-    <option value="Defense">Defense</option>
-    <option value="Ev & hybrid">Ev & hybrid</option>
-    <option value="2 wheelers- ev">2 wheelers- ev</option>
-    <option value="2 wheelers- ice">2 wheelers- ice</option>
-    <option value="Electrical and electronics">Electrical and electronics</option>
-    <option value="Power tools">Power tools</option>
-    <option value="Semi-conductors">Semi-conductors</option>
-    <option value="Medical equipements">Medical equipements</option>
-    <option value="Aerospace">Aerospace</option>
-<option value="Other">Other</option>
-</select>
+                        <option value="" disabled selected data-translate="select-industry">Select Industry</option>
+                        <option value="Electric & hybrid">Electric & hybrid</option>
+                        <option value="Passenger vehicles">Passenger vehicles</option>
+                        <option value="Commercial vehicles">Commercial vehicles</option>
+                        <option value="Industrial & hydraulics">Industrial & hydraulics</option>
+                        <option value="Tools and hardware">Tools and hardware</option>
+                        <option value="Locomotive">Locomotive</option>
+                        <option value="Marine">Marine</option>
+                        <option value="Agriculture">Agriculture</option>
+                        <option value="Defense">Defense</option>
+                        <option value="Ev & hybrid">Ev & hybrid</option>
+                        <option value="2 wheelers- ev">2 wheelers- ev</option>
+                        <option value="2 wheelers- ice">2 wheelers- ice</option>
+                        <option value="Electrical and electronics">Electrical and electronics</option>
+                        <option value="Power tools">Power tools</option>
+                        <option value="Semi-conductors">Semi-conductors</option>
+                        <option value="Medical equipements">Medical equipements</option>
+                        <option value="Aerospace">Aerospace</option>
+                        <option value="Other">Other</option>
+                    </select>
 
                 </div>
                 <div class="form-group">
-                    <textarea name=""  placeholder="I want to know more about" id="Inquiry"></textarea>
+                    <textarea name="" placeholder="I want to know more about" id="Inquiry"
+                        data-translate-placeholder="inquiry"></textarea>
 
                 </div>
                 <div class="d-flex gap-3 align-items-start">
                     <input required type="checkbox" name="" id="T&C" class="w-auto mt-2">
                     <label class="w-auto" for="T&C">
-                        By checking this box, I consent to the processing of my personal data in accordance with Section
-                        4 (1)(a) of the Digital Personal Data Protection Act 2023, for the purposes outlined in the
-                        Privacy Policy. I have also read and agreed to the <a target="_blank" href="privacy-policy.html">Privacy Policy.</a> 
+                        <span data-translate="privacy-consent">By checking this box, I consent to the processing of my
+                            personal data in accordance with Section
+                            4 (1)(a) of the Digital Personal Data Protection Act 2023, for the purposes outlined in the
+                            Privacy Policy. I have also read and agreed to the </span><a target="_blank"
+                            href="privacy-policy.html"><span data-translate="privacy-policy">Privacy Policy.</span></a>
                         <span class="text-danger">*</span>
                     </label>
                 </div>
@@ -613,7 +566,7 @@
                                 fill="currentColor"></path>
                         </svg>
                     </span>
-                    Submit
+                    <span data-translate="submit">Submit</span>
                 </button>
                 <div id="message" class="message"></div>
                 <div id="error" class="error"></div>
@@ -631,9 +584,11 @@
                         <lord-icon src="https://cdn.lordicon.com/bpmglzll.json" trigger="loop" colors="primary:#ffffff"
                             style="width:50px;height:50px">
                         </lord-icon>
-                        <h3>Our Offices</h3>
-                        <p>View our locations and find contact details to our nearest office.</p>
-                        <a href="contact.html#office-locations">Explore Our Locations</a>
+                        <h3 data-translate="our-offices">Our Offices</h3>
+                        <p data-translate="view-locations">View our locations and find contact details to our nearest
+                            office.</p>
+                        <a href="contact.html#office-locations" data-translate="explore-locations">Explore Our
+                            Locations</a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -642,9 +597,10 @@
                             colors="primary:#ffffff,secondary:#ebe6ef,tertiary:#e83a30,quaternary:#ffffff"
                             style="width:50px;height:50px">
                         </lord-icon>
-                        <h3>Drop us a Line</h3>
-                        <p>You can contact us by filling in this form any time you need professional support.</p>
-                        <a onclick="openPopup()" href="javascript:void(0)">Fill Our Form</a>
+                        <h3 data-translate="drop-us-line">Drop us a Line</h3>
+                        <p data-translate="contact-form">You can contact us by filling in this form any time you need
+                            professional support.</p>
+                        <a onclick="openPopup()" href="javascript:void(0)" data-translate="fill-form">Fill Our Form</a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -653,10 +609,11 @@
                             colors="primary:#ffffff,secondary:#ffffff,tertiary:#ffffff,quaternary:#ebe6ef"
                             style="width:50px;height:50px">
                         </lord-icon>
-                        <h3>Support</h3>
+                        <h3 data-translate="support">Support</h3>
                         <!-- <p>Learn more about us and find resources that will help you with all of our products</p> -->
-                        <p>Connect with us and know more about our products. Call our support executive.</p>
-                        <a href="tel:+912261527998">Call Now</a>
+                        <p data-translate="connect-support">Connect with us and know more about our products. Call our
+                            support executive.</p>
+                        <a href="tel:+912261527998" data-translate="call-now">Call Now</a>
                     </div>
                 </div>
             </div>
@@ -771,7 +728,8 @@
                                     </div>
                                 </div>
                             </a> -->
-                            <a target="_blank" href="https://www.linkedin.com/company/ring-plus-aqua-ltd./" class="linkedin-icon">
+                            <a target="_blank" href="https://www.linkedin.com/company/ring-plus-aqua-ltd./"
+                                class="linkedin-icon">
                                 <div class="socialcontainer">
                                     <div class="icon social-icon-4-4">
                                         <svg fill="white" viewBox="0 0 448 512" height="1.6em">
@@ -820,7 +778,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <p class="m-0">© 2025 JK Maini Precision Technology Limited (JKMPTL). All rights
+                        <p class="m-0" data-translate="copyright">© 2025 JK Maini Precision Technology Limited (JKMPTL).
+                            All rights
                             reserved.</p>
                     </div>
 
@@ -838,7 +797,7 @@
     </button>
 
     <div id="cursor"></div>
-        <!-- <div id="cursor-border"></div> -->
+    <!-- <div id="cursor-border"></div> -->
 
 
 
@@ -874,24 +833,291 @@
 
 
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
-<!-- Bootstrap Bundle with Popper -->
-<script src="https://unpkg.com/lenis@1.3.7/dist/lenis.min.js"></script>
-<script src="https://unpkg.com/split-type"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/TextPlugin.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
-    integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>AOS.init({ duration: 1000 });</script>
-<script src="https://unpkg.com/lenis@1.3.7/dist/lenis.min.js"></script>
-<script src="animation.js"></script>
-<script src="script.js"></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://unpkg.com/lenis@1.3.7/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
+        integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000 });</script>
+    <script src="https://unpkg.com/lenis@1.3.7/dist/lenis.min.js"></script>
+    <script src="animation.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        // Translation object with English and Indonesian text
+        const translations = {
+            en: {
+                // Navigation
+                "businesses": "Businesses",
+                "business_verticals": "Business Verticals",
+                "automotive_industrial_beyond": "Automotive, Industrial & Beyond",
+                "tools_hardware": "Tools & Hardware",
+                "aerospace_defence": "Aerospace & Defence",
+                "people": "People",
+                "life_at_jk_maini": "Life at JK Maini",
+                "employee_testimonials": "Employee Testimonials",
+                "beyond_business": "Beyond Business",
+                "purpose_progress": "Purpose & Progress",
+                "sustainability_certifications_governance": "Sustainability, Certifications & Governance",
+                "awards": "Awards",
+                "csr": "CSR",
+                "news_events": "News & Events",
+                "contact": "Contact",
+                "careers": "Careers",
+
+                //hero-section
+
+                "tools_hardware_title": "Tools & Hardware",
+                "tools_hardware_desc": "JK Maini is a trusted name in the tools and hardware sector, delivering precision-engineered solutions for a wide range of industrial and commercial applications. Our comprehensive portfolio includes Files, Cutting Tools, Hand Tools, Power Tools & Power Tool Accessories.",
+                "tools_hardware_visit_site": "Visit Site",
+
+                //about-section
+                "tools_legacy_subtitle": "Precision in Every Cut",
+                "tools_legacy_title": "The Tools & Hardware Legacy of JK Files",
+                "tools_legacy_desc": "At JK Files, we bring over seven decades of expertise in delivering high-quality tools and hardware solutions trusted by professionals across industries. As a core part of JK Maini, our tools and hardware business stands as a symbol of precision, performance, and reliability.",
+
+                //numbers-section 
+                "number_product_skus": "PRODUCT SKUs",
+                "number_dealers_globally": "Dealers Globally",
+                "number_plants": "PLANTS",
+                "number_countries": "Countries",
+
+                //cards
+                "core_products_title": "Core Products & Solutions",
+                "core_products_desc": "We manufacture high-performance & precision Tools that powers both industrial and professional-grade tools incl segments like Industrial, Automobile, Agriculture, Construction, Home improvement / DIY, Engineering, Real Estate, Metal Fabrications etc.",
+                "product_high_carbon_files": "High Carbon Files & Steels",
+                "product_cutting_tools": "Cutting Tools",
+                "product_hand_tools": "Hand Tools",
+                "product_power_tools_machines": "Power Tools Machines",
+                "product_power_tool_accessories": "Power Tool Accessories",
+                "explore_now": "Explore Now",
+
+                //details
+                "tools_expertise_title": "Our Expertise in Tools & Hardware",
+                "materials_tolerances_volume": "Materials, Tolerances & Volume",
+                "materials_label": "Materials",
+                "materials_desc": "High Carbon Steels, high-speed steel (HSS), Alloy steels, tool steels, stainless steel",
+                "tolerances_label": "Tolerances",
+                "tolerances_desc": "Precision-ground and machined to ±5 microns, with surface finishes suitable for rotational and impact applications",
+                "volume_label": "Volume Capabilities",
+                "volume_desc": "From small batch prototyping to mass production, tailored for OEM and Tier 1 tool manufacturers",
+                "industry_standards": "Industry Standards & Compliance",
+                "industry_standards_desc": "We adhere to global tooling standards and performance benchmarks, ensuring every part is validated for High performance, longevity, cost benefits and safety. Our in-house testing and quality assurance protocols deliver consistent reliability across thousands of cycles, meeting the demands of professional environments worldwide.",
+
+
+
+
+
+
+                // Get in Touch
+                "get-in-touch": "Get in Touch",
+                "ready-to-turn": "Ready to Turn Your Manufacturing Vision into Reality?",
+                "whether-looking": "Whether you're looking for custom-engineered solutions or want to explore how our capabilities align with your needs, we're here to help.",
+                "get-started": "Get Started",
+
+                // Contact Footer
+                "our-offices": "Our Offices",
+                "view-locations": "View our locations and find contact details to our nearest office.",
+                "explore-locations": "Explore Our Locations",
+                "drop-us-line": "Drop us a Line",
+                "contact-form": "You can contact us by filling in this form any time you need professional support.",
+                "fill-form": "Fill Our Form",
+                "support": "Support",
+                "connect-support": "Connect with us and know more about our products. Call our support executive.",
+                "call-now": "Call Now",
+
+                // Form Fields
+                "first-name": "First Name",
+                "last-name": "Last Name",
+                "company": "Company",
+                "email-address": "Email Address",
+                "phone-no": "Phone No.",
+                "select-industry": "Select Industry",
+                "inquiry": "I want to know more about",
+                "submit": "Submit",
+                "privacy-consent": "By checking this box, I consent to the processing of my personal data in accordance with Section 4 (1)(a) of the Digital Personal Data Protection Act 2023, for the purposes outlined in the Privacy Policy. I have also read and agreed to the",
+                "privacy-policy": "Privacy Policy.",
+
+                // Footer
+                "quick-links": "Quick Links",
+                "company-footer": "Company",
+                "follow-us": "Follow us",
+                "copyright": "© 2025 JK Maini Precision Technology Limited (JKMPTL). All rights reserved."
+            },
+            id: {
+                // Navigation
+                "businesses": "Bisnis",
+                "business_verticals": "Vertikal Bisnis",
+                "automotive_industrial_beyond": "Otomotif, Industri & di Atas",
+                "tools_hardware": "Alat & Perangkat Keras",
+                "aerospace_defence": "Aerospace & Pertahanan",
+                "people": "Orang",
+                "life_at_jk_maini": "Di JK Maini",
+                "employee_testimonials": "Testimoni Karyawan",
+                "beyond_business": "di Atas Bisnis",
+                "purpose_progress": "Tujuan & Kemajuan",
+                "sustainability_certifications_governance": "Keberlanjutan, Sertifikasi & Pengawasan",
+                "awards": "Penghargaan",
+                "csr": "CSR",
+                "news_events": "Berita & Acara",
+                "contact": "Kontak",
+                "careers": "Karir",
+
+                //hero-section
+                "tools_hardware_title": "Alat & Perkakas",
+                "tools_hardware_desc": "JK Maini adalah nama terpercaya di sektor alat dan perkakas, menyediakan solusi presisi untuk berbagai aplikasi industri dan komersial. Portofolio kami mencakup File, Alat Potong, Alat Tangan, Alat Listrik & Aksesori Alat Listrik.",
+                "tools_hardware_visit_site": "Kunjungi Situs",
+
+                //about-section
+                "tools_legacy_subtitle": "Presisi di Setiap Potongan",
+                "tools_legacy_title": "Warisan Alat & Perkakas JK Files",
+                "tools_legacy_desc": "Di JK Files, kami membawa pengalaman lebih dari tujuh dekade dalam menyediakan solusi alat dan perkakas berkualitas tinggi yang dipercaya oleh para profesional di berbagai industri. Sebagai bagian inti dari JK Maini, bisnis alat dan perkakas kami berdiri sebagai simbol presisi, kinerja, dan keandalan.",
+
+                //numbers-section 
+                "number_product_skus": "SKU PRODUK",
+                "number_dealers_globally": "Dealer Global",
+                "number_plants": "PABRIK",
+                "number_countries": "Negara",
+
+                //cards
+                "core_products_title": "Produk & Solusi Utama",
+                "core_products_desc": "Kami memproduksi alat presisi & berkinerja tinggi yang mendukung alat industri dan profesional, termasuk segmen seperti Industri, Otomotif, Pertanian, Konstruksi, Perbaikan Rumah / DIY, Rekayasa, Properti, Fabrikasi Logam, dll.",
+                "product_high_carbon_files": "Bilah & Baja Karbon Tinggi",
+                "product_cutting_tools": "Alat Pemotong",
+                "product_hand_tools": "Alat Tangan",
+                "product_power_tools_machines": "Mesin Alat Listrik",
+                "product_power_tool_accessories": "Aksesori Alat Listrik",
+                "explore_now": "Jelajahi Sekarang",
+
+                //details
+                "tools_expertise_title": "Keahlian Kami dalam Alat & Perkakas",
+                "materials_tolerances_volume": "Bahan, Toleransi & Volume",
+                "materials_label": "Bahan",
+                "materials_desc": "Baja Karbon Tinggi, baja kecepatan tinggi (HSS), baja paduan, baja alat, baja tahan karat",
+                "tolerances_label": "Toleransi",
+                "tolerances_desc": "Dihaluskan dan dibentuk dengan presisi ±5 mikron, dengan permukaan yang sesuai untuk aplikasi rotasi dan benturan",
+                "volume_label": "Kemampuan Volume",
+                "volume_desc": "Dari prototyping batch kecil hingga produksi massal, disesuaikan untuk OEM dan produsen alat Tier 1",
+                "industry_standards": "Standar & Kepatuhan Industri",
+                "industry_standards_desc": "Kami mematuhi standar alat global dan tolok ukur kinerja, memastikan setiap bagian divalidasi untuk performa tinggi, umur panjang, keuntungan biaya, dan keselamatan. Protokol pengujian dan jaminan kualitas internal kami memberikan keandalan konsisten di ribuan siklus, memenuhi tuntutan lingkungan profesional di seluruh dunia.",
+
+
+
+
+
+
+
+
+
+
+
+                // Get in Touch
+                "get-in-touch": "Hubungi Kami",
+                "ready-to-turn": "Siap Mengubah Visi Manufaktur Anda Menjadi Kenyataan?",
+                "whether-looking": "Baik Anda mencari solusi rekayasa khusus atau ingin menjelajahi bagaimana kemampuan kami selaras dengan kebutuhan Anda, kami siap membantu.",
+                "get-started": "Mulai",
+
+                // Contact Footer
+                "our-offices": "Kantor Kami",
+                "view-locations": "Lihat lokasi kami dan temukan detail kontak ke kantor terdekat kami.",
+                "explore-locations": "Jelajahi Lokasi Kami",
+                "drop-us-line": "Kirimkan Pesan",
+                "contact-form": "Anda dapat menghubungi kami dengan mengisi formulir ini kapan saja Anda membutuhkan dukungan profesional.",
+                "fill-form": "Isi Formulir Kami",
+                "support": "Dukungan",
+                "connect-support": "Hubungi kami dan ketahui lebih banyak tentang produk kami. Hubungi eksekutif dukungan kami.",
+                "call-now": "Hubungi Sekarang",
+
+                // Form Fields
+                "first-name": "Nama Depan",
+                "last-name": "Nama Belakang",
+                "company": "Perusahaan",
+                "email-address": "Alamat Email",
+                "phone-no": "Nomor Telepon",
+                "select-industry": "Pilih Industri",
+                "inquiry": "Saya ingin tahu lebih banyak tentang",
+                "submit": "Kirim",
+                "privacy-consent": "Dengan mencentang kotak ini, saya menyetujui pemrosesan data pribadi saya sesuai dengan Bagian 4 (1)(a) dari Undang-Undang Perlindungan Data Pribadi Digital 2023, untuk tujuan yang diuraikan dalam Kebijakan Privasi. Saya juga telah membaca dan menyetujui",
+                "privacy-policy": "Kebijakan Privasi.",
+
+                // Footer
+                "quick-links": "Tautan Cepat",
+                "company-footer": "Perusahaan",
+                "follow-us": "Ikuti kami",
+                "copyright": "© 2025 JK Maini Precision Technology Limited (JKMPTL). Semua hak dilindungi."
+            }
+        };
+
+        // Function to change language
+        function changeLanguage(language) {
+            // Store selected language in localStorage
+            localStorage.setItem('selectedLanguage', language);
+
+            // Update all elements with data-translate attribute
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[language] && translations[language][key]) {
+                    element.textContent = translations[language][key];
+                }
+            });
+
+            // Update elements with data-translate-placeholder attribute
+            const placeholderElements = document.querySelectorAll('[data-translate-placeholder]');
+            placeholderElements.forEach(element => {
+                const key = element.getAttribute('data-translate-placeholder');
+                if (translations[language] && translations[language][key]) {
+                    element.placeholder = translations[language][key];
+                }
+            });
+
+            // Update page title based on language
+            if (language === 'id') {
+                document.title = "JK Maini Precision Technology Ltd.";
+            } else {
+                document.title = "JK Maini Precision Technology Ltd.";
+            }
+        }
+
+        // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+            const languageSelect = document.getElementById('languageSelect');
+
+            if (languageSelect) {
+                languageSelect.value = savedLanguage;
+            }
+
+            changeLanguage(savedLanguage);
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script>
 
 
