@@ -45,29 +45,38 @@
                             data-bs-toggle="tooltip" data-bs-placement="bottom" title="JK Superdrive">
                             Tools & Hardware (JK Superdrive)</a>
                     </li>
-                    
+
                 </ul>
             </div>
             <div class="meta-header-right">
                 <ul class="navbar-nav-right d-none d-md-flex" style="list-style: none;">
                     <li class="nav-item ms-2    ">
-                        <a class="nav-link" aria-current="page" href="careers.html">Careers</a>
+                        <a class="nav-link" aria-current="page" href="careers.html" data-translate="careers">Careers</a>
                     </li>
                     <li class="nav-item ms-2 ">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link " href="contact.html" data-translate="contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <div class="language-switcher">
+                            <select id="languageSelect" onchange="changeLanguage(this.value)">
+                                <option value="en">English</option>
+                                <option value="id">Bahasa</option>
+                            </select>
+                        </div>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="container-lg container-fluid">
             <a class="navbar-brand" href="index.html"><img style="width: 350px;" class="img-fluid"
-                    src="./assets/images/JK-Maini.svg" alt="JK Maini Precision Technology Logo"></a>
+                    src="./assets/images/JK-Maini.svg" alt="JK Maini Precision Technology"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-md-2">
+
 
                     <!-- <li class="nav-item active has-mega-menu">
                         <a class="nav-link d-flex justify-content-between" href="./about.html"
@@ -97,44 +106,31 @@
 
                     <li class="nav-item has-mega-menu">
 
-                        <a class="nav-link d-flex justify-content-between" href="#"
-                            onclick="toggleMegaMenu(event)">Businesses
+                        <a class="nav-link d-flex justify-content-between" href="#" onclick="toggleMegaMenu(event)"
+                            data-translate="businesses">Businesses
                             <span class="d-lg-none">+</span>
                         </a>
                         <div class="mega-menu">
                             <div class="mega-menu-content">
                                 <div class="mega-menu-column d-none d-lg-block">
-                                    <h4 onclick="toggleAccordion(this)">Businesses</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="businesses">Businesses</h4>
 
                                 </div>
                                 <div class="mega-menu-column">
-                                    <h4 onclick="toggleAccordion(this)">Business Verticals</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="business_verticals">Business
+                                        Verticals</h4>
                                     <ul>
-                                        <li><a href="automotive-industrial-&-beyond.html">Automotive, Industrial &
+                                        <li><a href="automotive-industrial-&-beyond.html"
+                                                data-translate="automotive_industrial_beyond">Automotive, Industrial &
                                                 Beyond</a></li>
-                                        <li><a href="toolsAndHardware.html">Tools & Hardware</a></li>
-                                        <li><a href="aerospace.html">Aerospace & Defence</a></li>
+                                        <li><a href="toolsAndHardware.html" data-translate="tools_hardware">Tools &
+                                                Hardware</a></li>
+                                        <li><a href="aerospace.html" data-translate="aerospace_defence">Aerospace &
+                                                Defence</a></li>
                                         <!-- <li><a href="#">Global Footprints</a></li>  -->
                                     </ul>
                                 </div>
-                                <!-- <div class="mega-menu-column">
-                                    <h4 onclick="toggleAccordion(this)">Sustainability</h4>
-                                    <ul>
-                                        <li><a href="#">Environmental Impact</a></li>
-                                        <li><a href="#">Social Responsibility</a></li>
-                                        <li><a href="#">Green Initiatives</a></li>
-                                        <li><a href="#">Reports</a></li>
-                                    </ul>
-                                </div>
-                                <div class="mega-menu-column">
-                                    <h4 onclick="toggleAccordion(this)">Recognition</h4>
-                                    <ul>
-                                        <li><a href="#">Awards</a></li>
-                                        <li><a href="#">Certifications</a></li>
-                                        <li><a href="#">Press Coverage</a></li>
-                                        <li><a href="#">Testimonials</a></li>
-                                    </ul>
-                                </div> -->
+
                             </div>
                         </div>
                     </li>
@@ -209,22 +205,24 @@
 
                     <li class="nav-item has-mega-menu">
                         <a class="nav-link d-flex justify-content-between" href="people.html"
-                            onclick="toggleMegaMenu(event)">
+                            onclick="toggleMegaMenu(event)" data-translate="people">
                             People
                             <span class="d-lg-none">+</span>
                         </a>
                         <div class="mega-menu">
                             <div class="mega-menu-content">
                                 <div class="mega-menu-column d-none d-lg-block">
-                                    <h4 onclick="toggleAccordion(this)">People</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="people">People</h4>
 
                                 </div>
                                 <div class="mega-menu-column">
-                                    <h4 onclick="toggleAccordion(this)">People</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="people">People</h4>
                                     <ul>
-                                        <li><a href="people.html">Life at JK Maini</a></li>
+                                        <li><a href="people.html" data-translate="life_at_jk_maini">Life at JK Maini</a>
+                                        </li>
                                         <!-- <li><a href="#">Employee Testimonials</a></li> -->
-                                        <li><a href="people.html#employee-test">Employee Testimonials</a></li>
+                                        <li><a href="people.html#employee-test"
+                                                data-translate="employee_testimonials">Employee Testimonials</a></li>
                                         <!-- <li><a href="#">Global Footprints</a></li>  -->
                                     </ul>
                                 </div>
@@ -250,23 +248,29 @@
                         </div>
                     </li>
                     <li class="nav-item has-mega-menu">
-                        <a class="nav-link d-flex justify-content-between" href="#" onclick="toggleMegaMenu(event)">
+                        <a class="nav-link d-flex justify-content-between" href="#" onclick="toggleMegaMenu(event)"
+                            data-translate="beyond_business">
                             Beyond Business
                             <span class="d-lg-none">+</span>
                         </a>
                         <div class="mega-menu">
                             <div class="mega-menu-content">
                                 <div class="mega-menu-column d-none d-lg-block">
-                                    <h4 onclick="toggleAccordion(this)">Beyond Business</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="beyond_business">Beyond Business
+                                    </h4>
 
                                 </div>
                                 <div class="mega-menu-column">
-                                    <h4 onclick="toggleAccordion(this)">Purpose & Progress</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="purpose_progress">Purpose &
+                                        Progress</h4>
                                     <ul>
-                                        <li><a href="sustainability.html">Sustainability, Certifications & Governance</a></li>
-                                        <li><a href="awards.html">Awards</a></li>
-                                        <li><a href="csr.html">CSR</a></li>
-                                        <li><a href="events.html">News & Events</a></li>
+                                        <li><a href="sustainability.html"
+                                                data-translate="sustainability_certifications_governance">Sustainability,
+                                                Certifications &
+                                                Governance</a></li>
+                                        <li><a href="awards.html" data-translate="awards">Awards</a></li>
+                                        <li><a href="csr.html" data-translate="csr">CSR</a></li>
+                                        <li><a href="events.html" data-translate="news_events">News & Events</a></li>
                                     </ul>
                                 </div>
                                 <!-- <div class="mega-menu-column">
@@ -291,15 +295,22 @@
                     </li>
 
                     <li class="nav-item has-mega-menu d-md-none">
-                        <a class="nav-link" href="careers.html">Career</a>
+                        <a class="nav-link" href="careers.html" data-translate="careers">Career</a>
                     </li>
-                   
+
 
                     <li class="nav-item has-mega-menu d-md-none">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.html" data-translate="contact">Contact</a>
                     </li>
-                    
-                    
+
+                    <li class="nav-item  d-md-none">
+                        <div class="language-switcher">
+                            <select id="languageSelect" onchange="changeLanguage(this.value)">
+                                <option value="en">English</option>
+                                <option value="id">Bahasa</option>
+                            </select>
+                        </div>
+                    </li>
 
                 </ul>
                 <ul class="navbar-nav ms-md-auto">
@@ -324,7 +335,8 @@
                         </a>
                     </li>
                     <li class="nav-item icon-content my-auto">
-                        <a  data-social="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/company/ring-plus-aqua-ltd./">
+                        <a data-social="linkedin" aria-label="LinkedIn"
+                            href="https://www.linkedin.com/company/ring-plus-aqua-ltd./">
                             <div class="filled"></div>
                             <svg xml:space="preserve" viewBox="0 0 16 16" class="bi bi-linkedin" fill="currentColor"
                                 height="16" width="16" xmlns="http://www.w3.org/2000/svg">
@@ -334,182 +346,205 @@
                             </svg>
                         </a>
                     </li>
-
                 </ul>
             </div>
         </div>
     </nav>
 
-   
+
 
     <section class="privacy-policy" style="margin-top: 11rem;">
-        
+
         <div class="container my-5">
-            <h1 class=" fw-bold mb-3">Privacy Policy</h1>
-            <p class=" text-muted">Effective Date: 31st July 2025<br>Last Updated: 31st July 2025</p>
-        
+            <h1 class=" fw-bold mb-3" data-translate="privacy_title">Privacy Policy</h1>
+            <p class=" text-muted" data-translate="privacy_effective_date">Effective Date: 31st July 2025<br>Last Updated: 31st July 2025</p>
+
             <hr class="mb-4">
-        
-            <p><strong>JK Maini Group</strong> and its affiliated companies ("<strong>JK Maini</strong>", "we", "our", "us") value your privacy and are committed to protecting the personal information you provide to us in accordance with applicable data protection and privacy laws.</p>
-        
-            <p>This Privacy Policy (“Policy”) outlines how we collect, use, disclose, store, and protect your information through our website <strong>www.jkmaini.com</strong> ("Website") and through offline interactions related to our business operations in precision engineering and aerospace sectors.</p>
-        
-            <h4 class="mt-5 fw-semibold">IMPORTANT NOTE</h4>
+            <p data-translate="privacy_intro_1"><strong>JK Maini Group</strong> and its affiliated companies
+                ("<strong>JK Maini</strong>", "we", "our", "us") value your privacy and are committed to protecting the
+                personal information you provide to us in accordance with applicable data protection and privacy laws.
+            </p>
+            <p data-translate="privacy_intro_2">This Privacy Policy (“Policy”) outlines how we collect, use, disclose,
+                store, and protect your information through our website <strong>www.jkmaini.com</strong> ("Website") and
+                through offline interactions related to our business operations in precision engineering and aerospace
+                sectors.</p>
+            <h4 class="mt-5 fw-semibold" data-translate="privacy_important_note">IMPORTANT NOTE</h4>
             <ul>
-              <li>You can browse our Website without providing any personal information.</li>
-              <li>We collect personal data only for specific business, technical, or legal purposes, and do not misuse it.</li>
-              <li>By using our Website or engaging with us through any medium, you agree to the terms of this Policy.</li>
-              <li>If you do not agree with this Policy, you should refrain from using the Website or sharing personal information with us.</li>
-              <li>We may update this Policy from time to time. It is your responsibility to check for changes.</li>
+                <li data-translate="privacy_note_1">You can browse our Website without providing any personal
+                    information.</li>
+                <li data-translate="privacy_note_2">We collect personal data only for specific business, technical, or
+                    legal purposes, and do not misuse it.</li>
+                <li data-translate="privacy_note_3">By using our Website or engaging with us through any medium, you
+                    agree to the terms of this Policy.</li>
+                <li data-translate="privacy_note_4">If you do not agree with this Policy, you should refrain from using
+                    the Website or sharing personal information with us.</li>
+                <li data-translate="privacy_note_5">We may update this Policy from time to time. It is your
+                    responsibility to check for changes.</li>
             </ul>
-        
-            <h4 class="mt-5 fw-semibold">Information We Collect</h4>
+            <h4 class="mt-5 fw-semibold" data-translate="privacy_info_collect">Information We Collect</h4>
             <ul>
-              <li><strong>Personal Identification Details:</strong> Name, designation, contact number, email address, organization name, job title, location, and country of business.</li>
-              <li><strong>Business Information:</strong> Company name, industry, job function, interests, and business needs when interacting with us.</li>
-              <li><strong>Recruitment Information:</strong> Details submitted through the Careers page, including CV, education, employment history, skills, and certifications.</li>
-              <li><strong>Technical Information:</strong> IP address, browser type, OS, pages visited, time spent, referring URLs, and device identifiers.</li>
-              <li><strong>Cookies and Tracking Tools:</strong> Used to understand user behavior and improve our Website. Cookie preferences can be customized in your browser.</li>
+                <li data-translate="privacy_info_1"><strong>Personal Identification Details:</strong> Name, designation,
+                    contact number, email address, organization name, job title, location, and country of business.</li>
+                <li data-translate="privacy_info_2"><strong>Business Information:</strong> Company name, industry, job
+                    function, interests, and business needs when interacting with us.</li>
+                <li data-translate="privacy_info_3"><strong>Recruitment Information:</strong> Details submitted through
+                    the Careers page, including CV, education, employment history, skills, and certifications.</li>
+                <li data-translate="privacy_info_4"><strong>Technical Information:</strong> IP address, browser type,
+                    OS, pages visited, time spent, referring URLs, and device identifiers.</li>
+                <li data-translate="privacy_info_5"><strong>Cookies and Tracking Tools:</strong> Used to understand user
+                    behavior and improve our Website. Cookie preferences can be customized in your browser.</li>
             </ul>
-        
-            <h4 class="mt-5 fw-semibold">How We Collect Information</h4>
+            <h4 class="mt-5 fw-semibold" data-translate="privacy_how_collect">How We Collect Information</h4>
             <ul>
-              <li><strong>Directly from You:</strong> Through forms, job applications, and communications.</li>
-              <li><strong>Automatically:</strong> Using cookies, analytics, and server logs.</li>
-              <li><strong>From Third Parties:</strong> Via service providers, analytics partners, or lawful industry sources.</li>
+                <li data-translate="privacy_how_1"><strong>Directly from You:</strong> Through forms, job applications,
+                    and communications.</li>
+                <li data-translate="privacy_how_2"><strong>Automatically:</strong> Using cookies, analytics, and server
+                    logs.</li>
+                <li data-translate="privacy_how_3"><strong>From Third Parties:</strong> Via service providers, analytics
+                    partners, or lawful industry sources.</li>
             </ul>
-        
-            <h4 class="mt-5 fw-semibold">Use of Your Information</h4>
+            <h4 class="mt-5 fw-semibold" data-translate="privacy_use">Use of Your Information</h4>
             <ul>
-              <li>To respond to inquiries, proposals, or project requests</li>
-              <li>To process job applications</li>
-              <li>To improve website performance and content</li>
-              <li>To manage vendor and partner relationships</li>
-              <li>To send updates and communications</li>
-              <li>To comply with laws and secure our systems</li>
+                <li data-translate="privacy_use_1">To respond to inquiries, proposals, or project requests</li>
+                <li data-translate="privacy_use_2">To process job applications</li>
+                <li data-translate="privacy_use_3">To improve website performance and content</li>
+                <li data-translate="privacy_use_4">To manage vendor and partner relationships</li>
+                <li data-translate="privacy_use_5">To send updates and communications</li>
+                <li data-translate="privacy_use_6">To comply with laws and secure our systems</li>
             </ul>
-        
-            <h4 class="mt-5 fw-semibold">Data Retention</h4>
-            <p>We retain data only as long as necessary, such as:</p>
+            <h4 class="mt-5 fw-semibold" data-translate="privacy_retention">Data Retention</h4>
+            <p data-translate="privacy_retention_intro">We retain data only as long as necessary, such as:</p>
             <ul>
-              <li>Until a business relationship exists</li>
-              <li>Until recruitment cycle ends</li>
-              <li>As needed for legal or regulatory compliance</li>
+                <li data-translate="privacy_retention_1">Until a business relationship exists</li>
+                <li data-translate="privacy_retention_2">Until recruitment cycle ends</li>
+                <li data-translate="privacy_retention_3">As needed for legal or regulatory compliance</li>
             </ul>
-        
-            <h4 class="mt-5 fw-semibold">Information Security</h4>
-            <p>We use organizational and technical safeguards to protect your data. While no method is completely secure, we encourage users to protect their credentials proactively.</p>
-        
-            <h4 class="mt-5 fw-semibold">Sharing of Information</h4>
+            <h4 class="mt-5 fw-semibold" data-translate="privacy_security">Information Security</h4>
+            <p data-translate="privacy_security_text">We use organizational and technical safeguards to protect your
+                data. While no method is completely secure, we encourage users to protect their credentials proactively.
+            </p>
+            <h4 class="mt-5 fw-semibold" data-translate="privacy_sharing">Sharing of Information</h4>
             <ul>
-              <li>With trusted third-party service providers</li>
-              <li>Within JK Maini Group for business operations</li>
-              <li>With law enforcement or regulators if required</li>
-              <li>During mergers or restructuring with safeguards</li>
+                <li data-translate="privacy_sharing_1">With trusted third-party service providers</li>
+                <li data-translate="privacy_sharing_2">Within JK Maini Group for business operations</li>
+                <li data-translate="privacy_sharing_3">With law enforcement or regulators if required</li>
+                <li data-translate="privacy_sharing_4">During mergers or restructuring with safeguards</li>
             </ul>
-            <p>We do <strong>not</strong> sell or trade personal information for marketing or commercial gain.</p>
-        
-            <h4 class="mt-5 fw-semibold">Your Rights</h4>
-            <p>You may have the right to:</p>
+            <p data-translate="privacy_sharing_note">We do <strong>not</strong> sell or trade personal information for
+                marketing or commercial gain.</p>
+            <h4 class="mt-5 fw-semibold" data-translate="privacy_rights">Your Rights</h4>
+            <p data-translate="privacy_rights_intro">You may have the right to:</p>
             <ul>
-              <li>Access your data</li>
-              <li>Correct inaccuracies</li>
-              <li>Withdraw consent</li>
-              <li>Request deletion of your data</li>
-              <li>Object to or restrict processing</li>
-              <li>Complain to a data protection authority</li>
+                <li data-translate="privacy_rights_1">Access your data</li>
+                <li data-translate="privacy_rights_2">Correct inaccuracies</li>
+                <li data-translate="privacy_rights_3">Withdraw consent</li>
+                <li data-translate="privacy_rights_4">Request deletion of your data</li>
+                <li data-translate="privacy_rights_5">Object to or restrict processing</li>
+                <li data-translate="privacy_rights_6">Complain to a data protection authority</li>
             </ul>
-            <p>To exercise these rights, email us at <a href="mailto:privacy@jkmaini.com">privacy@jkmaini.com</a>. We may request identity verification before processing.</p>
-        
-            <h4 class="mt-5 fw-semibold">Third-Party Websites</h4>
-            <p>Our Website may contain links to third-party websites. We are not responsible for their content or privacy practices. Please read their policies before sharing data.</p>
-        
-            <h4 class="mt-5 fw-semibold">Children’s Privacy</h4>
-            <p>Our services are not intended for users under the age of 18. We do not knowingly collect data from minors.</p>
-        
-            <h4 class="mt-5 fw-semibold">Contact Us</h4>
-            <p>If you have any questions about this Policy, please contact:</p>
+            <p data-translate="privacy_rights_contact">To exercise these rights, email us at <a
+                    href="mailto:privacy@jkmaini.com">privacy@jkmaini.com</a>. We may request identity verification
+                before processing.</p>
+            <h4 class="mt-5 fw-semibold" data-translate="privacy_third_party">Third-Party Websites</h4>
+            <p data-translate="privacy_third_party_text">Our Website may contain links to third-party websites. We are
+                not responsible for their content or privacy practices. Please read their policies before sharing data.
+            </p>
+            <h4 class="mt-5 fw-semibold" data-translate="privacy_children">Children’s Privacy</h4>
+            <p data-translate="privacy_children_text">Our services are not intended for users under the age of 18. We do
+                not knowingly collect data from minors.</p>
+            <h4 class="mt-5 fw-semibold" data-translate="privacy_contact">Contact Us</h4>
+            <p data-translate="privacy_contact_text">If you have any questions about this Policy, please contact:</p>
             <ul class="list-unstyled">
-              <li><strong>Data Protection Officer</strong></li>
-              <li><strong>JK Maini</strong></li>
-              <li><strong>Address:</strong> [Add address here]</li>
-              <li><strong>Email:</strong> <a href="mailto:privacy@jkmaini.com">privacy@jkmaini.com</a></li>
+                <li data-translate="privacy_contact_officer"><strong>Data Protection Officer</strong></li>
+                <li data-translate="privacy_contact_company"><strong>JK Maini</strong></li>
+                <li data-translate="privacy_contact_address"><strong>Address:</strong> [Add address here]</li>
+                <li data-translate="privacy_contact_email"><strong>Email:</strong> <a
+                        href="mailto:privacy@jkmaini.com">privacy@jkmaini.com</a></li>
             </ul>
-          </div>      
-          
-            
-          
-          
+        </div>
+
+
+
+
     </section>
 
 
-   
-
-    
-
-   
 
 
-  
 
-    
 
-   
 
- 
-   
+
+
+
+
+
+
+
+
+
+
     <div id="popupOverlay" class="popup-overlay">
         <div class="right-form p-4">
             <span class="close-btn" onclick="closePopup()">&times;</span>
             <div>
-                <h2>Get in Touch</h2>
-                <p>Tell us what you're building — we'll show you how to get there, faster and smarter.
+                <h2 data-translate="get-in-touch">Get in Touch</h2>
+                <p data-translate="whether-looking">Tell us what you're building — we'll show you how to get there,
+                    faster and smarter.
                     Response guaranteed within 24 hours.</p>
             </div>
             <form action="" class="mt-4" id="contact-form">
                 <div class="form-group d-sm-flex gap-3 ">
-                    <input class="my-3" type="text" required placeholder="First Name" id="FirstName">
-                    <input class="my-3" type="text" required placeholder="Last Name" id="LastName">
+                    <input class="my-3" type="text" required placeholder="First Name" id="FirstName"
+                        data-translate-placeholder="first-name">
+                    <input class="my-3" type="text" required placeholder="Last Name" id="LastName"
+                        data-translate-placeholder="last-name">
                 </div>
                 <div class="form-group d-sm-flex gap-3 ">
-                    <input class="my-3" type="text" required placeholder="Company" id="Company">
-                    <input class="my-3" type="text" required placeholder="Email Address" id="EmailAddress">
+                    <input class="my-3" type="text" required placeholder="Company" id="Company"
+                        data-translate-placeholder="company">
+                    <input class="my-3" type="text" required placeholder="Email Address" id="EmailAddress"
+                        data-translate-placeholder="email-address">
                 </div>
                 <div class="form-group d-sm-flex gap-3 ">
-                    <input class="my-3" type="text" required placeholder="Phone No." id="PhoneNo">
+                    <input class="my-3" type="text" required placeholder="Phone No." id="PhoneNo"
+                        data-translate-placeholder="phone-no">
                     <select class="my-3 form-select" required id="Industry">
-    <option value="" disabled selected>Select Industry</option>
-    <option value="Electric & hybrid">Electric & hybrid</option>
-    <option value="Passenger vehicles">Passenger vehicles</option>
-    <option value="Commercial vehicles">Commercial vehicles</option>
-    <option value="Industrial & hydraulics">Industrial & hydraulics</option>
-    <option value="Tools and hardware">Tools and hardware</option>
-    <option value="Locomotive">Locomotive</option>
-    <option value="Marine">Marine</option>
-    <option value="Agriculture">Agriculture</option>
-    <option value="Defense">Defense</option>
-    <option value="Ev & hybrid">Ev & hybrid</option>
-    <option value="2 wheelers- ev">2 wheelers- ev</option>
-    <option value="2 wheelers- ice">2 wheelers- ice</option>
-    <option value="Electrical and electronics">Electrical and electronics</option>
-    <option value="Power tools">Power tools</option>
-    <option value="Semi-conductors">Semi-conductors</option>
-    <option value="Medical equipements">Medical equipements</option>
-    <option value="Aerospace">Aerospace</option>
-<option value="Other">Other</option>
-</select>
+                        <option value="" disabled selected data-translate="select-industry">Select Industry</option>
+                        <option value="Electric & hybrid">Electric & hybrid</option>
+                        <option value="Passenger vehicles">Passenger vehicles</option>
+                        <option value="Commercial vehicles">Commercial vehicles</option>
+                        <option value="Industrial & hydraulics">Industrial & hydraulics</option>
+                        <option value="Tools and hardware">Tools and hardware</option>
+                        <option value="Locomotive">Locomotive</option>
+                        <option value="Marine">Marine</option>
+                        <option value="Agriculture">Agriculture</option>
+                        <option value="Defense">Defense</option>
+                        <option value="Ev & hybrid">Ev & hybrid</option>
+                        <option value="2 wheelers- ev">2 wheelers- ev</option>
+                        <option value="2 wheelers- ice">2 wheelers- ice</option>
+                        <option value="Electrical and electronics">Electrical and electronics</option>
+                        <option value="Power tools">Power tools</option>
+                        <option value="Semi-conductors">Semi-conductors</option>
+                        <option value="Medical equipements">Medical equipements</option>
+                        <option value="Aerospace">Aerospace</option>
+                        <option value="Other">Other</option>
+                    </select>
 
                 </div>
                 <div class="form-group">
-                    <textarea name=""  placeholder="I want to know more about" id="Inquiry"></textarea>
+                    <textarea name="" placeholder="I want to know more about" id="Inquiry"
+                        data-translate-placeholder="inquiry"></textarea>
 
                 </div>
                 <div class="d-flex gap-3 align-items-start">
                     <input required type="checkbox" name="" id="T&C" class="w-auto mt-2">
                     <label class="w-auto" for="T&C">
-                        By checking this box, I consent to the processing of my personal data in accordance with Section
-                        4 (1)(a) of the Digital Personal Data Protection Act 2023, for the purposes outlined in the
-                        Privacy Policy. I have also read and agreed to the <a target="_blank" href="privacy-policy.html">Privacy Policy.</a> 
+                        <span data-translate="privacy-consent">By checking this box, I consent to the processing of my
+                            personal data in accordance with Section
+                            4 (1)(a) of the Digital Personal Data Protection Act 2023, for the purposes outlined in the
+                            Privacy Policy. I have also read and agreed to the </span><a target="_blank"
+                            href="privacy-policy.html"><span data-translate="privacy-policy">Privacy Policy.</span></a>
                         <span class="text-danger">*</span>
                     </label>
                 </div>
@@ -529,7 +564,7 @@
                                 fill="currentColor"></path>
                         </svg>
                     </span>
-                    Submit
+                    <span data-translate="submit">Submit</span>
                 </button>
                 <div id="message" class="message"></div>
                 <div id="error" class="error"></div>
@@ -547,9 +582,11 @@
                         <lord-icon src="https://cdn.lordicon.com/bpmglzll.json" trigger="loop" colors="primary:#ffffff"
                             style="width:50px;height:50px">
                         </lord-icon>
-                        <h3>Our Offices</h3>
-                        <p>View our locations and find contact details to our nearest office.</p>
-                        <a href="contact.html#office-locations">Explore Our Locations</a>
+                        <h3 data-translate="our-offices">Our Offices</h3>
+                        <p data-translate="view-locations">View our locations and find contact details to our nearest
+                            office.</p>
+                        <a href="contact.html#office-locations" data-translate="explore-locations">Explore Our
+                            Locations</a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -558,9 +595,10 @@
                             colors="primary:#ffffff,secondary:#ebe6ef,tertiary:#e83a30,quaternary:#ffffff"
                             style="width:50px;height:50px">
                         </lord-icon>
-                        <h3>Drop us a Line</h3>
-                        <p>You can contact us by filling in this form any time you need professional support.</p>
-                        <a onclick="openPopup()" href="javascript:void(0)">Fill Our Form</a>
+                        <h3 data-translate="drop-us-line">Drop us a Line</h3>
+                        <p data-translate="contact-form">You can contact us by filling in this form any time you need
+                            professional support.</p>
+                        <a onclick="openPopup()" href="javascript:void(0)" data-translate="fill-form">Fill Our Form</a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -569,10 +607,11 @@
                             colors="primary:#ffffff,secondary:#ffffff,tertiary:#ffffff,quaternary:#ebe6ef"
                             style="width:50px;height:50px">
                         </lord-icon>
-                        <h3>Support</h3>
+                        <h3 data-translate="support">Support</h3>
                         <!-- <p>Learn more about us and find resources that will help you with all of our products</p> -->
-                        <p>Connect with us and know more about our products. Call our support executive.</p>
-                        <a href="tel:+912261527998">Call Now</a>
+                        <p data-translate="connect-support">Connect with us and know more about our products. Call our
+                            support executive.</p>
+                        <a href="tel:+912261527998" data-translate="call-now">Call Now</a>
                     </div>
                 </div>
             </div>
@@ -687,7 +726,8 @@
                                     </div>
                                 </div>
                             </a> -->
-                            <a target="_blank" href="https://www.linkedin.com/company/ring-plus-aqua-ltd./" class="linkedin-icon">
+                            <a target="_blank" href="https://www.linkedin.com/company/ring-plus-aqua-ltd./"
+                                class="linkedin-icon">
                                 <div class="socialcontainer">
                                     <div class="icon social-icon-4-4">
                                         <svg fill="white" viewBox="0 0 448 512" height="1.6em">
@@ -736,7 +776,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <p class="m-0">© 2025 JK Maini Precision Technology Limited (JKMPTL). All rights
+                        <p class="m-0" data-translate="copyright">© 2025 JK Maini Precision Technology Limited (JKMPTL).
+                            All rights
                             reserved.</p>
                     </div>
 
@@ -754,7 +795,7 @@
     </button>
 
     <div id="cursor"></div>
-        <!-- <div id="cursor-border"></div> -->
+    <!-- <div id="cursor-border"></div> -->
 
 
 
@@ -840,6 +881,317 @@
     <script src="https://unpkg.com/lenis@1.3.7/dist/lenis.min.js"></script>
     <script src="animation.js"></script>
     <script src="script.js"></script>
+
+    <script>
+        // Translation object with English and Indonesian text
+        const translations = {
+            en: {
+                // Navigation
+                "businesses": "Businesses",
+                "business_verticals": "Business Verticals",
+                "automotive_industrial_beyond": "Automotive, Industrial & Beyond",
+                "tools_hardware": "Tools & Hardware",
+                "aerospace_defence": "Aerospace & Defence",
+                "people": "People",
+                "life_at_jk_maini": "Life at JK Maini",
+                "employee_testimonials": "Employee Testimonials",
+                "beyond_business": "Beyond Business",
+                "purpose_progress": "Purpose & Progress",
+                "sustainability_certifications_governance": "Sustainability, Certifications & Governance",
+                "awards": "Awards",
+                "csr": "CSR",
+                "news_events": "News & Events",
+                "contact": "Contact",
+                "careers": "Careers",
+
+                //privacy-policy
+                "privacy_title": "Privacy Policy",
+                "privacy_effective_date": "Effective Date: 31st July 2025Last Updated: 31st July 2025",
+                "privacy_intro_1": "JK Maini Group and its affiliated companies ('JK Maini', 'we', 'our', 'us') value your privacy and are committed to protecting the personal information you provide to us in accordance with applicable data protection and privacy laws.",
+                "privacy_intro_2": "This Privacy Policy outlines how we collect, use, disclose, store, and protect your information through our website www.jkmaini.com and through offline interactions related to our business operations in precision engineering and aerospace sectors.",
+                "privacy_important_note": "IMPORTANT NOTE",
+                "privacy_note_1": "You can browse our Website without providing any personal information.",
+                "privacy_note_2": "We collect personal data only for specific business, technical, or legal purposes, and do not misuse it.",
+                "privacy_note_3": "By using our Website or engaging with us through any medium, you agree to the terms of this Policy.",
+                "privacy_note_4": "If you do not agree with this Policy, you should refrain from using the Website or sharing personal information with us.",
+                "privacy_note_5": "We may update this Policy from time to time. It is your responsibility to check for changes.",
+                "privacy_info_collect": "Information We Collect",
+                "privacy_info_1": "Personal Identification Details: Name, designation, contact number, email address, organization name, job title, location, and country of business.",
+                "privacy_info_2": "Business Information: Company name, industry, job function, interests, and business needs when interacting with us.",
+                "privacy_info_3": "Recruitment Information: Details submitted through the Careers page, including CV, education, employment history, skills, and certifications.",
+                "privacy_info_4": "Technical Information: IP address, browser type, OS, pages visited, time spent, referring URLs, and device identifiers.",
+                "privacy_info_5": "Cookies and Tracking Tools: Used to understand user behavior and improve our Website. Cookie preferences can be customized in your browser.",
+                "privacy_how_collect": "How We Collect Information",
+                "privacy_how_1": "Directly from You: Through forms, job applications, and communications.",
+                "privacy_how_2": "Automatically: Using cookies, analytics, and server logs.",
+                "privacy_how_3": "From Third Parties: Via service providers, analytics partners, or lawful industry sources.",
+                "privacy_use": "Use of Your Information",
+                "privacy_use_1": "To respond to inquiries, proposals, or project requests",
+                "privacy_use_2": "To process job applications",
+                "privacy_use_3": "To improve website performance and content",
+                "privacy_use_4": "To manage vendor and partner relationships",
+                "privacy_use_5": "To send updates and communications",
+                "privacy_use_6": "To comply with laws and secure our systems",
+                "privacy_retention": "Data Retention",
+                "privacy_retention_intro": "We retain data only as long as necessary, such as:",
+                "privacy_retention_1": "Until a business relationship exists",
+                "privacy_retention_2": "Until recruitment cycle ends",
+                "privacy_retention_3": "As needed for legal or regulatory compliance",
+                "privacy_security": "Information Security",
+                "privacy_security_text": "We use organizational and technical safeguards to protect your data. While no method is completely secure, we encourage users to protect their credentials proactively.",
+                "privacy_sharing": "Sharing of Information",
+                "privacy_sharing_1": "With trusted third-party service providers",
+                "privacy_sharing_2": "Within JK Maini Group for business operations",
+                "privacy_sharing_3": "With law enforcement or regulators if required",
+                "privacy_sharing_4": "During mergers or restructuring with safeguards",
+                "privacy_sharing_note": "We do not sell or trade personal information for marketing or commercial gain.",
+                "privacy_rights": "Your Rights",
+                "privacy_rights_intro": "You may have the right to:",
+                "privacy_rights_1": "Access your data",
+                "privacy_rights_2": "Correct inaccuracies",
+                "privacy_rights_3": "Withdraw consent",
+                "privacy_rights_4": "Request deletion of your data",
+                "privacy_rights_5": "Object to or restrict processing",
+                "privacy_rights_6": "Complain to a data protection authority",
+                "privacy_rights_contact": "To exercise these rights, email us at privacy@jkmaini.com. We may request identity verification before processing.",
+                "privacy_third_party": "Third-Party Websites",
+                "privacy_third_party_text": "Our Website may contain links to third-party websites. We are not responsible for their content or privacy practices. Please read their policies before sharing data.",
+                "privacy_children": "Children’s Privacy",
+                "privacy_children_text": "Our services are not intended for users under the age of 18. We do not knowingly collect data from minors.",
+                "privacy_contact": "Contact Us",
+                "privacy_contact_text": "If you have any questions about this Policy, please contact:",
+                "privacy_contact_officer": "Data Protection Officer",
+                "privacy_contact_company": "JK Maini",
+                "privacy_contact_address": "Address: [Add address here]",
+                "privacy_contact_email": "Email: privacy@jkmaini.com",
+
+
+
+
+
+
+
+
+
+
+
+                // Get in Touch
+                "get-in-touch": "Get in Touch",
+                "ready-to-turn": "Ready to Turn Your Manufacturing Vision into Reality?",
+                "whether-looking": "Whether you're looking for custom-engineered solutions or want to explore how our capabilities align with your needs, we're here to help.",
+                "get-started": "Get Started",
+
+
+
+
+                // Contact Footer
+                "our-offices": "Our Offices",
+                "view-locations": "View our locations and find contact details to our nearest office.",
+                "explore-locations": "Explore Our Locations",
+                "drop-us-line": "Drop us a Line",
+                "contact-form": "You can contact us by filling in this form any time you need professional support.",
+                "fill-form": "Fill Our Form",
+                "support": "Support",
+                "connect-support": "Connect with us and know more about our products. Call our support executive.",
+                "call-now": "Call Now",
+
+                // Form Fields
+                "first-name": "First Name",
+                "last-name": "Last Name",
+                "company": "Company",
+                "email-address": "Email Address",
+                "phone-no": "Phone No.",
+                "select-industry": "Select Industry",
+                "inquiry": "I want to know more about",
+                "submit": "Submit",
+                "privacy-consent": "By checking this box, I consent to the processing of my personal data in accordance with Section 4 (1)(a) of the Digital Personal Data Protection Act 2023, for the purposes outlined in the Privacy Policy. I have also read and agreed to the",
+                "privacy-policy": "Privacy Policy.",
+
+                // Footer
+                "quick-links": "Quick Links",
+                "company-footer": "Company",
+                "follow-us": "Follow us",
+                "copyright": "© 2025 JK Maini Precision Technology Limited (JKMPTL). All rights reserved."
+            },
+            id: {
+                // Navigation
+                "businesses": "Bisnis",
+                "business_verticals": "Vertikal Bisnis",
+                "automotive_industrial_beyond": "Otomotif, Industri & di Atas",
+                "tools_hardware": "Alat & Perangkat Keras",
+                "aerospace_defence": "Aerospace & Pertahanan",
+                "people": "Orang",
+                "life_at_jk_maini": "Di JK Maini",
+                "employee_testimonials": "Testimoni Karyawan",
+                "beyond_business": "di Atas Bisnis",
+                "purpose_progress": "Tujuan & Kemajuan",
+                "sustainability_certifications_governance": "Keberlanjutan, Sertifikasi & Pengawasan",
+                "awards": "Penghargaan",
+                "csr": "CSR",
+                "news_events": "Berita & Acara",
+                "contact": "Kontak",
+                "careers": "Karir",
+
+                //privacy policy
+                "privacy_title": "Kebijakan Privasi",
+                "privacy_effective_date": "Tanggal Berlaku: 31 Juli 2025Diperbarui Terakhir: 31 Juli 2025",
+                "privacy_intro_1": "JK Maini Group dan perusahaan afiliasinya ('JK Maini', 'kami') menghargai privasi Anda dan berkomitmen untuk melindungi informasi pribadi yang Anda berikan kepada kami sesuai dengan undang-undang perlindungan data yang berlaku.",
+                "privacy_intro_2": "Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, mengungkapkan, menyimpan, dan melindungi informasi Anda melalui situs web kami www.jkmaini.com dan melalui interaksi offline terkait operasi bisnis kami di bidang rekayasa presisi dan sektor dirgantara.",
+                "privacy_important_note": "CATATAN PENTING",
+                "privacy_note_1": "Anda dapat menelusuri situs web kami tanpa memberikan informasi pribadi apa pun.",
+                "privacy_note_2": "Kami mengumpulkan data pribadi hanya untuk tujuan bisnis, teknis, atau hukum tertentu, dan tidak menyalahgunakannya.",
+                "privacy_note_3": "Dengan menggunakan situs web kami atau berinteraksi dengan kami melalui media apa pun, Anda menyetujui ketentuan dalam Kebijakan ini.",
+                "privacy_note_4": "Jika Anda tidak menyetujui Kebijakan ini, Anda sebaiknya tidak menggunakan situs web atau membagikan informasi pribadi dengan kami.",
+                "privacy_note_5": "Kami dapat memperbarui Kebijakan ini dari waktu ke waktu. Anda bertanggung jawab untuk memeriksa perubahan.",
+                "privacy_info_collect": "Informasi yang Kami Kumpulkan",
+                "privacy_info_1": "Detail Identifikasi Pribadi: Nama, jabatan, nomor kontak, alamat email, nama organisasi, jabatan, lokasi, dan negara tempat usaha.",
+                "privacy_info_2": "Informasi Bisnis: Nama perusahaan, industri, fungsi pekerjaan, minat, dan kebutuhan bisnis saat berinteraksi dengan kami.",
+                "privacy_info_3": "Informasi Rekrutmen: Detail yang dikirim melalui halaman Karier, termasuk CV, pendidikan, riwayat pekerjaan, keterampilan, dan sertifikasi.",
+                "privacy_info_4": "Informasi Teknis: Alamat IP, jenis browser, sistem operasi, halaman yang dikunjungi, waktu yang dihabiskan, URL referensi, dan pengenal perangkat.",
+                "privacy_info_5": "Cookie dan Alat Pelacak: Digunakan untuk memahami perilaku pengguna dan meningkatkan situs web kami. Preferensi cookie dapat disesuaikan di browser Anda.",
+                "privacy_how_collect": "Cara Kami Mengumpulkan Informasi",
+                "privacy_how_1": "Langsung dari Anda: Melalui formulir, aplikasi kerja, dan komunikasi.",
+                "privacy_how_2": "Secara Otomatis: Menggunakan cookie, analitik, dan log server.",
+                "privacy_how_3": "Dari Pihak Ketiga: Melalui penyedia layanan, mitra analitik, atau sumber industri yang sah.",
+                "privacy_use": "Penggunaan Informasi Anda",
+                "privacy_use_1": "Untuk menanggapi pertanyaan, proposal, atau permintaan proyek",
+                "privacy_use_2": "Untuk memproses lamaran pekerjaan",
+                "privacy_use_3": "Untuk meningkatkan kinerja dan konten situs web",
+                "privacy_use_4": "Untuk mengelola hubungan dengan vendor dan mitra",
+                "privacy_use_5": "Untuk mengirim pembaruan dan komunikasi",
+                "privacy_use_6": "Untuk mematuhi hukum dan mengamankan sistem kami",
+                "privacy_data_retention": "Retensi Data",
+                "privacy_data_retention_text": "Kami menyimpan data hanya selama diperlukan, seperti:",
+                "privacy_data_retention_1": "Sampai hubungan bisnis ada",
+                "privacy_data_retention_2": "Sampai siklus rekrutmen berakhir",
+                "privacy_data_retention_3": "Sesuai kebutuhan untuk kepatuhan hukum atau peraturan",
+                "privacy_security": "Keamanan Informasi",
+                "privacy_security_text": "Kami menggunakan langkah-langkah organisasi dan teknis untuk melindungi data Anda. Meskipun tidak ada metode yang sepenuhnya aman, kami mendorong pengguna untuk melindungi kredensial mereka secara proaktif.",
+                "privacy_sharing": "Berbagi Informasi",
+                "privacy_sharing_1": "Dengan penyedia layanan pihak ketiga yang terpercaya",
+                "privacy_sharing_2": "Di dalam Grup JK Maini untuk operasi bisnis",
+                "privacy_sharing_3": "Dengan penegak hukum atau regulator jika diperlukan",
+                "privacy_sharing_4": "Selama merger atau restrukturisasi dengan perlindungan yang memadai",
+                "privacy_no_sale": "Kami tidak menjual atau memperdagangkan informasi pribadi untuk keuntungan pemasaran atau komersial.",
+                "privacy_rights": "Hak Anda",
+                "privacy_rights_intro": "Anda mungkin memiliki hak untuk:",
+                "privacy_rights_1": "Mengakses data Anda",
+                "privacy_rights_2": "Memperbaiki ketidakakuratan",
+                "privacy_rights_3": "Menarik persetujuan",
+                "privacy_rights_4": "Meminta penghapusan data Anda",
+                "privacy_rights_5": "Menolak atau membatasi pemrosesan",
+                "privacy_rights_6": "Mengajukan keluhan kepada otoritas perlindungan data",
+                "privacy_rights_contact": "Untuk menggunakan hak-hak ini, kirim email ke privacy@jkmaini.com. Kami mungkin meminta verifikasi identitas sebelum memproses.",
+                "privacy_third_party": "Situs Web Pihak Ketiga",
+                "privacy_third_party_text": "Situs web kami mungkin berisi tautan ke situs pihak ketiga. Kami tidak bertanggung jawab atas konten atau praktik privasi mereka. Harap baca kebijakan mereka sebelum membagikan data.",
+                "privacy_children": "Privasi Anak-Anak",
+                "privacy_children_text": "Layanan kami tidak ditujukan untuk pengguna di bawah usia 18 tahun. Kami tidak dengan sengaja mengumpulkan data dari anak di bawah umur.",
+                "privacy_contact": "Hubungi Kami",
+                "privacy_contact_text": "Jika Anda memiliki pertanyaan tentang Kebijakan ini, silakan hubungi:",
+                "privacy_contact_person": "Petugas Perlindungan Data",
+                "privacy_contact_company": "JK Maini",
+                "privacy_contact_address": "Alamat: [Tambahkan alamat di sini]",
+                "privacy_contact_email": "Email: privacy@jkmaini.com",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                // Get in Touch
+                "get-in-touch": "Hubungi Kami",
+                "ready-to-turn": "Siap Mengubah Visi Manufaktur Anda Menjadi Kenyataan?",
+                "whether-looking": "Baik Anda mencari solusi rekayasa khusus atau ingin menjelajahi bagaimana kemampuan kami selaras dengan kebutuhan Anda, kami siap membantu.",
+                "get-started": "Mulai",
+
+
+
+
+
+
+                // Contact Footer
+                "our-offices": "Kantor Kami",
+                "view-locations": "Lihat lokasi kami dan temukan detail kontak ke kantor terdekat kami.",
+                "explore-locations": "Jelajahi Lokasi Kami",
+                "drop-us-line": "Kirimkan Pesan",
+                "contact-form": "Anda dapat menghubungi kami dengan mengisi formulir ini kapan saja Anda membutuhkan dukungan profesional.",
+                "fill-form": "Isi Formulir Kami",
+                "support": "Dukungan",
+                "connect-support": "Hubungi kami dan ketahui lebih banyak tentang produk kami. Hubungi eksekutif dukungan kami.",
+                "call-now": "Hubungi Sekarang",
+
+                // Form Fields
+                "first-name": "Nama Depan",
+                "last-name": "Nama Belakang",
+                "company": "Perusahaan",
+                "email-address": "Alamat Email",
+                "phone-no": "Nomor Telepon",
+                "select-industry": "Pilih Industri",
+                "inquiry": "Saya ingin tahu lebih banyak tentang",
+                "submit": "Kirim",
+                "privacy-consent": "Dengan mencentang kotak ini, saya menyetujui pemrosesan data pribadi saya sesuai dengan Bagian 4 (1)(a) dari Undang-Undang Perlindungan Data Pribadi Digital 2023, untuk tujuan yang diuraikan dalam Kebijakan Privasi. Saya juga telah membaca dan menyetujui",
+                "privacy-policy": "Kebijakan Privasi.",
+
+                // Footer
+                "quick-links": "Tautan Cepat",
+                "company-footer": "Perusahaan",
+                "follow-us": "Ikuti kami",
+                "copyright": "© 2025 JK Maini Precision Technology Limited (JKMPTL). Semua hak dilindungi."
+            }
+        };
+
+        // Function to change language
+        function changeLanguage(language) {
+            // Store selected language in localStorage
+            localStorage.setItem('selectedLanguage', language);
+
+            // Update all elements with data-translate attribute
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[language] && translations[language][key]) {
+                    element.textContent = translations[language][key];
+                }
+            });
+
+            // Update elements with data-translate-placeholder attribute
+            const placeholderElements = document.querySelectorAll('[data-translate-placeholder]');
+            placeholderElements.forEach(element => {
+                const key = element.getAttribute('data-translate-placeholder');
+                if (translations[language] && translations[language][key]) {
+                    element.placeholder = translations[language][key];
+                }
+            });
+
+            // Update page title based on language
+            if (language === 'id') {
+                document.title = "JK Maini Precision Technology Ltd.";
+            } else {
+                document.title = "JK Maini Precision Technology Ltd.";
+            }
+        }
+
+        // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+            const languageSelect = document.getElementById('languageSelect');
+
+            if (languageSelect) {
+                languageSelect.value = savedLanguage;
+            }
+
+            changeLanguage(savedLanguage);
+        });
+    </script>
 
 
     <script>

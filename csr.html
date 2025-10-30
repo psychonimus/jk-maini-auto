@@ -44,16 +44,24 @@
                             data-bs-toggle="tooltip" data-bs-placement="bottom" title="JK Superdrive">
                             Tools & Hardware (JK Superdrive)</a>
                     </li>
-
+                    
                 </ul>
             </div>
             <div class="meta-header-right">
                 <ul class="navbar-nav-right d-none d-md-flex" style="list-style: none;">
                     <li class="nav-item ms-2    ">
-                        <a class="nav-link" aria-current="page" href="careers.html">Careers</a>
+                        <a class="nav-link" aria-current="page" href="careers.html" data-translate="careers">Careers</a>
                     </li>
                     <li class="nav-item ms-2 ">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.html" data-translate="contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <div class="language-switcher">
+                            <select id="languageSelect" onchange="changeLanguage(this.value)">
+                                <option value="en">English</option>
+                                <option value="id">Bahasa</option>
+                            </select>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -67,8 +75,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-md-2">
-
-
+                    
 
                     <!-- <li class="nav-item active has-mega-menu">
                         <a class="nav-link d-flex justify-content-between" href="./about.html"
@@ -99,43 +106,30 @@
                     <li class="nav-item has-mega-menu">
 
                         <a class="nav-link d-flex justify-content-between" href="#"
-                            onclick="toggleMegaMenu(event)">Businesses
+                            onclick="toggleMegaMenu(event)" data-translate="businesses">Businesses
                             <span class="d-lg-none">+</span>
                         </a>
                         <div class="mega-menu">
                             <div class="mega-menu-content">
                                 <div class="mega-menu-column d-none d-lg-block">
-                                    <h4 onclick="toggleAccordion(this)">Businesses</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="businesses">Businesses</h4>
 
                                 </div>
                                 <div class="mega-menu-column">
-                                    <h4 onclick="toggleAccordion(this)">Business Verticals</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="business_verticals">Business
+                                        Verticals</h4>
                                     <ul>
-                                        <li><a href="automotive-industrial-&-beyond.html">Automotive, Industrial &
+                                        <li><a href="automotive-industrial-&-beyond.html"
+                                                data-translate="automotive_industrial_beyond">Automotive, Industrial &
                                                 Beyond</a></li>
-                                        <li><a href="toolsAndHardware.html">Tools & Hardware</a></li>
-                                        <li><a href="aerospace.html">Aerospace & Defence</a></li>
+                                        <li><a href="toolsAndHardware.html" data-translate="tools_hardware">Tools &
+                                                Hardware</a></li>
+                                        <li><a href="aerospace.html" data-translate="aerospace_defence">Aerospace &
+                                                Defence</a></li>
                                         <!-- <li><a href="#">Global Footprints</a></li>  -->
                                     </ul>
                                 </div>
-                                <!-- <div class="mega-menu-column">
-                                    <h4 onclick="toggleAccordion(this)">Sustainability</h4>
-                                    <ul>
-                                        <li><a href="#">Environmental Impact</a></li>
-                                        <li><a href="#">Social Responsibility</a></li>
-                                        <li><a href="#">Green Initiatives</a></li>
-                                        <li><a href="#">Reports</a></li>
-                                    </ul>
-                                </div>
-                                <div class="mega-menu-column">
-                                    <h4 onclick="toggleAccordion(this)">Recognition</h4>
-                                    <ul>
-                                        <li><a href="#">Awards</a></li>
-                                        <li><a href="#">Certifications</a></li>
-                                        <li><a href="#">Press Coverage</a></li>
-                                        <li><a href="#">Testimonials</a></li>
-                                    </ul>
-                                </div> -->
+
                             </div>
                         </div>
                     </li>
@@ -210,22 +204,24 @@
 
                     <li class="nav-item has-mega-menu">
                         <a class="nav-link d-flex justify-content-between" href="people.html"
-                            onclick="toggleMegaMenu(event)">
+                            onclick="toggleMegaMenu(event)" data-translate="people">
                             People
                             <span class="d-lg-none">+</span>
                         </a>
                         <div class="mega-menu">
                             <div class="mega-menu-content">
                                 <div class="mega-menu-column d-none d-lg-block">
-                                    <h4 onclick="toggleAccordion(this)">People</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="people">People</h4>
 
                                 </div>
                                 <div class="mega-menu-column">
-                                    <h4 onclick="toggleAccordion(this)">People</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="people">People</h4>
                                     <ul>
-                                        <li><a href="people.html">Life at JK Maini</a></li>
+                                        <li><a href="people.html" data-translate="life_at_jk_maini">Life at JK Maini</a>
+                                        </li>
                                         <!-- <li><a href="#">Employee Testimonials</a></li> -->
-                                        <li><a href="people.html#employee-test">Employee Testimonials</a></li>
+                                        <li><a href="people.html#employee-test"
+                                                data-translate="employee_testimonials">Employee Testimonials</a></li>
                                         <!-- <li><a href="#">Global Footprints</a></li>  -->
                                     </ul>
                                 </div>
@@ -251,25 +247,29 @@
                         </div>
                     </li>
                     <li class="nav-item has-mega-menu">
-                        <a class="nav-link d-flex justify-content-between active" href="#"
-                            onclick="toggleMegaMenu(event)">
+                        <a class="nav-link d-flex justify-content-between active" href="#" onclick="toggleMegaMenu(event)"
+                            data-translate="beyond_business">
                             Beyond Business
                             <span class="d-lg-none">+</span>
                         </a>
                         <div class="mega-menu">
                             <div class="mega-menu-content">
                                 <div class="mega-menu-column d-none d-lg-block">
-                                    <h4 onclick="toggleAccordion(this)">Beyond Business</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="beyond_business">Beyond Business
+                                    </h4>
 
                                 </div>
                                 <div class="mega-menu-column">
-                                    <h4 onclick="toggleAccordion(this)">Purpose & Progress</h4>
+                                    <h4 onclick="toggleAccordion(this)" data-translate="purpose_progress">Purpose &
+                                        Progress</h4>
                                     <ul>
-                                        <li><a href="sustainability.html">Sustainability, Certifications &
+                                        <li><a href="sustainability.html"
+                                                data-translate="sustainability_certifications_governance">Sustainability,
+                                                Certifications &
                                                 Governance</a></li>
-                                        <li><a href="awards.html">Awards</a></li>
-                                        <li><a href="csr.html">CSR</a></li>
-                                        <li><a href="events.html">News & Events</a></li>
+                                        <li><a href="awards.html" data-translate="awards">Awards</a></li>
+                                        <li><a href="csr.html" data-translate="csr">CSR</a></li>
+                                        <li><a href="events.html" data-translate="news_events">News & Events</a></li>
                                     </ul>
                                 </div>
                                 <!-- <div class="mega-menu-column">
@@ -294,12 +294,21 @@
                     </li>
 
                     <li class="nav-item has-mega-menu d-md-none">
-                        <a class="nav-link" href="careers.html">Career</a>
+                        <a class="nav-link" href="careers.html" data-translate="careers">Career</a>
                     </li>
 
 
                     <li class="nav-item has-mega-menu d-md-none">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.html" data-translate="contact">Contact</a>
+                    </li>
+
+                    <li class="nav-item  d-md-none">
+                        <div class="language-switcher">
+                            <select id="languageSelect" onchange="changeLanguage(this.value)">
+                                <option value="en">English</option>
+                                <option value="id">Bahasa</option>
+                            </select>
+                        </div>
                     </li>
 
                 </ul>
@@ -325,8 +334,7 @@
                         </a>
                     </li>
                     <li class="nav-item icon-content my-auto">
-                        <a data-social="linkedin" aria-label="LinkedIn"
-                            href="https://www.linkedin.com/company/ring-plus-aqua-ltd./">
+                        <a  data-social="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/company/ring-plus-aqua-ltd./">
                             <div class="filled"></div>
                             <svg xml:space="preserve" viewBox="0 0 16 16" class="bi bi-linkedin" fill="currentColor"
                                 height="16" width="16" xmlns="http://www.w3.org/2000/svg">
@@ -336,7 +344,6 @@
                             </svg>
                         </a>
                     </li>
-
                 </ul>
             </div>
         </div>
@@ -348,38 +355,33 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="slide-image">
-                            <img src="./assets/images/csr-bg.png" alt="">
+                            <img src="./assets/images/csr-bg.png" alt="CSR background image">
                         </div>
                         <div class="container swiper-content">
                             <div class="text-center mt-5" data-aos="fade-up">
-                                <h1 class="page-title">Corporate Social Responsibility</h1>
-                                <p class="mt-3 mb-4 text-center heading-animate">
+                                <h1 class="page-title" data-translate="csr_title">Corporate Social Responsibility</h1>
+                                <p class="mt-3 mb-4 text-center heading-animate" data-translate="csr_description">
                                     Corporate Social Responsibility (CSR) is about integrating ethical, social, and
                                     environmental considerations into business operations and decision-making. It
                                     involves going beyond profit-making to positively impact employees, communities, and
                                     the environment.
                                 </p>
-                                <!-- <div class="d-flex justify-content-center">
-                                    <button class="hero-button d-flex align-items-center">
-                                        View CSR Report <i class="fa-solid fa-download ms-2"></i>
-                                    </button>
-                                </div> -->
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
+    
 
 
 
     <section class="foundations my-5">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-                <h6 class="section-title" data-aos="fade-up">Our Foundations</h6>
-                <h2 class="page-title-animate">Working Together for a Better Tomorrow</h2>
+                <h6 class="section-title" data-aos="fade-up" data-translate="csr_foundations_subtitle">Our Foundations</h6>
+                <h2 class="page-title-animate" data-translate="csr_foundations_title">Working Together for a Better Tomorrow</h2>
             </div>
             <div class="row justify-content-center align-items-center" data-aos="fade-up">
                 <div class="col-md-4 text-center">
@@ -430,116 +432,71 @@
     <section class="reportsanddata my-3 mb-5">
         <div class="container">
             <div class="header-text text-center" data-aos="fade-up">
-                <h5 class="section-title" data-aos="fade-up">Giving back to the society</h5>
-                <h4 class="mb-4 page-title-animate">Rural Development & Environment</h4>
+                <h5 class="section-title" data-aos="fade-up" data-translate="csr_giving_back">Giving back to the society</h5>
+                <h4 class="mb-4 page-title-animate" data-translate="csr_rural_env_title">Rural Development & Environment</h4>
             </div>
+    
             <div class="data-numbers">
                 <div class="row my-3" data-aos="fade-up">
-
                     <div class="col-md-3">
-                        <div class="p-3 num-data text-center"
-                            style="border-top: 3px solid var(--accent); border-left: none;">
+                        <div class="p-3 num-data text-center" style="border-top: 3px solid var(--accent); border-left: none;">
                             <i class="fas fa-tree" style="font-size: 40px; color: var(--accent);"></i>
-                            <h4 class="mt-2 section-title">Afforestation
-                            </h4>
-
+                            <h4 class="mt-2 section-title" data-translate="csr_afforestation">Afforestation</h4>
                         </div>
                     </div>
+    
                     <div class="col-md-3">
-                        <div class="p-3 num-data text-center"
-                            style="border-top: 3px solid var(--accent); border-left: none;">
+                        <div class="p-3 num-data text-center" style="border-top: 3px solid var(--accent); border-left: none;">
                             <i class="fas fa-home" style="font-size: 40px; color: var(--accent);"></i>
-                            <h4 class="mt-2 section-title">Rehabilitation & Sheltercare
-                            </h4>
-
+                            <h4 class="mt-2 section-title" data-translate="csr_rehabilitation">Rehabilitation & Sheltercare</h4>
                         </div>
                     </div>
+    
                     <div class="col-md-3">
-                        <div class="p-3 num-data text-center"
-                            style="border-top: 3px solid var(--accent); border-left: none;">
+                        <div class="p-3 num-data text-center" style="border-top: 3px solid var(--accent); border-left: none;">
                             <i class="fas fa-broom" style="font-size: 40px; color: var(--accent);"></i>
-                            <h4 class="mt-2 section-title">Swachh Bharat Mission
-                            </h4>
-
+                            <h4 class="mt-2 section-title" data-translate="csr_swachh_bharat">Swachh Bharat Mission</h4>
                         </div>
                     </div>
+    
                     <div class="col-md-3">
-                        <div class="p-3 num-data text-center"
-                            style="border-top: 3px solid var(--accent); border-left: none;">
+                        <div class="p-3 num-data text-center" style="border-top: 3px solid var(--accent); border-left: none;">
                             <i class="fas fa-solar-panel" style="font-size: 40px; color: var(--accent);"></i>
-                            <h4 class="mt-2 section-title">Solarization
-                            </h4>
-
+                            <h4 class="mt-2 section-title" data-translate="csr_solarization">Solarization</h4>
                         </div>
                     </div>
                 </div>
-
+    
                 <div class="row my-3" data-aos="fade-up">
                     <div class="text-center">
-                        <h4 class="mb-4">Wellness & Health</h4>
+                        <h4 class="mb-4" data-translate="csr_health_wellness">Wellness & Health</h4>
                     </div>
+    
                     <div class="col-md-4">
-                        <div class="p-3 num-data text-center"
-                            style="border-top: 3px solid var(--accent); border-left: none;">
+                        <div class="p-3 num-data text-center" style="border-top: 3px solid var(--accent); border-left: none;">
                             <i class="fas fa-heartbeat" style="font-size: 40px; color: var(--accent);"></i>
-                            <h4 class="mt-2 section-title">Installation of Life Saving Equipments
-                            </h4>
-
+                            <h4 class="mt-2 section-title" data-translate="csr_life_saving">Installation of Life Saving Equipments</h4>
                         </div>
                     </div>
+    
                     <div class="col-md-4">
-                        <div class="p-3 num-data text-center"
-                            style="border-top: 3px solid var(--accent); border-left: none;">
+                        <div class="p-3 num-data text-center" style="border-top: 3px solid var(--accent); border-left: none;">
                             <i class="fas fa-baby" style="font-size: 40px; color: var(--accent);"></i>
-                            <h4 class="mt-2 section-title">Revamp of Maternity & Child Health Center
-                            </h4>
-
+                            <h4 class="mt-2 section-title" data-translate="csr_maternity_center">Revamp of Maternity & Child Health Center</h4>
                         </div>
                     </div>
+    
                     <div class="col-md-4">
-                        <div class="p-3 num-data text-center"
-                            style="border-top: 3px solid var(--accent); border-left: none;">
+                        <div class="p-3 num-data text-center" style="border-top: 3px solid var(--accent); border-left: none;">
                             <i class="fas fa-baby-carriage" style="font-size: 40px; color: var(--accent);"></i>
-                            <h4 class="mt-2 section-title">Upgraded SNCU with Advanced Neonatal Equipment
-                            </h4>
-
+                            <h4 class="mt-2 section-title" data-translate="csr_neonatal_equipment">Upgraded SNCU with Advanced Neonatal Equipment</h4>
                         </div>
                     </div>
-                    <!-- <div class="col-md-3">
-                        <div class="p-3 num-data text-center" style="border-top: 3px solid var(--accent); border-left: none;">
-                            <img src="./assets/images/auto-lightning.png" alt="">
-                            <h4 class="mt-2 section-title">Festival & Sports camp
-                            </h4>
-                            
-                        </div>
-                    </div> -->
                 </div>
-
-                <!-- <div class="row my-3 justify-content-center">
-                    <div class="text-center">
-                        <h4 class="mb-4">Education</h4>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="p-3 num-data text-center" style="border-top: 3px solid var(--accent); border-left: none;">
-                            <img src="./assets/images/solar-panel.png" alt="">
-                            <h4 class="mt-2 section-title">Adoptions of Schools
-                            </h4>
-                            
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="p-3 num-data text-center" style="border-top: 3px solid var(--accent); border-left: none;">
-                            <img src="./assets/images/paperless-factory.png" alt="">
-                            <h4 class="mt-2 section-title">Scholarships to Children
-                            </h4>
-                            
-                        </div>
-                    </div>
-                    
-                </div> -->
             </div>
         </div>
     </section>
+    
 
 
 
@@ -1326,23 +1283,29 @@
         <div class="right-form p-4">
             <span class="close-btn" onclick="closePopup()">&times;</span>
             <div>
-                <h2>Get in Touch</h2>
-                <p>Tell us what you’re building — we’ll show you how to get there, faster and smarter.
+                <h2 data-translate="get-in-touch">Get in Touch</h2>
+                <p data-translate="whether-looking">Tell us what you're building — we'll show you how to get there,
+                    faster and smarter.
                     Response guaranteed within 24 hours.</p>
             </div>
             <form action="" class="mt-4" id="contact-form">
                 <div class="form-group d-sm-flex gap-3 ">
-                    <input class="my-3" type="text" required placeholder="First Name" id="FirstName">
-                    <input class="my-3" type="text" required placeholder="Last Name" id="LastName">
+                    <input class="my-3" type="text" required placeholder="First Name" id="FirstName"
+                        data-translate-placeholder="first-name">
+                    <input class="my-3" type="text" required placeholder="Last Name" id="LastName"
+                        data-translate-placeholder="last-name">
                 </div>
                 <div class="form-group d-sm-flex gap-3 ">
-                    <input class="my-3" type="text" required placeholder="Company" id="Company">
-                    <input class="my-3" type="text" required placeholder="Email Address" id="EmailAddress">
+                    <input class="my-3" type="text" required placeholder="Company" id="Company"
+                        data-translate-placeholder="company">
+                    <input class="my-3" type="text" required placeholder="Email Address" id="EmailAddress"
+                        data-translate-placeholder="email-address">
                 </div>
                 <div class="form-group d-sm-flex gap-3 ">
-                    <input class="my-3" type="text" required placeholder="Phone No." id="PhoneNo">
+                    <input class="my-3" type="text" required placeholder="Phone No." id="PhoneNo"
+                        data-translate-placeholder="phone-no">
                     <select class="my-3 form-select" required id="Industry">
-                        <option value="" disabled selected>Select Industry</option>
+                        <option value="" disabled selected data-translate="select-industry">Select Industry</option>
                         <option value="Electric & hybrid">Electric & hybrid</option>
                         <option value="Passenger vehicles">Passenger vehicles</option>
                         <option value="Commercial vehicles">Commercial vehicles</option>
@@ -1365,16 +1328,18 @@
 
                 </div>
                 <div class="form-group">
-                    <textarea name="" placeholder="I want to know more about" id="Inquiry"></textarea>
+                    <textarea name="" placeholder="I want to know more about" id="Inquiry"
+                        data-translate-placeholder="inquiry"></textarea>
 
                 </div>
                 <div class="d-flex gap-3 align-items-start">
                     <input required type="checkbox" name="" id="T&C" class="w-auto mt-2">
                     <label class="w-auto" for="T&C">
-                        By checking this box, I consent to the processing of my personal data in accordance with Section
-                        4 (1)(a) of the Digital Personal Data Protection Act 2023, for the purposes outlined in the
-                        Privacy Policy. I have also read and agreed to the <a target="_blank"
-                            href="privacy-policy.html">Privacy Policy.</a>
+                        <span data-translate="privacy-consent">By checking this box, I consent to the processing of my
+                            personal data in accordance with Section
+                            4 (1)(a) of the Digital Personal Data Protection Act 2023, for the purposes outlined in the
+                            Privacy Policy. I have also read and agreed to the </span><a target="_blank"
+                            href="privacy-policy.html"><span data-translate="privacy-policy">Privacy Policy.</span></a>
                         <span class="text-danger">*</span>
                     </label>
                 </div>
@@ -1394,7 +1359,7 @@
                                 fill="currentColor"></path>
                         </svg>
                     </span>
-                    Submit
+                    <span data-translate="submit">Submit</span>
                 </button>
                 <div id="message" class="message"></div>
                 <div id="error" class="error"></div>
@@ -1404,17 +1369,20 @@
 
     <section class="get-in-touch-section py-5 text-center" data-aos="fade-up">
         <div class="container">
-            <h6 class="section-title">Get in Touch</h6>
-            <h2>Together, We Build a Better Tomorrow !</h2>
-            <p class="mb-4">Empowering people, protecting the planet, and uplifting communities through focused CSR
-                initiatives.</p>
+            <h6 class="section-title" data-translate="get_in_touch_title">Get in Touch</h6>
+            <h2 data-translate="get_in_touch_heading">Together, We Build a Better Tomorrow!</h2>
+            <p class="mb-4" data-translate="get_in_touch_paragraph">
+                Join us in creating a positive impact — empowering communities, protecting the planet, and driving meaningful change through our CSR initiatives.
+            </p>
             <div class="d-flex justify-content-center" data-aos="flip-right">
-                <button onclick="openPopup()" class="download-button d-flex gap-2 align-items-center">
+                <button onclick="openPopup()" class="download-button d-flex gap-2 align-items-center" data-translate="get_in_touch_button">
                     Be Part of the Change
                 </button>
             </div>
         </div>
     </section>
+    
+    
 
     <div class="image-popup" id="imagePopup">
         <span class="close-popup">&times;</span>
@@ -1431,9 +1399,11 @@
                         <lord-icon src="https://cdn.lordicon.com/bpmglzll.json" trigger="loop" colors="primary:#ffffff"
                             style="width:50px;height:50px">
                         </lord-icon>
-                        <h3>Our Offices</h3>
-                        <p>View our locations and find contact details to our nearest office.</p>
-                        <a href="contact.html#office-locations">Explore Our Locations</a>
+                        <h3 data-translate="our-offices">Our Offices</h3>
+                        <p data-translate="view-locations">View our locations and find contact details to our nearest
+                            office.</p>
+                        <a href="contact.html#office-locations" data-translate="explore-locations">Explore Our
+                            Locations</a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -1442,9 +1412,10 @@
                             colors="primary:#ffffff,secondary:#ebe6ef,tertiary:#e83a30,quaternary:#ffffff"
                             style="width:50px;height:50px">
                         </lord-icon>
-                        <h3>Drop us a Line</h3>
-                        <p>You can contact us by filling in this form any time you need professional support.</p>
-                        <a onclick="openPopup()" href="javascript:void(0)">Fill Our Form</a>
+                        <h3 data-translate="drop-us-line">Drop us a Line</h3>
+                        <p data-translate="contact-form">You can contact us by filling in this form any time you need
+                            professional support.</p>
+                        <a onclick="openPopup()" href="javascript:void(0)" data-translate="fill-form">Fill Our Form</a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -1453,10 +1424,11 @@
                             colors="primary:#ffffff,secondary:#ffffff,tertiary:#ffffff,quaternary:#ebe6ef"
                             style="width:50px;height:50px">
                         </lord-icon>
-                        <h3>Support</h3>
+                        <h3 data-translate="support">Support</h3>
                         <!-- <p>Learn more about us and find resources that will help you with all of our products</p> -->
-                        <p>Connect with us and know more about our products. Call our support executive.</p>
-                        <a href="tel:+912261527998">Call Now</a>
+                        <p data-translate="connect-support">Connect with us and know more about our products. Call our
+                            support executive.</p>
+                        <a href="tel:+912261527998" data-translate="call-now">Call Now</a>
                     </div>
                 </div>
             </div>
@@ -1621,7 +1593,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <p class="m-0">© 2025 JK Maini Precision Technology Limited (JKMPTL). All rights
+                        <p class="m-0" data-translate="copyright">© 2025 JK Maini Precision Technology Limited (JKMPTL).
+                            All rights
                             reserved.</p>
                     </div>
 
@@ -1718,6 +1691,229 @@
     <script src="https://unpkg.com/lenis@1.3.7/dist/lenis.min.js"></script>
     <script src="animation.js"></script>
     <script src="script.js"></script>
+
+    <script>
+        // Translation object with English and Indonesian text
+        const translations = {
+            en: {
+                // Navigation
+                "businesses": "Businesses",
+                "business_verticals": "Business Verticals",
+                "automotive_industrial_beyond": "Automotive, Industrial & Beyond",
+                "tools_hardware": "Tools & Hardware",
+                "aerospace_defence": "Aerospace & Defence",
+                "people": "People",
+                "life_at_jk_maini": "Life at JK Maini",
+                "employee_testimonials": "Employee Testimonials",
+                "beyond_business": "Beyond Business",
+                "purpose_progress": "Purpose & Progress",
+                "sustainability_certifications_governance": "Sustainability, Certifications & Governance",
+                "awards": "Awards",
+                "csr": "CSR",
+                "news_events": "News & Events",
+                "contact": "Contact",
+                "careers": "Careers",
+
+                //hero-section
+                "csr_title": "Corporate Social Responsibility",
+                "csr_description": "Corporate Social Responsibility (CSR) is about integrating ethical, social, and environmental considerations into business operations and decision-making. It involves going beyond profit-making to positively impact employees, communities, and the environment.",
+
+                "csr_foundations_subtitle": "Our Foundations",
+                "csr_foundations_title": "Working Together for a Better Tomorrow",
+
+                //reports-data
+                "csr_giving_back": "Giving back to the society",
+                "csr_rural_env_title": "Rural Development & Environment",
+                "csr_afforestation": "Afforestation",
+                "csr_rehabilitation": "Rehabilitation & Sheltercare",
+                "csr_swachh_bharat": "Swachh Bharat Mission",
+                "csr_solarization": "Solarization",
+                "csr_health_wellness": "Wellness & Health",
+                "csr_life_saving": "Installation of Life Saving Equipments",
+                "csr_maternity_center": "Revamp of Maternity & Child Health Center",
+                "csr_neonatal_equipment": "Upgraded SNCU with Advanced Neonatal Equipment",
+
+                //cta
+                "get_in_touch_title": "Get in Touch",
+                "get_in_touch_heading": "Together, We Build a Better Tomorrow!",
+                "get_in_touch_paragraph": "Join us in creating a positive impact — empowering communities, protecting the planet, and driving meaningful change through our CSR initiatives.",
+                "get_in_touch_button": "Be Part of the Change",
+
+                
+    
+                // Get in Touch
+                "get-in-touch": "Get in Touch",
+                "ready-to-turn": "Ready to Turn Your Manufacturing Vision into Reality?",
+                "whether-looking": "Whether you're looking for custom-engineered solutions or want to explore how our capabilities align with your needs, we're here to help.",
+                "get-started": "Get Started",
+    
+    
+                
+    
+                // Contact Footer
+                "our-offices": "Our Offices",
+                "view-locations": "View our locations and find contact details to our nearest office.",
+                "explore-locations": "Explore Our Locations",
+                "drop-us-line": "Drop us a Line",
+                "contact-form": "You can contact us by filling in this form any time you need professional support.",
+                "fill-form": "Fill Our Form",
+                "support": "Support",
+                "connect-support": "Connect with us and know more about our products. Call our support executive.",
+                "call-now": "Call Now",
+    
+                // Form Fields
+                "first-name": "First Name",
+                "last-name": "Last Name",
+                "company": "Company",
+                "email-address": "Email Address",
+                "phone-no": "Phone No.",
+                "select-industry": "Select Industry",
+                "inquiry": "I want to know more about",
+                "submit": "Submit",
+                "privacy-consent": "By checking this box, I consent to the processing of my personal data in accordance with Section 4 (1)(a) of the Digital Personal Data Protection Act 2023, for the purposes outlined in the Privacy Policy. I have also read and agreed to the",
+                "privacy-policy": "Privacy Policy.",
+    
+                // Footer
+                "quick-links": "Quick Links",
+                "company-footer": "Company",
+                "follow-us": "Follow us",
+                "copyright": "© 2025 JK Maini Precision Technology Limited (JKMPTL). All rights reserved."
+            },
+            id: {
+                // Navigation
+                "businesses": "Bisnis",
+                "business_verticals": "Vertikal Bisnis",
+                "automotive_industrial_beyond": "Otomotif, Industri & di Atas",
+                "tools_hardware": "Alat & Perangkat Keras",
+                "aerospace_defence": "Aerospace & Pertahanan",
+                "people": "Orang",
+                "life_at_jk_maini": "Di JK Maini",
+                "employee_testimonials": "Testimoni Karyawan",
+                "beyond_business": "di Atas Bisnis",
+                "purpose_progress": "Tujuan & Kemajuan",
+                "sustainability_certifications_governance": "Keberlanjutan, Sertifikasi & Pengawasan",
+                "awards": "Penghargaan",
+                "csr": "CSR",
+                "news_events": "Berita & Acara",
+                "contact": "Kontak",
+                "careers": "Karir",
+
+                //hero-section
+                "csr_title": "Tanggung Jawab Sosial Perusahaan",
+                "csr_description": "Tanggung Jawab Sosial Perusahaan (CSR) adalah tentang mengintegrasikan pertimbangan etika, sosial, dan lingkungan ke dalam operasi bisnis serta pengambilan keputusan. Hal ini mencakup lebih dari sekadar mencari keuntungan, yaitu memberikan dampak positif bagi karyawan, masyarakat, dan lingkungan.",
+
+                "csr_foundations_subtitle": "Fondasi Kami",
+                "csr_foundations_title": "Bekerja Sama untuk Hari Esok yang Lebih Baik",
+
+                //reports-data
+                "csr_giving_back": "Memberi kembali kepada masyarakat",
+                "csr_rural_env_title": "Pembangunan Pedesaan & Lingkungan",
+                "csr_afforestation": "Penghijauan",
+                "csr_rehabilitation": "Rehabilitasi & Perawatan Tempat Tinggal",
+                "csr_swachh_bharat": "Misi Swachh Bharat (Kebersihan India)",
+                "csr_solarization": "Pemasangan Energi Surya",
+                "csr_health_wellness": "Kesehatan & Kesejahteraan",
+                "csr_life_saving": "Pemasangan Peralatan Penyelamat Jiwa",
+                "csr_maternity_center": "Perbaikan Pusat Kesehatan Ibu dan Anak",
+                "csr_neonatal_equipment": "Peningkatan SNCU dengan Peralatan Neonatal Canggih",
+
+                //cta
+                "get_in_touch_title": "Hubungi Kami",
+                "get_in_touch_heading": "Bersama, Kita Membangun Hari Esok yang Lebih Baik!",
+                "get_in_touch_paragraph": "Bergabunglah dengan kami dalam menciptakan dampak positif — memberdayakan komunitas, melindungi planet, dan mendorong perubahan bermakna melalui inisiatif CSR kami.",
+                "get_in_touch_button": "Jadilah Bagian dari Perubahan",
+
+
+
+    
+                
+    
+                // Get in Touch
+                "get-in-touch": "Hubungi Kami",
+                "ready-to-turn": "Siap Mengubah Visi Manufaktur Anda Menjadi Kenyataan?",
+                "whether-looking": "Baik Anda mencari solusi rekayasa khusus atau ingin menjelajahi bagaimana kemampuan kami selaras dengan kebutuhan Anda, kami siap membantu.",
+                "get-started": "Mulai",
+    
+    
+    
+    
+               
+    
+                // Contact Footer
+                "our-offices": "Kantor Kami",
+                "view-locations": "Lihat lokasi kami dan temukan detail kontak ke kantor terdekat kami.",
+                "explore-locations": "Jelajahi Lokasi Kami",
+                "drop-us-line": "Kirimkan Pesan",
+                "contact-form": "Anda dapat menghubungi kami dengan mengisi formulir ini kapan saja Anda membutuhkan dukungan profesional.",
+                "fill-form": "Isi Formulir Kami",
+                "support": "Dukungan",
+                "connect-support": "Hubungi kami dan ketahui lebih banyak tentang produk kami. Hubungi eksekutif dukungan kami.",
+                "call-now": "Hubungi Sekarang",
+    
+                // Form Fields
+                "first-name": "Nama Depan",
+                "last-name": "Nama Belakang",
+                "company": "Perusahaan",
+                "email-address": "Alamat Email",
+                "phone-no": "Nomor Telepon",
+                "select-industry": "Pilih Industri",
+                "inquiry": "Saya ingin tahu lebih banyak tentang",
+                "submit": "Kirim",
+                "privacy-consent": "Dengan mencentang kotak ini, saya menyetujui pemrosesan data pribadi saya sesuai dengan Bagian 4 (1)(a) dari Undang-Undang Perlindungan Data Pribadi Digital 2023, untuk tujuan yang diuraikan dalam Kebijakan Privasi. Saya juga telah membaca dan menyetujui",
+                "privacy-policy": "Kebijakan Privasi.",
+    
+                // Footer
+                "quick-links": "Tautan Cepat",
+                "company-footer": "Perusahaan",
+                "follow-us": "Ikuti kami",
+                "copyright": "© 2025 JK Maini Precision Technology Limited (JKMPTL). Semua hak dilindungi."
+            }
+        };
+    
+        // Function to change language
+        function changeLanguage(language) {
+            // Store selected language in localStorage
+            localStorage.setItem('selectedLanguage', language);
+    
+            // Update all elements with data-translate attribute
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[language] && translations[language][key]) {
+                    element.textContent = translations[language][key];
+                }
+            });
+    
+            // Update elements with data-translate-placeholder attribute
+            const placeholderElements = document.querySelectorAll('[data-translate-placeholder]');
+            placeholderElements.forEach(element => {
+                const key = element.getAttribute('data-translate-placeholder');
+                if (translations[language] && translations[language][key]) {
+                    element.placeholder = translations[language][key];
+                }
+            });
+    
+            // Update page title based on language
+            if (language === 'id') {
+                document.title = "JK Maini Precision Technology Ltd.";
+            } else {
+                document.title = "JK Maini Precision Technology Ltd.";
+            }
+        }
+    
+        // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+            const languageSelect = document.getElementById('languageSelect');
+    
+            if (languageSelect) {
+                languageSelect.value = savedLanguage;
+            }
+    
+            changeLanguage(savedLanguage);
+        });
+    </script>
+
     <script>
 
 
